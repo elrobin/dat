@@ -1,0 +1,27 @@
+/* Ajustes mínimos sobre el tema Flatly */
+
+/* Callouts de práctica más compactos */
+.callout {
+  margin-bottom: 1.2rem;
+}
+
+/* Tablas más legibles */
+table {
+  font-size: 0.9rem;
+}
+
+/* Distinguir visualmente los entregables de las prácticas en clase */
+.callout-warning .callout-title {
+  font-weight: 600;
+}
+
+/* Código de ejemplo de prompts */
+pre code {
+  font-size: 0.85rem;
+}
+
+/* Separador entre teoría y prácticas */
+hr {
+  margin: 2.5rem 0;
+  border-color: #dee2e6;
+}

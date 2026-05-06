@@ -1,0 +1,152 @@
+# Sesión 2. Riesgos, limitaciones y uso crítico
+
+::: {.callout-note}
+## Sesión 2 de 3 &nbsp;·&nbsp; 2 horas
+**Foco:** fallar de forma controlada y reflexionar  
+**Hilo conductor:** la IA no es un oráculo — el criterio es tuyo, no de la herramienta
+:::
+
+## Funcionalidades y limitaciones básicas
+
+Antes de hablar de riesgos concretos, conviene tener claro qué tipo de sistema es un LLM:
+
+- Es un **chat conversacional**, no un sistema de preguntas y respuestas con acceso a una base de datos verificada
+- **No discrimina las fuentes** con las que fue entrenado: un artículo científico revisado por pares y una entrada de un foro anónimo tienen el mismo peso estadístico
+- **Aprende patrones de texto**, no hechos: genera la continuación más probable, no la más verdadera
+- **Cada respuesta es aleatoria** en cierta medida: el mismo prompt puede dar respuestas distintas en distintas sesiones
+
+## Alucinaciones
+
+El término **alucinación** designa la generación de contenido verosímil pero incorrecto o inventado. El modelo no "miente" conscientemente: simplemente produce la secuencia de texto estadísticamente más probable, aunque no corresponda a ningún hecho real.
+
+Las alucinaciones son especialmente peligrosas en contextos de traducción especializada porque:
+
+- Los términos inventados suenan plausibles en la lengua meta
+- Las referencias bibliográficas falsas tienen el formato correcto (autor, año, título, revista)
+- Los errores conceptuales en textos jurídicos o médicos pueden tener consecuencias reales
+
+::: {.callout-warning}
+## Ejemplo real de alucinación bibliográfica
+Si pides a ChatGPT una lista de artículos sobre traducción jurídica español-inglés, es habitual que incluya títulos que no existen, publicados en revistas reales, con autores reales, en años plausibles. El formato es impecable. El artículo, inexistente.
+:::
+
+## Sesgos lingüísticos
+
+Los LLMs no son igualmente competentes en todos los idiomas. La calidad de sus outputs depende directamente del volumen de datos en esa lengua que había en el corpus de entrenamiento.
+
+Consecuencias prácticas para T&I:
+
+- En pares de lenguas con corpus pequeño (español-euskera, español-galés, español-catalán jurídico), los errores son más frecuentes y menos detectables porque la propia herramienta no sabe que se está equivocando
+- Los modelos tienden a "anglificar" las estructuras sintácticas incluso cuando traducen hacia lenguas con estructuras muy distintas
+- La terminología especializada en lenguas minoritarias está sistemáticamente subrepresentada
+
+## Evaluación de la calidad de los outputs
+
+Ante cualquier output generado por IA, aplica este filtro mínimo:
+
+1. **¿Las fuentes o referencias existen?** Comprueba DOI, enlace o búsqueda directa en Google Scholar
+2. **¿Los términos son reales y correctos en ese dominio?** Contrasta con un diccionario especializado o una base terminológica
+3. **¿La información es actual?** Los LLMs tienen fecha de corte de conocimiento
+4. **¿El output es consistente internamente?** Un texto que se contradice a sí mismo es señal de alucinación
+5. **¿Sabes de dónde viene la información?** Si la herramienta no cita fuentes, no puedes verificar
+
+## Ética e integridad académica
+
+### Qué dice la UGR
+
+La Universidad de Granada no prohíbe el uso de IA generativa, pero exige **transparencia**: si has usado IA en la elaboración de un trabajo, debes indicarlo explícitamente. El uso no declarado de IA para generar contenido que entregas como propio es considerado una falta de integridad académica.
+
+Consulta la política actualizada en el [portal de integridad académica de la UGR](https://biblioteca.ugr.es).
+
+### Cómo citar el uso de IA
+
+La forma más extendida actualmente sigue las recomendaciones de APA 7ª edición:
+
+```
+OpenAI. (2024). ChatGPT (versión GPT-4o) [Modelo de lenguaje de gran escala]. 
+https://chatgpt.com
+```
+
+Además de la cita, es buena práctica incluir una nota metodológica breve que explique para qué usaste la herramienta y qué verificaste o modificaste del output.
+
+### Usos aceptables, zona gris e inaceptables
+
+| Tipo de uso | Ejemplos |
+|-------------|---------|
+| **Aceptable** | Buscar fuentes para documentarse, generar un borrador que luego reescribes, verificar terminología, mejorar el estilo de un texto propio |
+| **Zona gris** | Resumir un artículo que luego citas como si lo hubieras leído completo, usar IA para corregir un texto sin indicarlo |
+| **Inaceptable** | Entregar como propio un texto generado íntegramente por IA, fabricar referencias bibliográficas |
+
+## Privacidad y propiedad intelectual
+
+Cuando subes un texto a ChatGPT, Gemini u otras herramientas, ese texto puede ser usado para mejorar los modelos según los términos de uso de cada plataforma. Esto tiene implicaciones directas para el trabajo de traducción profesional:
+
+- **Textos de clientes:** subir un contrato, un informe médico o cualquier documento confidencial a una herramienta pública puede violar los acuerdos de confidencialidad
+- **Textos protegidos por derechos de autor:** subir el texto original de un libro o artículo puede ser problemático legalmente
+- **Alternativa:** Copilot con cuenta UGR garantiza que los datos permanecen dentro de la organización y no se usan para entrenar modelos
+
+::: {.callout-important}
+## Regla práctica
+Si el texto que vas a subir contiene información que no publicarías libremente en internet, no lo subas a una herramienta de IA pública. Usa Copilot con tu cuenta UGR o trabaja solo con fragmentos descontextualizados.
+:::
+
+## NotebookLM como caso de estudio crítico
+
+NotebookLM trabaja sobre documentos cerrados que tú proporcionas, lo que en principio debería reducir las alucinaciones. Pero "en principio" no significa "siempre". En esta sesión lo pondremos a prueba.
+
+---
+
+## Prácticas de la sesión
+
+### Práctica en clase A — Caza de errores {#practica-2a}
+
+::: {.callout-note icon=false}
+## 🔵 Práctica en clase &nbsp;·&nbsp; Individual &nbsp;·&nbsp; ~25 min
+
+**Tarea:** El siguiente texto es una traducción al inglés del fragmento base del tema generada por IA. Contiene al menos **cuatro errores** de distinto tipo. Identifícalos, clasifícalos y justifica por qué son errores.
+
+> *The licensor grants the licensee a non-exclusive, non-transferable and cancellable license for the use of the software subject of this contract, being expressly forbidden its sublicense, assignment or distribution to third parties without the previous and written consent of the licensor. The breach of any of the conditions established in this agreement will empower the licensor to terminate the contract by full right, without the need of previous judicial requirement.*
+
+**Tipos de error a buscar:** falso cognado, calco sintáctico, término técnico incorrecto en el sistema jurídico anglosajón, registro inadecuado.
+
+**Puesta en común:** cada persona comparte un error. Se discute cuáles son los más peligrosos en un contexto profesional real y por qué la IA los comete.
+:::
+
+### Práctica en clase B — Casos en zona gris {#practica-2b}
+
+::: {.callout-note icon=false}
+## 🔵 Práctica en clase &nbsp;·&nbsp; Grupos de 3-4 &nbsp;·&nbsp; ~20 min
+
+**Tarea:** Discutid en grupo dónde está la línea en cada uno de estos casos. Preparad una posición para defenderla en la puesta en común.
+
+**Caso 1:** Una estudiante usa ChatGPT para generar un primer borrador de la sección de metodología de su TFG. Luego lo reescribe casi por completo, pero la estructura y algunas frases son del modelo. No lo menciona en el trabajo.
+
+**Caso 2:** Un estudiante sube el PDF de un artículo académico a NotebookLM, le pide un resumen y lo incluye en su trabajo citando el artículo original (que no ha leído completo).
+
+**Caso 3:** Una traductora en prácticas usa DeepL para hacer una primera pasada de un contrato de un cliente, lo revisa y corrige, y entrega la traducción como propia sin mencionarlo al cliente.
+
+**Preguntas guía:** ¿Es un problema ético, académico, legal o los tres? ¿Cambia algo si se declara el uso? ¿Cambia algo si el resultado final es de calidad?
+:::
+
+### Entregable 2 — Glosario terminológico verificado {#entregable-2}
+
+::: {.callout-warning icon=false}
+## 🟢 Entregable individual &nbsp;·&nbsp; Se hace y corrige en clase
+
+**Tarea:** Usando el mismo texto base de la sesión 1, pide a Gemini o ChatGPT que extraiga los términos clave y proponga equivalencias en inglés o francés. Luego **verifica cada término** usando al menos una de las fuentes que encontraste en el entregable 1.
+
+**Qué entregar** — una tabla con estas columnas:
+
+| Término en español | Propuesta de la IA | Fuente que lo avala o contradice | Decisión final justificada |
+|--------------------|-------------------|----------------------------------|---------------------------|
+| licenciatario | licensee | Black's Law Dictionary (2024) | ✓ Correcto en derecho anglosajón |
+| resolver el contrato de pleno derecho | terminate the contract by full right | — (no encontré fuente) | ✗ Calco; la expresión correcta es *terminate ipso facto* o *automatic termination* |
+| ... | ... | ... | ... |
+
+**Corrección en clase:** se comparan tablas. Se discute qué ocurrió cuando la IA y la fuente no coincidían, y qué hizo cada persona ante la discrepancia.
+
+::: {.callout-tip}
+## Pista
+Para terminología jurídica en inglés, IATE (la base terminológica de la UE) y Black's Law Dictionary son referencias más fiables que cualquier resultado de ChatGPT sin verificar.
+:::
+:::

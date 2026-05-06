@@ -1,0 +1,273 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Documentación aplicada a la traducción",
+    "section": "",
+    "text": "Bienvenidos\nEste sitio recoge los materiales de la asignatura Documentación aplicada a la traducción del Grado en Traducción e Interpretación de la Universidad de Granada.",
+    "crumbs": [
+      "Bienvenidos"
+    ]
+  },
+  {
+    "objectID": "index.html#cómo-usar-estos-materiales",
+    "href": "index.html#cómo-usar-estos-materiales",
+    "title": "Documentación aplicada a la traducción",
+    "section": "Cómo usar estos materiales",
+    "text": "Cómo usar estos materiales\nCada tema está organizado en sesiones de dos horas que combinan contenido teórico y prácticas. Las prácticas de clase y los entregables individuales están descritos al final de cada sesión.\nLos materiales se actualizan de forma continua. Si encuentras algún error o tienes sugerencias, puedes abrir un issue en el repositorio usando el enlace de la barra superior.",
+    "crumbs": [
+      "Bienvenidos"
+    ]
+  },
+  {
+    "objectID": "index.html#herramientas-necesarias",
+    "href": "index.html#herramientas-necesarias",
+    "title": "Documentación aplicada a la traducción",
+    "section": "Herramientas necesarias",
+    "text": "Herramientas necesarias\nA lo largo del curso utilizaremos varias herramientas. Todas son accesibles con tu cuenta institucional @ugr.es o de forma gratuita:\n\nGemini — acceso con cuenta UGR Google\nNotebookLM — acceso con cuenta UGR Google\nAI Studio — acceso con cuenta UGR Google\nPerplexity — versión gratuita suficiente\nElicit — versión gratuita suficiente\nScite — versión gratuita suficiente\nChatGPT — versión gratuita suficiente\nDeepL — versión gratuita suficiente",
+    "crumbs": [
+      "Bienvenidos"
+    ]
+  },
+  {
+    "objectID": "index.html#contacto",
+    "href": "index.html#contacto",
+    "title": "Documentación aplicada a la traducción",
+    "section": "Contacto",
+    "text": "Contacto\nPara dudas sobre el contenido, usa el foro de la asignatura en PRADO. Para cuestiones administrativas, contacta por correo institucional.",
+    "crumbs": [
+      "Bienvenidos"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion1.html",
+    "href": "tema9/sesion1.html",
+    "title": "Sesión 1. ¿Qué es y cómo funciona?",
+    "section": "",
+    "text": "De la recuperación de información a la IA generativa\nLa irrupción pública de ChatGPT en noviembre de 2022 generó una expectación casi instantánea. Sin embargo, la inteligencia artificial llevaba años modificando nuestros hábitos de consumo de información: los algoritmos de recomendación de TikTok o Instagram, los motores de traducción de Google o los sistemas de autocompletado del buscador son ejemplos de IA que ya formaban parte de nuestra vida cotidiana antes de que los chatbots generativos se hicieran populares.\nLa IA generativa no es, por tanto, una ruptura con el pasado sino una aceleración de procesos que venían desarrollándose desde los años 50.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sesión 1. ¿Qué es y cómo funciona?</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion1.html#de-la-recuperación-de-información-a-la-ia-generativa",
+    "href": "tema9/sesion1.html#de-la-recuperación-de-información-a-la-ia-generativa",
+    "title": "Sesión 1. ¿Qué es y cómo funciona?",
+    "section": "",
+    "text": "Cronología mínima\n\n\n\n\n\n\n\nAño\nHito\n\n\n\n\n1966\nELIZA: primer chatbot basado en reglas (MIT)\n\n\n2011\nWatson de IBM gana en Jeopardy! usando modelos estadísticos\n\n\n2017\nPaper Attention is all you need (Google): aparece la arquitectura Transformer\n\n\n2018\nBERT (Google): primer modelo que entiende el contexto bidireccional\n\n\nNov. 2022\nOpenAI lanza ChatGPT públicamente\n\n\nFeb. 2023\nChatGPT Plus: primera versión de pago\n\n\nMar. 2023\nGPT-4 con acceso a Internet en tiempo real",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sesión 1. ¿Qué es y cómo funciona?</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion1.html#qué-es-un-llm",
+    "href": "tema9/sesion1.html#qué-es-un-llm",
+    "title": "Sesión 1. ¿Qué es y cómo funciona?",
+    "section": "Qué es un LLM",
+    "text": "Qué es un LLM\nLLM son las siglas de Large Language Model (modelo de lenguaje de gran escala). Son una rama del procesamiento del lenguaje natural (PLN o NLP en inglés) que utiliza técnicas de aprendizaje automático para generar texto.\n\nCómo aprende un LLM\nEl proceso de entrenamiento de un LLM se puede resumir en tres pasos:\n\nSe construye un corpus lingüístico enorme (big data) formado por texto extraído de internet, libros, artículos y otras fuentes.\nEl modelo aprende patrones estadísticos a partir de ese corpus: qué palabras suelen aparecer juntas, en qué contextos, con qué frecuencia.\nA partir de esos patrones, el modelo aprende a predecir secuencias de texto: dada una entrada, genera la continuación más probable.\n\n\n\n\n\n\n\nTipPara entenderlo de forma intuitiva\n\n\n\nCuando escribes “Érase una vez…” en el buscador, el autocompletado te sugiere “una niña llamada Caperucita”. Un LLM hace exactamente lo mismo, pero a una escala y con una sofisticación incomparablemente mayores.\n\n\n\n\nEl modelo Transformer y la atención\nEl salto cualitativo que permitió los LLMs actuales fue la arquitectura Transformer, presentada en 2017 en el artículo Attention is all you need. Su innovación clave es el mecanismo de atención: el modelo es capaz de dar más peso a unas palabras que a otras para entender el contexto completo de una oración.\nPor ejemplo, en la frase “El traductor revisó el texto porque lo consideraba confuso”, para entender a qué se refiere “lo” el modelo presta atención a “texto”, no a “traductor”. Esta capacidad de contextualización bidireccional es lo que diferencia los LLMs modernos de sus predecesores.\n\n\nAlgunos LLMs relevantes para T&I\n\n\n\nModelo\n¿Para qué se usa?\n\n\n\n\nGPT (OpenAI)\nGeneración de texto — ChatGPT, Copilot\n\n\nGemini (Google)\nMultipropósito — integrado en Google Workspace\n\n\nBERT (Google)\nComprensión de texto — motores de búsqueda\n\n\nT5\nTraducción, resumen y reescritura\n\n\nmBART\nTraducción automática multilingüe",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sesión 1. ¿Qué es y cómo funciona?</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion1.html#panorama-de-herramientas-para-ti",
+    "href": "tema9/sesion1.html#panorama-de-herramientas-para-ti",
+    "title": "Sesión 1. ¿Qué es y cómo funciona?",
+    "section": "Panorama de herramientas para T&I",
+    "text": "Panorama de herramientas para T&I\nPara el trabajo de documentación y traducción, las herramientas de IA se pueden clasificar en tres categorías según su función principal:\n\nHerramientas multipropósito\nSon capaces de mantener una conversación fluida, generar texto, ideas, esquemas, código o imágenes, y adaptarse a distintos usuarios y contextos.\nEjemplos: ChatGPT (OpenAI), Gemini (Google), Claude (Anthropic), Copilot (Microsoft)\n\n\nHerramientas de recuperación de información académica\nBuscan en bases de datos académicas, generan respuestas basadas en fuentes reales e indican de dónde obtienen la información. Son más precisas que un buscador generalista para encontrar artículos científicos.\nEjemplos: Perplexity, Elicit, Consensus, Scite\n\n\nHerramientas de traducción y revisión lingüística\nTraducen textos automáticamente, sugieren mejoras de estilo y se adaptan al contexto y nivel de formalidad.\nEjemplos: DeepL Translator, DeepL Write, Writefull\n\n\nNotebookLM: una categoría propia\nNotebookLM merece mención especial. A diferencia de los chatbots generalistas, trabaja exclusivamente sobre los documentos que tú le proporcionas: PDFs, páginas web, notas. Genera resúmenes, responde preguntas y puede producir un podcast de audio explicativo basado en tu material.\n\n\n\n\n\n\nImportanteImportante para esta sesión\n\n\n\nNotebookLM está disponible con tu cuenta UGR (@go.ugr.es). Úsala para estudiar, preparar trabajos y verificar información — pero recuerda que incluso trabajando sobre documentos cerrados puede cometer errores. Lo veremos en detalle en la sesión 2.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sesión 1. ¿Qué es y cómo funciona?</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion1.html#introducción-a-los-prompts",
+    "href": "tema9/sesion1.html#introducción-a-los-prompts",
+    "title": "Sesión 1. ¿Qué es y cómo funciona?",
+    "section": "Introducción a los prompts",
+    "text": "Introducción a los prompts\nUn prompt es la instrucción o entrada que damos a un chat conversacional para que genere una respuesta. La calidad de la respuesta depende en buena medida de la calidad del prompt.\n\nCuatro componentes de un buen prompt\n\n\n\n\n\n\n\n\nComponente\nPregunta que responde\nEjemplo\n\n\n\n\nTarea\n¿Qué quiero que haga?\n“Elabora una guía…”\n\n\nContexto\n¿En qué situación? ¿Con qué material?\n“…para mi TFG del Grado de T&I”\n\n\nFormato\n¿Cómo quiero el output?\n“…en formato lista con pasos”\n\n\nPúblico\n¿Para quién es?\n“…con lenguaje pedagógico y sencillo”\n\n\n\n\n\n\n\n\n\nTipPrincipios básicos\n\n\n\n\nUsa frases directas y sé específico/a\nEvita palabras vagas o ambiguas\nIndica el tipo de output que esperas (texto, tabla, código, imagen)\nAjusta y refina el prompt manteniendo la conversación — no empieces de cero cada vez",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sesión 1. ¿Qué es y cómo funciona?</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion1.html#prácticas-de-la-sesión",
+    "href": "tema9/sesion1.html#prácticas-de-la-sesión",
+    "title": "Sesión 1. ¿Qué es y cómo funciona?",
+    "section": "Prácticas de la sesión",
+    "text": "Prácticas de la sesión\n\nPráctica en clase A — Comparativa de herramientas\n\n\n\n\n\n\nNota🔵 Práctica en clase  ·  Parejas  ·  ~30 min\n\n\n\nTarea: Usar el mismo prompt en Gemini y en ChatGPT (o Copilot) para buscar fuentes sobre un tema de traducción que elijáis vosotros.\nPrompt de partida (podéis modificarlo):\n\nSoy estudiante de primer curso del Grado en Traducción e Interpretación. Necesito tres fuentes académicas sobre [tema] para documentarme antes de traducir un texto especializado. Dame el título, el autor, el año y un resumen de dos líneas de cada fuente.\n\nQué comparar:\n\n¿Las fuentes que propone cada herramienta son reales y verificables?\n¿El formato de la respuesta es útil o hay que reformatear?\n¿Alguna herramienta admite que no sabe algo? ¿Cuál?\n¿Qué diferencias observáis entre las dos herramientas?\n\nPuesta en común: cada pareja comparte una observación que le haya sorprendido.\n\n\n\n\nPráctica en clase B — NotebookLM con el material de la sesión\n\n\n\n\n\n\nNota🔵 Práctica en clase  ·  Individual  ·  ~20 min\n\n\n\nTarea: Cargar el PDF de este tema en NotebookLM y explorar sus funciones.\n\nVe a notebooklm.google.com con tu cuenta UGR\nCrea un nuevo notebook y sube el PDF del tema 9\nGenera el podcast automático (botón “Audio overview”)\nPide un resumen del documento\nGenera tres preguntas de estudio sobre el contenido\n\nPara reflexionar: ¿El podcast o el resumen contiene algo que no está en el PDF? ¿Hay algo del PDF que haya omitido o distorsionado?\n\n\n\n\nEntregable 1 — Búsqueda de fuentes documentales\n\n\n\n\n\n\nAdvertencia🟢 Entregable individual  ·  Se hace y corrige en clase\n\n\n\nTexto base para todo el tema:\n\nEl licenciante otorga al licenciatario una licencia no exclusiva, intransferible y revocable para el uso del software objeto del presente contrato, quedando expresamente prohibida su sublicencia, cesión o distribución a terceros sin el consentimiento previo y por escrito del licenciante. El incumplimiento de cualquiera de las condiciones establecidas en el presente acuerdo facultará al licenciante para resolver el contrato de pleno derecho, sin necesidad de requerimiento judicial previo.\n\nTarea: Usando Perplexity o Elicit, encuentra tres fuentes útiles para documentarte antes de traducir este fragmento al inglés o al francés.\nQué entregar — una tabla con estas columnas:\n\n\n\n\n\n\n\n\n\nFuente encontrada\nPrompt o búsqueda que usaste\n¿Verificaste que existe?\n¿Dice lo que la herramienta dice que dice?\n\n\n\n\n…\n…\nSí / No\nSí / No / Parcialmente\n\n\n\nCorrección en clase: se proyectan varias tablas y discutimos qué fuentes son fiables, cuáles son alucinaciones y qué diferencia hay entre los resultados de Perplexity y Elicit.\n\n\n\n\n\n\nTipPista\n\n\n\nAntes de dar una fuente por buena, comprueba que el DOI o el enlace funciona y que el resumen que da la herramienta corresponde al contenido real del artículo o recurso.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sesión 1. ¿Qué es y cómo funciona?</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion2.html",
+    "href": "tema9/sesion2.html",
+    "title": "Sesión 2. Riesgos, limitaciones y uso crítico",
+    "section": "",
+    "text": "Funcionalidades y limitaciones básicas\nAntes de hablar de riesgos concretos, conviene tener claro qué tipo de sistema es un LLM:",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sesión 2. Riesgos, limitaciones y uso crítico</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion2.html#funcionalidades-y-limitaciones-básicas",
+    "href": "tema9/sesion2.html#funcionalidades-y-limitaciones-básicas",
+    "title": "Sesión 2. Riesgos, limitaciones y uso crítico",
+    "section": "",
+    "text": "Es un chat conversacional, no un sistema de preguntas y respuestas con acceso a una base de datos verificada\nNo discrimina las fuentes con las que fue entrenado: un artículo científico revisado por pares y una entrada de un foro anónimo tienen el mismo peso estadístico\nAprende patrones de texto, no hechos: genera la continuación más probable, no la más verdadera\nCada respuesta es aleatoria en cierta medida: el mismo prompt puede dar respuestas distintas en distintas sesiones",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sesión 2. Riesgos, limitaciones y uso crítico</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion2.html#alucinaciones",
+    "href": "tema9/sesion2.html#alucinaciones",
+    "title": "Sesión 2. Riesgos, limitaciones y uso crítico",
+    "section": "Alucinaciones",
+    "text": "Alucinaciones\nEl término alucinación designa la generación de contenido verosímil pero incorrecto o inventado. El modelo no “miente” conscientemente: simplemente produce la secuencia de texto estadísticamente más probable, aunque no corresponda a ningún hecho real.\nLas alucinaciones son especialmente peligrosas en contextos de traducción especializada porque:\n\nLos términos inventados suenan plausibles en la lengua meta\nLas referencias bibliográficas falsas tienen el formato correcto (autor, año, título, revista)\nLos errores conceptuales en textos jurídicos o médicos pueden tener consecuencias reales\n\n\n\n\n\n\n\nAdvertenciaEjemplo real de alucinación bibliográfica\n\n\n\nSi pides a ChatGPT una lista de artículos sobre traducción jurídica español-inglés, es habitual que incluya títulos que no existen, publicados en revistas reales, con autores reales, en años plausibles. El formato es impecable. El artículo, inexistente.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sesión 2. Riesgos, limitaciones y uso crítico</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion2.html#sesgos-lingüísticos",
+    "href": "tema9/sesion2.html#sesgos-lingüísticos",
+    "title": "Sesión 2. Riesgos, limitaciones y uso crítico",
+    "section": "Sesgos lingüísticos",
+    "text": "Sesgos lingüísticos\nLos LLMs no son igualmente competentes en todos los idiomas. La calidad de sus outputs depende directamente del volumen de datos en esa lengua que había en el corpus de entrenamiento.\nConsecuencias prácticas para T&I:\n\nEn pares de lenguas con corpus pequeño (español-euskera, español-galés, español-catalán jurídico), los errores son más frecuentes y menos detectables porque la propia herramienta no sabe que se está equivocando\nLos modelos tienden a “anglificar” las estructuras sintácticas incluso cuando traducen hacia lenguas con estructuras muy distintas\nLa terminología especializada en lenguas minoritarias está sistemáticamente subrepresentada",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sesión 2. Riesgos, limitaciones y uso crítico</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion2.html#evaluación-de-la-calidad-de-los-outputs",
+    "href": "tema9/sesion2.html#evaluación-de-la-calidad-de-los-outputs",
+    "title": "Sesión 2. Riesgos, limitaciones y uso crítico",
+    "section": "Evaluación de la calidad de los outputs",
+    "text": "Evaluación de la calidad de los outputs\nAnte cualquier output generado por IA, aplica este filtro mínimo:\n\n¿Las fuentes o referencias existen? Comprueba DOI, enlace o búsqueda directa en Google Scholar\n¿Los términos son reales y correctos en ese dominio? Contrasta con un diccionario especializado o una base terminológica\n¿La información es actual? Los LLMs tienen fecha de corte de conocimiento\n¿El output es consistente internamente? Un texto que se contradice a sí mismo es señal de alucinación\n¿Sabes de dónde viene la información? Si la herramienta no cita fuentes, no puedes verificar",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sesión 2. Riesgos, limitaciones y uso crítico</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion2.html#ética-e-integridad-académica",
+    "href": "tema9/sesion2.html#ética-e-integridad-académica",
+    "title": "Sesión 2. Riesgos, limitaciones y uso crítico",
+    "section": "Ética e integridad académica",
+    "text": "Ética e integridad académica\n\nQué dice la UGR\nLa Universidad de Granada no prohíbe el uso de IA generativa, pero exige transparencia: si has usado IA en la elaboración de un trabajo, debes indicarlo explícitamente. El uso no declarado de IA para generar contenido que entregas como propio es considerado una falta de integridad académica.\nConsulta la política actualizada en el portal de integridad académica de la UGR.\n\n\nCómo citar el uso de IA\nLa forma más extendida actualmente sigue las recomendaciones de APA 7ª edición:\nOpenAI. (2024). ChatGPT (versión GPT-4o) [Modelo de lenguaje de gran escala]. \nhttps://chatgpt.com\nAdemás de la cita, es buena práctica incluir una nota metodológica breve que explique para qué usaste la herramienta y qué verificaste o modificaste del output.\n\n\nUsos aceptables, zona gris e inaceptables\n\n\n\n\n\n\n\nTipo de uso\nEjemplos\n\n\n\n\nAceptable\nBuscar fuentes para documentarse, generar un borrador que luego reescribes, verificar terminología, mejorar el estilo de un texto propio\n\n\nZona gris\nResumir un artículo que luego citas como si lo hubieras leído completo, usar IA para corregir un texto sin indicarlo\n\n\nInaceptable\nEntregar como propio un texto generado íntegramente por IA, fabricar referencias bibliográficas",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sesión 2. Riesgos, limitaciones y uso crítico</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion2.html#privacidad-y-propiedad-intelectual",
+    "href": "tema9/sesion2.html#privacidad-y-propiedad-intelectual",
+    "title": "Sesión 2. Riesgos, limitaciones y uso crítico",
+    "section": "Privacidad y propiedad intelectual",
+    "text": "Privacidad y propiedad intelectual\nCuando subes un texto a ChatGPT, Gemini u otras herramientas, ese texto puede ser usado para mejorar los modelos según los términos de uso de cada plataforma. Esto tiene implicaciones directas para el trabajo de traducción profesional:\n\nTextos de clientes: subir un contrato, un informe médico o cualquier documento confidencial a una herramienta pública puede violar los acuerdos de confidencialidad\nTextos protegidos por derechos de autor: subir el texto original de un libro o artículo puede ser problemático legalmente\nAlternativa: Copilot con cuenta UGR garantiza que los datos permanecen dentro de la organización y no se usan para entrenar modelos\n\n\n\n\n\n\n\nImportanteRegla práctica\n\n\n\nSi el texto que vas a subir contiene información que no publicarías libremente en internet, no lo subas a una herramienta de IA pública. Usa Copilot con tu cuenta UGR o trabaja solo con fragmentos descontextualizados.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sesión 2. Riesgos, limitaciones y uso crítico</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion2.html#notebooklm-como-caso-de-estudio-crítico",
+    "href": "tema9/sesion2.html#notebooklm-como-caso-de-estudio-crítico",
+    "title": "Sesión 2. Riesgos, limitaciones y uso crítico",
+    "section": "NotebookLM como caso de estudio crítico",
+    "text": "NotebookLM como caso de estudio crítico\nNotebookLM trabaja sobre documentos cerrados que tú proporcionas, lo que en principio debería reducir las alucinaciones. Pero “en principio” no significa “siempre”. En esta sesión lo pondremos a prueba.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sesión 2. Riesgos, limitaciones y uso crítico</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion2.html#prácticas-de-la-sesión",
+    "href": "tema9/sesion2.html#prácticas-de-la-sesión",
+    "title": "Sesión 2. Riesgos, limitaciones y uso crítico",
+    "section": "Prácticas de la sesión",
+    "text": "Prácticas de la sesión\n\nPráctica en clase A — Caza de errores\n\n\n\n\n\n\nNota🔵 Práctica en clase  ·  Individual  ·  ~25 min\n\n\n\nTarea: El siguiente texto es una traducción al inglés del fragmento base del tema generada por IA. Contiene al menos cuatro errores de distinto tipo. Identifícalos, clasifícalos y justifica por qué son errores.\n\nThe licensor grants the licensee a non-exclusive, non-transferable and cancellable license for the use of the software subject of this contract, being expressly forbidden its sublicense, assignment or distribution to third parties without the previous and written consent of the licensor. The breach of any of the conditions established in this agreement will empower the licensor to terminate the contract by full right, without the need of previous judicial requirement.\n\nTipos de error a buscar: falso cognado, calco sintáctico, término técnico incorrecto en el sistema jurídico anglosajón, registro inadecuado.\nPuesta en común: cada persona comparte un error. Se discute cuáles son los más peligrosos en un contexto profesional real y por qué la IA los comete.\n\n\n\n\nPráctica en clase B — Casos en zona gris\n\n\n\n\n\n\nNota🔵 Práctica en clase  ·  Grupos de 3-4  ·  ~20 min\n\n\n\nTarea: Discutid en grupo dónde está la línea en cada uno de estos casos. Preparad una posición para defenderla en la puesta en común.\nCaso 1: Una estudiante usa ChatGPT para generar un primer borrador de la sección de metodología de su TFG. Luego lo reescribe casi por completo, pero la estructura y algunas frases son del modelo. No lo menciona en el trabajo.\nCaso 2: Un estudiante sube el PDF de un artículo académico a NotebookLM, le pide un resumen y lo incluye en su trabajo citando el artículo original (que no ha leído completo).\nCaso 3: Una traductora en prácticas usa DeepL para hacer una primera pasada de un contrato de un cliente, lo revisa y corrige, y entrega la traducción como propia sin mencionarlo al cliente.\nPreguntas guía: ¿Es un problema ético, académico, legal o los tres? ¿Cambia algo si se declara el uso? ¿Cambia algo si el resultado final es de calidad?\n\n\n\n\nEntregable 2 — Glosario terminológico verificado\n\n\n\n\n\n\nAdvertencia🟢 Entregable individual  ·  Se hace y corrige en clase\n\n\n\nTarea: Usando el mismo texto base de la sesión 1, pide a Gemini o ChatGPT que extraiga los términos clave y proponga equivalencias en inglés o francés. Luego verifica cada término usando al menos una de las fuentes que encontraste en el entregable 1.\nQué entregar — una tabla con estas columnas:\n\n\n\n\n\n\n\n\n\nTérmino en español\nPropuesta de la IA\nFuente que lo avala o contradice\nDecisión final justificada\n\n\n\n\nlicenciatario\nlicensee\nBlack’s Law Dictionary (2024)\n✓ Correcto en derecho anglosajón\n\n\nresolver el contrato de pleno derecho\nterminate the contract by full right\n— (no encontré fuente)\n✗ Calco; la expresión correcta es terminate ipso facto o automatic termination\n\n\n…\n…\n…\n…\n\n\n\nCorrección en clase: se comparan tablas. Se discute qué ocurrió cuando la IA y la fuente no coincidían, y qué hizo cada persona ante la discrepancia.\n\n\n\n\n\n\nTipPista\n\n\n\nPara terminología jurídica en inglés, IATE (la base terminológica de la UE) y Black’s Law Dictionary son referencias más fiables que cualquier resultado de ChatGPT sin verificar.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sesión 2. Riesgos, limitaciones y uso crítico</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion3.html",
+    "href": "tema9/sesion3.html",
+    "title": "Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas",
+    "section": "",
+    "text": "Ingeniería de prompts\nLa ingeniería de prompts es la práctica de diseñar instrucciones de entrada para obtener outputs más útiles y precisos de un LLM. No es una disciplina técnica reservada a programadores: es una habilidad comunicativa que cualquier profesional puede desarrollar.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion3.html#ingeniería-de-prompts",
+    "href": "tema9/sesion3.html#ingeniería-de-prompts",
+    "title": "Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas",
+    "section": "",
+    "text": "Técnicas básicas\n\nZero-shot prompting\nSe pide una tarea sin proporcionar ningún ejemplo ni contexto adicional. Es el punto de partida más simple.\nTraduce el siguiente término jurídico al inglés: \"resolver el contrato de pleno derecho\"\n\n\nFew-shot prompting\nSe proporcionan uno o varios ejemplos dentro del prompt para guiar el tipo de output esperado. Muy útil para tareas de formato específico.\nExtrae los términos clave del siguiente texto y proporciona su equivalente en inglés \njurídico. Sigue este formato:\n\nTérmino: licenciante\nEquivalente: licensor\nContexto: derecho contractual anglosajón\n\nAhora haz lo mismo con este texto: [texto]\n\n\nChain-of-Thought (CoT) prompting\nSe pide al modelo que razone paso a paso antes de dar la respuesta final. Mejora significativamente los resultados en tareas que requieren análisis o justificación.\nAnaliza si el término \"requerimiento judicial previo\" tiene equivalente directo en el \nsistema jurídico inglés. Razona tu respuesta antes de concluir: considera primero las \ndiferencias entre el sistema procesal civil español y el anglosajón, luego evalúa si \nexiste un concepto equivalente, y finalmente propón la traducción más adecuada.\n\n\nRole prompting\nSe asigna un rol al modelo para que ajuste su base de conocimiento y tono al tipo de respuesta deseada.\nActúa como terminólogo especializado en derecho contractual con experiencia en el par \nde lenguas español-inglés. Tu tarea es revisar la siguiente lista de equivalencias y \nseñalar cuáles son incorrectas o imprecisas para un contexto de derecho anglosajón.\n\n\nPrompting multimodal\nSe combinan diferentes formatos de entrada: texto, imágenes, PDFs, código. Gemini y ChatGPT admiten subir documentos directamente al chat.\nCasos de uso para T&I:\n\nSubir un glosario en PDF y pedir que lo use como referencia para verificar terminología\nSubir una captura de pantalla de una interfaz y pedir que explique cómo usarla\nCombinar un texto fuente con instrucciones estilísticas para orientar la traducción\n\n\n\n\nTipos de prompts por función\n\n\n\n\n\n\n\n\nTipo\nPara qué sirve\nEjemplo\n\n\n\n\nInstrucción directa\nPedir algo concreto\n“Dame una ecuación de búsqueda para Web of Science sobre traducción jurídica”\n\n\nReescritura y edición\nMejorar un texto\n“Reescribe este párrafo en un registro más formal e indica los cambios”\n\n\nConsulta\nObtener una explicación\n“¿Cuál es la diferencia entre assignment y transfer en derecho contractual inglés?”\n\n\nTarea simulada\nGenerar contenido desde un rol\n“Eres un revisor de traducción jurídica. Evalúa este fragmento y señala los problemas”\n\n\nRefinamiento\nAjustar la respuesta anterior\n“Bien, ahora hazlo más conciso y elimina los ejemplos”",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion3.html#la-ia-como-asistente",
+    "href": "tema9/sesion3.html#la-ia-como-asistente",
+    "title": "Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas",
+    "section": "La IA como asistente",
+    "text": "La IA como asistente\nLlegados aquí, es el momento de nombrar lo que habéis estado haciendo estas tres sesiones.\nEn ningún momento os hemos pedido que la IA haga el trabajo por vosotros. Os hemos pedido que la uséis para buscar (sesión 1), verificar (sesión 2) y ahora construir con criterio (sesión 3). Eso tiene un nombre: usar la IA como asistente, no como oráculo ni como sustituto.\nLos usos más valiosos de un LLM en el trabajo de documentación y traducción son precisamente los que no generan un producto final directamente:\n\nBrainstorming: generar ideas, ángulos o enfoques que luego tú evalúas y seleccionas\nAndamiaje: obtener una estructura o borrador sobre el que trabajar, no el resultado final\nEcuaciones de búsqueda: construir búsquedas para bases de datos que luego ejecutas y verificas tú\nTutoriales on demand: pedir que te explique cómo usar una herramienta, un formato o una función concreta\nCódigo asistido: generar un script para automatizar una tarea repetitiva aunque no sepas programar\n\n\n\n\n\n\n\nTipLa pregunta clave\n\n\n\nAntes de usar la IA para una tarea, pregúntate: ¿estoy usando la IA para pensar mejor o para no pensar? La primera opción suma. La segunda resta.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion3.html#gemini-integrado-en-google-workspace",
+    "href": "tema9/sesion3.html#gemini-integrado-en-google-workspace",
+    "title": "Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas",
+    "section": "Gemini integrado en Google Workspace",
+    "text": "Gemini integrado en Google Workspace\nCon tu cuenta UGR tienes acceso a Gemini integrado directamente en Google Docs, Sheets y Drive. Muchos de vosotros ya lo usáis sin identificarlo conscientemente: el botón de “Ayúdame a escribir” en Docs, las sugerencias de respuesta en Gmail, los resúmenes automáticos en Drive.\nUsos concretos para T&I:\n\nEn Google Docs: pedir que reformule un párrafo, que cambie el registro, que resuma un documento largo\nEn Google Sheets: generar fórmulas, ordenar y filtrar datos terminológicos\nEn Drive: buscar dentro de documentos usando lenguaje natural",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion3.html#canvas-y-ai-studio-de-prompt-a-artefacto-visual",
+    "href": "tema9/sesion3.html#canvas-y-ai-studio-de-prompt-a-artefacto-visual",
+    "title": "Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas",
+    "section": "Canvas y AI Studio: de prompt a artefacto visual",
+    "text": "Canvas y AI Studio: de prompt a artefacto visual\nCanvas (disponible en ChatGPT y en algunas versiones de Gemini) permite trabajar de forma iterativa sobre un documento o código, editando partes concretas sin reescribir todo cada vez.\nAI Studio de Google permite construir aplicaciones sencillas a partir de prompts, incluyendo páginas web estáticas, sin necesidad de saber HTML. El punto no es que aprendáis a programar: es que entendéis que la IA puede hacer de puente entre vuestra idea y un artefacto técnico que de otra manera requeriría conocimientos que no tenéis todavía.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span>"
+    ]
+  },
+  {
+    "objectID": "tema9/sesion3.html#prácticas-de-la-sesión",
+    "href": "tema9/sesion3.html#prácticas-de-la-sesión",
+    "title": "Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas",
+    "section": "Prácticas de la sesión",
+    "text": "Prácticas de la sesión\n\nPráctica en clase A — Refinamiento de prompts en cadena\n\n\n\n\n\n\nNota🔵 Práctica en clase  ·  Individual  ·  ~25 min\n\n\n\nTarea: Partid del prompt más básico posible y llegad a uno bien construido en cuatro iteraciones. Usad Gemini con vuestra cuenta UGR.\nIteración 1 — Prompt malo:\ntradúceme esto al inglés\n[pegar el texto base]\nIteración 2 — Añadir tarea y contexto:\nTraduce el siguiente fragmento de contrato de licencia de software del español al inglés \njurídico. El texto va dirigido a una empresa anglosajona en un contexto de derecho \ncontractual británico.\n[texto]\nIteración 3 — Añadir formato y restricciones:\n[prompt anterior] \nPresenta el resultado en dos columnas: español a la izquierda, inglés a la derecha. \nPara los términos que no tengan equivalente directo en el sistema jurídico británico, \nañade una nota breve explicando la diferencia conceptual.\nIteración 4 — Añadir input multimodal:\nSubid junto al prompt una captura o PDF con una entrada del diccionario IATE o Black’s Law Dictionary para uno de los términos clave. Pedid que tenga en cuenta esa referencia.\nPuesta en común: comparamos el resultado de la iteración 1 y la iteración 4. ¿Qué cambió? ¿Qué sigue siendo incorrecto aunque el prompt sea mejor?\n\n\n\n\nPráctica en clase B — Flujo de trabajo real\n\n\n\n\n\n\nNota🔵 Práctica en clase  ·  Grupos de 3  ·  ~25 min\n\n\n\nTarea: Resolved en grupo la siguiente tarea de documentación previa usando al menos dos herramientas distintas. Documentad qué usasteis para qué y por qué.\nEncargo: Necesitáis documentaros para traducir el texto base al francés jurídico. En 25 minutos tenéis que producir: (1) tres fuentes fiables, (2) cinco equivalencias terminológicas verificadas, (3) una nota sobre las diferencias entre el sistema jurídico español y el francés relevantes para esta traducción.\nLo que se evalúa no es el resultado sino el proceso: ¿qué herramienta usasteis para qué paso? ¿Dónde falló la IA? ¿Cómo lo compensasteis?\n\n\n\n\nEntregable 3 — Infografía del flujo de trabajo\n\n\n\n\n\n\nAdvertencia🟢 Entregable individual  ·  Se hace y corrige en clase\n\n\n\nTarea: Usando los entregables 1 y 2 como materia prima, documentad el flujo de trabajo completo que habéis seguido a lo largo de las tres sesiones. El output no es un documento de texto: es una infografía creada con Canvas (Gemini o ChatGPT) o con AI Studio.\nQué debe incluir la infografía:\n\nLas tres fases del flujo (búsqueda de fuentes → glosario verificado → traducción asistida)\nQué herramienta usaste en cada fase y para qué\nAl menos un prompt que funcionó bien y uno que no funcionó\nUna decisión que tomaste tú porque la IA se equivocó o fue insuficiente\n\nProceso sugerido:\nPrompt de partida para Canvas o AI Studio:\n\nCrea una infografía visual sobre mi flujo de trabajo de documentación para traducción. \nEl flujo tiene tres fases: [describe brevemente cada fase]. \nIncluye iconos simples, flechas de proceso y una sección de \"lecciones aprendidas\". \nEstilo limpio y profesional, paleta de colores azul y gris.\nLuego iterad sobre el resultado: pedid cambios concretos, añadid texto, ajustad el diseño.\nCorrección en clase: mini-exposición de 2 minutos por persona. Mostráis la infografía y respondéis a una pregunta sobre una decisión que tomasteis.\n\n\n\n\n\n\nTipOpción avanzada\n\n\n\nSi quieres ir más allá, usa AI Studio para generar una página web estática sencilla en lugar de una infografía. El proceso es el mismo: partes de un prompt describiendo el contenido y el estilo, y la herramienta genera el código HTML. No necesitas saber programar para entender lo que está haciendo.\n\n\n\n\n\n\n\n\n\n\n\nNotaCierre del tema 9\n\n\n\nLo que habéis hecho en estas tres sesiones tiene un nombre: usar la IA como asistente inteligente, no como oráculo. Habéis buscado con criterio, verificado con escepticismo y producido con decisión propia. Eso es exactamente lo que diferencia a un profesional de alguien que delega sin pensar.\nLas herramientas cambiarán. El criterio que habéis entrenado, no.",
+    "crumbs": [
+      "Tema 9. La IA en el entorno académico",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span>"
+    ]
+  }
+]

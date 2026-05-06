@@ -1,0 +1,26 @@
+# Bienvenidos {.unnumbered}
+
+Este sitio recoge los materiales de la asignatura **Documentación aplicada a la traducción** del Grado en Traducción e Interpretación de la Universidad de Granada.
+
+## Cómo usar estos materiales
+
+Cada tema está organizado en sesiones de dos horas que combinan contenido teórico y prácticas. Las prácticas de clase y los entregables individuales están descritos al final de cada sesión.
+
+Los materiales se actualizan de forma continua. Si encuentras algún error o tienes sugerencias, puedes abrir un *issue* en el repositorio usando el enlace de la barra superior.
+
+## Herramientas necesarias
+
+A lo largo del curso utilizaremos varias herramientas. Todas son accesibles con tu cuenta institucional `@ugr.es` o de forma gratuita:
+
+- [Gemini](https://gemini.google.com) — acceso con cuenta UGR Google
+- [NotebookLM](https://notebooklm.google.com) — acceso con cuenta UGR Google
+- [AI Studio](https://aistudio.google.com) — acceso con cuenta UGR Google
+- [Perplexity](https://www.perplexity.ai) — versión gratuita suficiente
+- [Elicit](https://elicit.com) — versión gratuita suficiente
+- [Scite](https://scite.ai) — versión gratuita suficiente
+- [ChatGPT](https://chatgpt.com) — versión gratuita suficiente
+- [DeepL](https://www.deepl.com) — versión gratuita suficiente
+
+## Contacto
+
+Para dudas sobre el contenido, usa el foro de la asignatura en PRADO. Para cuestiones administrativas, contacta por correo institucional.

@@ -1,0 +1,41 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Documentación aplicada a la traducción"
+  author: "Universidad de Granada"
+  language: es
+  repo-url: https://github.com/tuusuario/documentacion-traduccion
+  repo-actions: [edit, issue]
+  sidebar:
+    style: docked
+    search: true
+  navbar:
+    background: primary
+  chapters:
+    - index.qmd
+    - part: "Tema 9. La IA en el entorno académico"
+      chapters:
+        - tema9/sesion1.qmd
+        - tema9/sesion2.qmd
+        - tema9/sesion3.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    toc-title: "En esta página"
+    number-sections: false
+    smooth-scroll: true
+    code-fold: true
+    code-tools: true
+    highlight-style: github
+    link-external-newwindow: true
+    lang: es

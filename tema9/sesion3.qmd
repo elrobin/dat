@@ -1,0 +1,208 @@
+# Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas
+
+::: {.callout-note}
+## Sesión 3 de 3 &nbsp;·&nbsp; 2 horas
+**Foco:** aplicar con criterio  
+**Hilo conductor:** la IA como asistente, no como sustituto — y ponerle nombre a lo que habéis estado haciendo
+:::
+
+## Ingeniería de prompts
+
+La **ingeniería de prompts** es la práctica de diseñar instrucciones de entrada para obtener outputs más útiles y precisos de un LLM. No es una disciplina técnica reservada a programadores: es una habilidad comunicativa que cualquier profesional puede desarrollar.
+
+### Técnicas básicas
+
+#### Zero-shot prompting
+
+Se pide una tarea sin proporcionar ningún ejemplo ni contexto adicional. Es el punto de partida más simple.
+
+```
+Traduce el siguiente término jurídico al inglés: "resolver el contrato de pleno derecho"
+```
+
+#### Few-shot prompting
+
+Se proporcionan uno o varios ejemplos dentro del prompt para guiar el tipo de output esperado. Muy útil para tareas de formato específico.
+
+```
+Extrae los términos clave del siguiente texto y proporciona su equivalente en inglés 
+jurídico. Sigue este formato:
+
+Término: licenciante
+Equivalente: licensor
+Contexto: derecho contractual anglosajón
+
+Ahora haz lo mismo con este texto: [texto]
+```
+
+#### Chain-of-Thought (CoT) prompting
+
+Se pide al modelo que razone paso a paso antes de dar la respuesta final. Mejora significativamente los resultados en tareas que requieren análisis o justificación.
+
+```
+Analiza si el término "requerimiento judicial previo" tiene equivalente directo en el 
+sistema jurídico inglés. Razona tu respuesta antes de concluir: considera primero las 
+diferencias entre el sistema procesal civil español y el anglosajón, luego evalúa si 
+existe un concepto equivalente, y finalmente propón la traducción más adecuada.
+```
+
+#### Role prompting
+
+Se asigna un rol al modelo para que ajuste su base de conocimiento y tono al tipo de respuesta deseada.
+
+```
+Actúa como terminólogo especializado en derecho contractual con experiencia en el par 
+de lenguas español-inglés. Tu tarea es revisar la siguiente lista de equivalencias y 
+señalar cuáles son incorrectas o imprecisas para un contexto de derecho anglosajón.
+```
+
+#### Prompting multimodal
+
+Se combinan diferentes formatos de entrada: texto, imágenes, PDFs, código. Gemini y ChatGPT admiten subir documentos directamente al chat.
+
+Casos de uso para T&I:
+
+- Subir un glosario en PDF y pedir que lo use como referencia para verificar terminología
+- Subir una captura de pantalla de una interfaz y pedir que explique cómo usarla
+- Combinar un texto fuente con instrucciones estilísticas para orientar la traducción
+
+### Tipos de prompts por función
+
+| Tipo | Para qué sirve | Ejemplo |
+|------|---------------|---------|
+| Instrucción directa | Pedir algo concreto | "Dame una ecuación de búsqueda para Web of Science sobre traducción jurídica" |
+| Reescritura y edición | Mejorar un texto | "Reescribe este párrafo en un registro más formal e indica los cambios" |
+| Consulta | Obtener una explicación | "¿Cuál es la diferencia entre *assignment* y *transfer* en derecho contractual inglés?" |
+| Tarea simulada | Generar contenido desde un rol | "Eres un revisor de traducción jurídica. Evalúa este fragmento y señala los problemas" |
+| Refinamiento | Ajustar la respuesta anterior | "Bien, ahora hazlo más conciso y elimina los ejemplos" |
+
+## La IA como asistente
+
+Llegados aquí, es el momento de nombrar lo que habéis estado haciendo estas tres sesiones.
+
+En ningún momento os hemos pedido que la IA haga el trabajo por vosotros. Os hemos pedido que la uséis para **buscar** (sesión 1), **verificar** (sesión 2) y ahora **construir con criterio** (sesión 3). Eso tiene un nombre: usar la IA como **asistente**, no como oráculo ni como sustituto.
+
+Los usos más valiosos de un LLM en el trabajo de documentación y traducción son precisamente los que no generan un producto final directamente:
+
+- **Brainstorming:** generar ideas, ángulos o enfoques que luego tú evalúas y seleccionas
+- **Andamiaje:** obtener una estructura o borrador sobre el que trabajar, no el resultado final
+- **Ecuaciones de búsqueda:** construir búsquedas para bases de datos que luego ejecutas y verificas tú
+- **Tutoriales on demand:** pedir que te explique cómo usar una herramienta, un formato o una función concreta
+- **Código asistido:** generar un script para automatizar una tarea repetitiva aunque no sepas programar
+
+::: {.callout-tip}
+## La pregunta clave
+Antes de usar la IA para una tarea, pregúntate: ¿estoy usando la IA para **pensar mejor** o para **no pensar**? La primera opción suma. La segunda resta.
+:::
+
+## Gemini integrado en Google Workspace
+
+Con tu cuenta UGR tienes acceso a Gemini integrado directamente en Google Docs, Sheets y Drive. Muchos de vosotros ya lo usáis sin identificarlo conscientemente: el botón de "Ayúdame a escribir" en Docs, las sugerencias de respuesta en Gmail, los resúmenes automáticos en Drive.
+
+Usos concretos para T&I:
+
+- En Google Docs: pedir que reformule un párrafo, que cambie el registro, que resuma un documento largo
+- En Google Sheets: generar fórmulas, ordenar y filtrar datos terminológicos
+- En Drive: buscar dentro de documentos usando lenguaje natural
+
+## Canvas y AI Studio: de prompt a artefacto visual
+
+**Canvas** (disponible en ChatGPT y en algunas versiones de Gemini) permite trabajar de forma iterativa sobre un documento o código, editando partes concretas sin reescribir todo cada vez.
+
+**AI Studio** de Google permite construir aplicaciones sencillas a partir de prompts, incluyendo páginas web estáticas, sin necesidad de saber HTML. El punto no es que aprendáis a programar: es que entendéis que la IA puede hacer de puente entre vuestra idea y un artefacto técnico que de otra manera requeriría conocimientos que no tenéis todavía.
+
+---
+
+## Prácticas de la sesión
+
+### Práctica en clase A — Refinamiento de prompts en cadena {#practica-3a}
+
+::: {.callout-note icon=false}
+## 🔵 Práctica en clase &nbsp;·&nbsp; Individual &nbsp;·&nbsp; ~25 min
+
+**Tarea:** Partid del prompt más básico posible y llegad a uno bien construido en cuatro iteraciones. Usad Gemini con vuestra cuenta UGR.
+
+**Iteración 1 — Prompt malo:**
+```
+tradúceme esto al inglés
+[pegar el texto base]
+```
+
+**Iteración 2 — Añadir tarea y contexto:**
+```
+Traduce el siguiente fragmento de contrato de licencia de software del español al inglés 
+jurídico. El texto va dirigido a una empresa anglosajona en un contexto de derecho 
+contractual británico.
+[texto]
+```
+
+**Iteración 3 — Añadir formato y restricciones:**
+```
+[prompt anterior] 
+Presenta el resultado en dos columnas: español a la izquierda, inglés a la derecha. 
+Para los términos que no tengan equivalente directo en el sistema jurídico británico, 
+añade una nota breve explicando la diferencia conceptual.
+```
+
+**Iteración 4 — Añadir input multimodal:**  
+Subid junto al prompt una captura o PDF con una entrada del diccionario IATE o Black's Law Dictionary para uno de los términos clave. Pedid que tenga en cuenta esa referencia.
+
+**Puesta en común:** comparamos el resultado de la iteración 1 y la iteración 4. ¿Qué cambió? ¿Qué sigue siendo incorrecto aunque el prompt sea mejor?
+:::
+
+### Práctica en clase B — Flujo de trabajo real {#practica-3b}
+
+::: {.callout-note icon=false}
+## 🔵 Práctica en clase &nbsp;·&nbsp; Grupos de 3 &nbsp;·&nbsp; ~25 min
+
+**Tarea:** Resolved en grupo la siguiente tarea de documentación previa usando al menos dos herramientas distintas. Documentad qué usasteis para qué y por qué.
+
+**Encargo:** Necesitáis documentaros para traducir el texto base al francés jurídico. En 25 minutos tenéis que producir: (1) tres fuentes fiables, (2) cinco equivalencias terminológicas verificadas, (3) una nota sobre las diferencias entre el sistema jurídico español y el francés relevantes para esta traducción.
+
+**Lo que se evalúa no es el resultado sino el proceso:** ¿qué herramienta usasteis para qué paso? ¿Dónde falló la IA? ¿Cómo lo compensasteis?
+:::
+
+### Entregable 3 — Infografía del flujo de trabajo {#entregable-3}
+
+::: {.callout-warning icon=false}
+## 🟢 Entregable individual &nbsp;·&nbsp; Se hace y corrige en clase
+
+**Tarea:** Usando los entregables 1 y 2 como materia prima, documentad el flujo de trabajo completo que habéis seguido a lo largo de las tres sesiones. El output no es un documento de texto: es una **infografía** creada con Canvas (Gemini o ChatGPT) o con **AI Studio**.
+
+**Qué debe incluir la infografía:**
+
+1. Las tres fases del flujo (búsqueda de fuentes → glosario verificado → traducción asistida)
+2. Qué herramienta usaste en cada fase y para qué
+3. Al menos un prompt que funcionó bien y uno que no funcionó
+4. Una decisión que tomaste tú porque la IA se equivocó o fue insuficiente
+
+**Proceso sugerido:**
+
+```
+Prompt de partida para Canvas o AI Studio:
+
+Crea una infografía visual sobre mi flujo de trabajo de documentación para traducción. 
+El flujo tiene tres fases: [describe brevemente cada fase]. 
+Incluye iconos simples, flechas de proceso y una sección de "lecciones aprendidas". 
+Estilo limpio y profesional, paleta de colores azul y gris.
+```
+
+Luego iterad sobre el resultado: pedid cambios concretos, añadid texto, ajustad el diseño.
+
+**Corrección en clase:** mini-exposición de 2 minutos por persona. Mostráis la infografía y respondéis a una pregunta sobre una decisión que tomasteis.
+
+::: {.callout-tip}
+## Opción avanzada
+Si quieres ir más allá, usa AI Studio para generar una página web estática sencilla en lugar de una infografía. El proceso es el mismo: partes de un prompt describiendo el contenido y el estilo, y la herramienta genera el código HTML. No necesitas saber programar para entender lo que está haciendo.
+:::
+:::
+
+---
+
+::: {.callout-note}
+## Cierre del tema 9
+
+Lo que habéis hecho en estas tres sesiones tiene un nombre: usar la IA como **asistente inteligente**, no como oráculo. Habéis buscado con criterio, verificado con escepticismo y producido con decisión propia. Eso es exactamente lo que diferencia a un profesional de alguien que delega sin pensar.
+
+Las herramientas cambiarán. El criterio que habéis entrenado, no.
+:::
