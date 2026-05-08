@@ -1,0 +1,159 @@
+
+<style>
+  @keyframes pulse { 0%,100%{opacity:.7} 50%{opacity:1} }
+  .token-box { cursor:pointer; transition: opacity .2s; }
+  .token-box:hover rect { opacity: .85; }
+  .att-line { transition: stroke-width .3s, opacity .3s; pointer-events:none; }
+  #hint { font-size:12px; fill:var(--color-text-secondary,#888); text-anchor:middle; }
+</style>
+<svg id="svg" width="100%" viewBox="0 0 680 460" role="img">
+  <title>Mecanismo de atención en un Transformer</title>
+  <desc>Diagrama interactivo del mecanismo de atención. Haz clic en una palabra para ver a qué otras palabras presta más atención el modelo.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <g class="c-purple">
+    <rect x="40" y="44" width="600" height="28" rx="6" stroke-width="0.5"/>
+    <text class="ts" x="52" y="63" dominant-baseline="central">Capa 3 — abstracción semántica</text>
+  </g>
+  <g class="c-purple">
+    <rect x="40" y="84" width="600" height="28" rx="6" stroke-width="0.5"/>
+    <text class="ts" x="52" y="103" dominant-baseline="central">Capa 2 — relaciones gramaticales</text>
+  </g>
+  <g class="c-purple">
+    <rect x="40" y="124" width="600" height="28" rx="6" stroke-width="0.5"/>
+    <text class="ts" x="52" y="143" dominant-baseline="central">Capa 1 — patrones básicos</text>
+  </g>
+
+  <g id="att-lines"></g>
+
+  <g id="tokens">
+    <g class="token-box" data-i="0" onclick="selectToken(0)">
+      <rect id="tb0" x="44"  y="210" width="80" height="44" rx="8" stroke-width="1"/>
+      <text id="tt0" class="th" x="84"  y="232" text-anchor="middle" dominant-baseline="central">El</text>
+    </g>
+    <g class="token-box" data-i="1" onclick="selectToken(1)">
+      <rect id="tb1" x="154" y="210" width="100" height="44" rx="8" stroke-width="1"/>
+      <text id="tt1" class="th" x="204" y="232" text-anchor="middle" dominant-baseline="central">traductor</text>
+    </g>
+    <g class="token-box" data-i="2" onclick="selectToken(2)">
+      <rect id="tb2" x="284" y="210" width="80" height="44" rx="8" stroke-width="1"/>
+      <text id="tt2" class="th" x="324" y="232" text-anchor="middle" dominant-baseline="central">revisó</text>
+    </g>
+    <g class="token-box" data-i="3" onclick="selectToken(3)">
+      <rect id="tb3" x="394" y="210" width="70" height="44" rx="8" stroke-width="1"/>
+      <text id="tt3" class="th" x="429" y="232" text-anchor="middle" dominant-baseline="central">el</text>
+    </g>
+    <g class="token-box" data-i="4" onclick="selectToken(4)">
+      <rect id="tb4" x="494" y="210" width="80" height="44" rx="8" stroke-width="1"/>
+      <text id="tt4" class="th" x="534" y="232" text-anchor="middle" dominant-baseline="central">texto</text>
+    </g>
+  </g>
+
+  <g id="output-layer" opacity="0">
+    <g class="c-teal">
+      <rect id="ob0" x="44"  y="310" width="80"  height="44" rx="8" stroke-width="0.5"/>
+      <text id="ot0" class="ts" x="84"  y="332" text-anchor="middle" dominant-baseline="central">El</text>
+    </g>
+    <g class="c-teal">
+      <rect id="ob1" x="154" y="310" width="100" height="44" rx="8" stroke-width="0.5"/>
+      <text id="ot1" class="ts" x="204" y="332" text-anchor="middle" dominant-baseline="central">traductor</text>
+    </g>
+    <g class="c-teal">
+      <rect id="ob2" x="284" y="310" width="80"  height="44" rx="8" stroke-width="0.5"/>
+      <text id="ot2" class="ts" x="324" y="332" text-anchor="middle" dominant-baseline="central">revisó</text>
+    </g>
+    <g class="c-teal">
+      <rect id="ob3" x="394" y="310" width="70"  height="44" rx="8" stroke-width="0.5"/>
+      <text id="ot3" class="ts" x="429" y="332" text-anchor="middle" dominant-baseline="central">el</text>
+    </g>
+    <g class="c-teal">
+      <rect id="ob4" x="494" y="310" width="80"  height="44" rx="8" stroke-width="0.5"/>
+      <text id="ot4" class="ts" x="534" y="332" text-anchor="middle" dominant-baseline="central">texto</text>
+    </g>
+    <text class="ts" x="340" y="380" text-anchor="middle" fill="var(--color-text-secondary)">Representación enriquecida con contexto</text>
+  </g>
+
+  <text id="hint" x="340" y="290">Haz clic en una palabra para ver a qué presta atención</text>
+
+  <text class="ts" x="340" y="420" text-anchor="middle" fill="var(--color-text-secondary)">Grosor de línea = peso de atención &nbsp;·&nbsp; Ámbar = palabra seleccionada &nbsp;·&nbsp; Verde = representación de salida</text>
+</svg>
+
+<script>
+const cx = [84, 204, 324, 429, 534];
+const tokenY = 232;
+const layerY = [152, 112, 72];
+
+const weights = [
+  [0.7, 0.1, 0.05, 0.1, 0.05],
+  [0.2, 0.6, 0.1,  0.05,0.05],
+  [0.1, 0.3, 0.5,  0.05,0.05],
+  [0.3, 0.1, 0.1,  0.4, 0.1 ],
+  [0.05,0.4, 0.3,  0.1, 0.15],
+];
+
+let selected = -1;
+
+function selectToken(i) {
+  selected = i;
+  const svg = document.getElementById('svg');
+  const linesG = document.getElementById('att-lines');
+  linesG.innerHTML = '';
+
+  for (let j = 0; j < 5; j++) {
+    const tb = document.getElementById('tb'+j);
+    const tt = document.getElementById('tt'+j);
+    if (j === i) {
+      tb.setAttribute('class','c-amber');
+      tb.setAttribute('fill','');
+      tb.setAttribute('stroke-width','1.5');
+    } else {
+      tb.setAttribute('class','');
+      tb.setAttribute('fill','var(--color-background-secondary)');
+      tb.setAttribute('stroke','var(--color-border-secondary)');
+      tb.setAttribute('stroke-width','0.5');
+    }
+  }
+
+  const w = weights[i];
+  for (let j = 0; j < 5; j++) {
+    const wt = w[j];
+    const sw = Math.max(0.5, wt * 10);
+    const op = Math.max(0.08, wt * 1.2);
+    const color = j === i ? '#EF9F27' : '#7F77DD';
+
+    layerY.forEach((ly, li) => {
+      const jitter = (li - 1) * 6;
+      const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1', cx[i]);
+      line.setAttribute('y1', tokenY - 22);
+      line.setAttribute('x2', cx[j] + jitter);
+      line.setAttribute('y2', ly + 14);
+      line.setAttribute('stroke', color);
+      line.setAttribute('stroke-width', sw * (1 - li * 0.15));
+      line.setAttribute('opacity', op);
+      line.setAttribute('stroke-linecap','round');
+      line.setAttribute('class','att-line');
+      linesG.appendChild(line);
+    });
+
+    const downLine = document.createElementNS('http://www.w3.org/2000/svg','line');
+    downLine.setAttribute('x1', cx[i]);
+    downLine.setAttribute('y1', tokenY + 22);
+    downLine.setAttribute('x2', cx[j]);
+    downLine.setAttribute('y2', 308);
+    downLine.setAttribute('stroke', color);
+    downLine.setAttribute('stroke-width', sw * 0.7);
+    downLine.setAttribute('opacity', op * 0.8);
+    downLine.setAttribute('stroke-linecap','round');
+    downLine.setAttribute('class','att-line');
+    linesG.appendChild(downLine);
+  }
+
+  document.getElementById('hint').setAttribute('opacity','0');
+  document.getElementById('output-layer').setAttribute('opacity','1');
+}
+</script>

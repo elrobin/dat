@@ -15,6 +15,12 @@ table {
   font-weight: 600;
 }
 
+/* Alinear a la derecha*/
+.right
+{
+  text-align: right;
+}
+
 /* Código de ejemplo de prompts */
 pre code {
   font-size: 0.85rem;
