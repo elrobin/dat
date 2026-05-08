@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sesión 2. Riesgos, limitaciones y uso crítico – Documentación aplicada a la traducción</title>
+<title>Limitaciones y uso crítico – Documentación aplicada a la traducción</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -302,7 +267,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tema9/sesion1.html">9| La IA en el entorno académico</a></li><li class="breadcrumb-item"><a href="../tema9/sesion2.html"><span class="chapter-title">Sesión 2. Riesgos, limitaciones y uso crítico</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tema9/sesion1.html">9| La IA en el entorno académico</a></li><li class="breadcrumb-item"><a href="../tema9/sesion2.html"><span class="chapter-title">Limitaciones y uso crítico</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -348,7 +313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tema9/sesion2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 2. Riesgos, limitaciones y uso crítico</span></a>
+  <a href="../tema9/sesion2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Limitaciones y uso crítico</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -368,14 +333,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">En esta página</h2>
    
   <ul class="collapse">
-  <li><a href="#funcionalidades-y-limitaciones-básicas" id="toc-funcionalidades-y-limitaciones-básicas" class="nav-link active" data-scroll-target="#funcionalidades-y-limitaciones-básicas">Funcionalidades y limitaciones básicas</a></li>
-  <li><a href="#alucinaciones" id="toc-alucinaciones" class="nav-link" data-scroll-target="#alucinaciones">Alucinaciones</a></li>
-  <li><a href="#sesgos-lingüísticos" id="toc-sesgos-lingüísticos" class="nav-link" data-scroll-target="#sesgos-lingüísticos">Sesgos lingüísticos</a></li>
-  <li><a href="#evaluación-de-la-calidad-de-los-outputs" id="toc-evaluación-de-la-calidad-de-los-outputs" class="nav-link" data-scroll-target="#evaluación-de-la-calidad-de-los-outputs">Evaluación de la calidad de los outputs</a></li>
-  <li><a href="#ética-e-integridad-académica" id="toc-ética-e-integridad-académica" class="nav-link" data-scroll-target="#ética-e-integridad-académica">Ética e integridad académica</a></li>
-  <li><a href="#privacidad-y-propiedad-intelectual" id="toc-privacidad-y-propiedad-intelectual" class="nav-link" data-scroll-target="#privacidad-y-propiedad-intelectual">Privacidad y propiedad intelectual</a></li>
-  <li><a href="#notebooklm-como-caso-de-estudio-crítico" id="toc-notebooklm-como-caso-de-estudio-crítico" class="nav-link" data-scroll-target="#notebooklm-como-caso-de-estudio-crítico">NotebookLM como caso de estudio crítico</a></li>
-  <li><a href="#prácticas-de-la-sesión" id="toc-prácticas-de-la-sesión" class="nav-link" data-scroll-target="#prácticas-de-la-sesión">Prácticas de la sesión</a></li>
+  <li><a href="#limitaciones-técnicas-de-los-llms" id="toc-limitaciones-técnicas-de-los-llms" class="nav-link active" data-scroll-target="#limitaciones-técnicas-de-los-llms">Limitaciones técnicas de los LLMs</a></li>
+  <li><a href="#herramientas-especializadas" id="toc-herramientas-especializadas" class="nav-link" data-scroll-target="#herramientas-especializadas">Herramientas especializadas</a></li>
+  <li><a href="#efectos-nocivos-del-uso-inadecuado" id="toc-efectos-nocivos-del-uso-inadecuado" class="nav-link" data-scroll-target="#efectos-nocivos-del-uso-inadecuado">Efectos nocivos del uso inadecuado</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/elrobin/dat/edit/main/tema9/sesion2.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/elrobin/dat/issues/new" class="toc-action"><i class="bi empty"></i>Informar sobre problema</a></li></ul></div></nav>
     </div>
@@ -383,9 +343,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tema9/sesion1.html">9| La IA en el entorno académico</a></li><li class="breadcrumb-item"><a href="../tema9/sesion2.html"><span class="chapter-title">Sesión 2. Riesgos, limitaciones y uso crítico</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tema9/sesion1.html">9| La IA en el entorno académico</a></li><li class="breadcrumb-item"><a href="../tema9/sesion2.html"><span class="chapter-title">Limitaciones y uso crítico</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Sesión 2. Riesgos, limitaciones y uso crítico</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Limitaciones y uso crítico</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
 </div>
 
 
@@ -402,37 +362,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Sesión 2 de 3 &nbsp;·&nbsp; 2 horas
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Foco:</strong> fallar de forma controlada y reflexionar<br>
-<strong>Hilo conductor:</strong> la IA no es un oráculo — el criterio es tuyo, no de la herramienta</p>
-</div>
-</div>
-<section id="funcionalidades-y-limitaciones-básicas" class="level2">
-<h2 class="anchored" data-anchor-id="funcionalidades-y-limitaciones-básicas">Funcionalidades y limitaciones básicas</h2>
-<p>Antes de hablar de riesgos concretos, conviene tener claro qué tipo de sistema es un LLM:</p>
-<ul>
-<li>Es un <strong>chat conversacional</strong>, no un sistema de preguntas y respuestas con acceso a una base de datos verificada</li>
-<li><strong>No discrimina las fuentes</strong> con las que fue entrenado: un artículo científico revisado por pares y una entrada de un foro anónimo tienen el mismo peso estadístico</li>
-<li><strong>Aprende patrones de texto</strong>, no hechos: genera la continuación más probable, no la más verdadera</li>
-<li><strong>Cada respuesta es aleatoria</strong> en cierta medida: el mismo prompt puede dar respuestas distintas en distintas sesiones</li>
-</ul>
-</section>
-<section id="alucinaciones" class="level2">
-<h2 class="anchored" data-anchor-id="alucinaciones">Alucinaciones</h2>
-<p>El término <strong>alucinación</strong> designa la generación de contenido verosímil pero incorrecto o inventado. El modelo no “miente” conscientemente: simplemente produce la secuencia de texto estadísticamente más probable, aunque no corresponda a ningún hecho real.</p>
-<p>Las alucinaciones son especialmente peligrosas en contextos de traducción especializada porque:</p>
+<section id="limitaciones-técnicas-de-los-llms" class="level2">
+<h2 class="anchored" data-anchor-id="limitaciones-técnicas-de-los-llms">Limitaciones técnicas de los LLMs</h2>
+<p>Los LLMs son generadores de texto estadístico, no sistemas de conocimiento verificado. Entender esto es la clave para interpretar correctamente sus fallos: no mienten, no se equivocan por descuido, simplemente producen la secuencia de texto más probable dado su entrenamiento. De ahí se derivan todas sus limitaciones.</p>
+<section id="alucinaciones" class="level3">
+<h3 class="anchored" data-anchor-id="alucinaciones">Alucinaciones</h3>
+<p>El término <strong>alucinación</strong> designa la generación de contenido verosímil pero incorrecto o inventado. El modelo no tiene forma de distinguir entre lo que sabe y lo que no sabe: cuando no tiene información suficiente, extrapola patrones y genera texto plausible con la misma confianza que cuando acierta.</p>
+<p>Las alucinaciones son especialmente peligrosas en T&amp;I porque:</p>
 <ul>
 <li>Los términos inventados suenan plausibles en la lengua meta</li>
-<li>Las referencias bibliográficas falsas tienen el formato correcto (autor, año, título, revista)</li>
+<li>Las referencias bibliográficas falsas tienen el formato correcto: autor, año, título, revista existente</li>
 <li>Los errores conceptuales en textos jurídicos o médicos pueden tener consecuencias reales</li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -441,219 +380,300 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Advertencia</span>Ejemplo real de alucinación bibliográfica
+<span class="screen-reader-only">Advertencia</span>Ejemplo real
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>Si pides a ChatGPT una lista de artículos sobre traducción jurídica español-inglés, es habitual que incluya títulos que no existen, publicados en revistas reales, con autores reales, en años plausibles. El formato es impecable. El artículo, inexistente.</p>
+<p>Puedes comprobarlo tú mismo: coge cualquier referencia que te dé un LLM sin conexión a internet y búscala en Google Scholar.</p>
 </div>
 </div>
 </section>
-<section id="sesgos-lingüísticos" class="level2">
-<h2 class="anchored" data-anchor-id="sesgos-lingüísticos">Sesgos lingüísticos</h2>
-<p>Los LLMs no son igualmente competentes en todos los idiomas. La calidad de sus outputs depende directamente del volumen de datos en esa lengua que había en el corpus de entrenamiento.</p>
+<section id="sesgos-lingüísticos" class="level3">
+<h3 class="anchored" data-anchor-id="sesgos-lingüísticos">Sesgos lingüísticos</h3>
+<p>Los LLMs no son igualmente competentes en todos los idiomas. Su calidad depende directamente del volumen de texto en esa lengua que había en el corpus de entrenamiento, que está fuertemente sesgado hacia el inglés y, en menor medida, hacia las lenguas europeas mayoritarias.</p>
 <p>Consecuencias prácticas para T&amp;I:</p>
 <ul>
-<li>En pares de lenguas con corpus pequeño (español-euskera, español-galés, español-catalán jurídico), los errores son más frecuentes y menos detectables porque la propia herramienta no sabe que se está equivocando</li>
-<li>Los modelos tienden a “anglificar” las estructuras sintácticas incluso cuando traducen hacia lenguas con estructuras muy distintas</li>
-<li>La terminología especializada en lenguas minoritarias está sistemáticamente subrepresentada</li>
+<li>En pares de lenguas con corpus pequeño —español-euskera, español-galés, español-catalán jurídico— los errores son más frecuentes y menos detectables porque el propio modelo no sabe que se está equivocando</li>
+<li>Los modelos tienden a <em>anglificar</em> las estructuras sintácticas incluso cuando traducen hacia lenguas con estructuras muy distintas</li>
+<li>La terminología especializada en lenguas con menor presencia digital está sistemáticamente subrepresentada</li>
 </ul>
 </section>
-<section id="evaluación-de-la-calidad-de-los-outputs" class="level2">
-<h2 class="anchored" data-anchor-id="evaluación-de-la-calidad-de-los-outputs">Evaluación de la calidad de los outputs</h2>
-<p>Ante cualquier output generado por IA, aplica este filtro mínimo:</p>
+<section id="sesgos-del-corpus-de-entrenamiento" class="level3">
+<h3 class="anchored" data-anchor-id="sesgos-del-corpus-de-entrenamiento">Sesgos del corpus de entrenamiento</h3>
+<p>Más allá del idioma, el corpus con el que se entrena un LLM introduce sesgos de contenido. El modelo aprende a reproducir los patrones más frecuentes en ese corpus, lo que significa que tiende a privilegiar ciertos enfoques, marcos conceptuales o perspectivas culturales sobre otros. En T&amp;I esto se manifiesta en traducciones que reproducen el sesgo cultural del texto mayoritario en el corpus, no necesariamente el del texto fuente.</p>
+</section>
+<section id="fecha-de-corte-y-falta-de-verificación-en-tiempo-real" class="level3">
+<h3 class="anchored" data-anchor-id="fecha-de-corte-y-falta-de-verificación-en-tiempo-real">Fecha de corte y falta de verificación en tiempo real</h3>
+<p>Los LLMs tienen una <strong>fecha de corte de conocimiento</strong>: no saben nada de lo que ocurrió después de su entrenamiento. Aunque muchos modelos actuales tienen conexión a internet, eso no elimina el problema: el modelo puede malinterpretar o resumir incorrectamente las fuentes que consulta, y los usuarios tienden a confiar más en las respuestas cuando citan URLs, sin verificar si el contenido recuperado es realmente lo que el modelo dice que es.</p>
+</section>
+<section id="cómo-evaluar-un-output" class="level3">
+<h3 class="anchored" data-anchor-id="cómo-evaluar-un-output">Cómo evaluar un output</h3>
+<p>Ante cualquier resultado generado por IA, aplica este filtro mínimo antes de usarlo:</p>
 <ol type="1">
-<li><strong>¿Las fuentes o referencias existen?</strong> Comprueba DOI, enlace o búsqueda directa en Google Scholar</li>
-<li><strong>¿Los términos son reales y correctos en ese dominio?</strong> Contrasta con un diccionario especializado o una base terminológica</li>
-<li><strong>¿La información es actual?</strong> Los LLMs tienen fecha de corte de conocimiento</li>
+<li><strong>¿Las fuentes o referencias existen?</strong> Comprueba el DOI o búscalo directamente en Google Scholar</li>
+<li><strong>¿Los términos son correctos en ese dominio?</strong> Contrasta con un diccionario especializado o base terminológica</li>
+<li><strong>¿La información es actual?</strong> Recuerda la fecha de corte del modelo</li>
 <li><strong>¿El output es consistente internamente?</strong> Un texto que se contradice a sí mismo es señal de alucinación</li>
-<li><strong>¿Sabes de dónde viene la información?</strong> Si la herramienta no cita fuentes, no puedes verificar</li>
+<li><strong>¿Sabes de dónde viene?</strong> Si la herramienta no cita fuentes, no puedes verificar</li>
 </ol>
-</section>
-<section id="ética-e-integridad-académica" class="level2">
-<h2 class="anchored" data-anchor-id="ética-e-integridad-académica">Ética e integridad académica</h2>
-<section id="qué-dice-la-ugr" class="level3">
-<h3 class="anchored" data-anchor-id="qué-dice-la-ugr">Qué dice la UGR</h3>
-<p>La Universidad de Granada no prohíbe el uso de IA generativa, pero exige <strong>transparencia</strong>: si has usado IA en la elaboración de un trabajo, debes indicarlo explícitamente. El uso no declarado de IA para generar contenido que entregas como propio es considerado una falta de integridad académica.</p>
-<p>Consulta la política actualizada en el <a href="https://biblioteca.ugr.es">portal de integridad académica de la UGR</a>.</p>
-</section>
-<section id="cómo-citar-el-uso-de-ia" class="level3">
-<h3 class="anchored" data-anchor-id="cómo-citar-el-uso-de-ia">Cómo citar el uso de IA</h3>
-<p>La forma más extendida actualmente sigue las recomendaciones de APA 7ª edición:</p>
-<pre><code>OpenAI. (2024). ChatGPT (versión GPT-4o) [Modelo de lenguaje de gran escala]. 
-https://chatgpt.com</code></pre>
-<p>Además de la cita, es buena práctica incluir una nota metodológica breve que explique para qué usaste la herramienta y qué verificaste o modificaste del output.</p>
-</section>
-<section id="usos-aceptables-zona-gris-e-inaceptables" class="level3">
-<h3 class="anchored" data-anchor-id="usos-aceptables-zona-gris-e-inaceptables">Usos aceptables, zona gris e inaceptables</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 59%">
-<col style="width: 40%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Tipo de uso</th>
-<th>Ejemplos</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Aceptable</strong></td>
-<td>Buscar fuentes para documentarse, generar un borrador que luego reescribes, verificar terminología, mejorar el estilo de un texto propio</td>
-</tr>
-<tr class="even">
-<td><strong>Zona gris</strong></td>
-<td>Resumir un artículo que luego citas como si lo hubieras leído completo, usar IA para corregir un texto sin indicarlo</td>
-</tr>
-<tr class="odd">
-<td><strong>Inaceptable</strong></td>
-<td>Entregar como propio un texto generado íntegramente por IA, fabricar referencias bibliográficas</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="privacidad-y-propiedad-intelectual" class="level2">
-<h2 class="anchored" data-anchor-id="privacidad-y-propiedad-intelectual">Privacidad y propiedad intelectual</h2>
-<p>Cuando subes un texto a ChatGPT, Gemini u otras herramientas, ese texto puede ser usado para mejorar los modelos según los términos de uso de cada plataforma. Esto tiene implicaciones directas para el trabajo de traducción profesional:</p>
-<ul>
-<li><strong>Textos de clientes:</strong> subir un contrato, un informe médico o cualquier documento confidencial a una herramienta pública puede violar los acuerdos de confidencialidad</li>
-<li><strong>Textos protegidos por derechos de autor:</strong> subir el texto original de un libro o artículo puede ser problemático legalmente</li>
-<li><strong>Alternativa:</strong> Copilot con cuenta UGR garantiza que los datos permanecen dentro de la organización y no se usan para entrenar modelos</li>
-</ul>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Importante</span>Regla práctica
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Si el texto que vas a subir contiene información que no publicarías libremente en internet, no lo subas a una herramienta de IA pública. Usa Copilot con tu cuenta UGR o trabaja solo con fragmentos descontextualizados.</p>
-</div>
-</div>
-</section>
-<section id="notebooklm-como-caso-de-estudio-crítico" class="level2">
-<h2 class="anchored" data-anchor-id="notebooklm-como-caso-de-estudio-crítico">NotebookLM como caso de estudio crítico</h2>
-<p>NotebookLM trabaja sobre documentos cerrados que tú proporcionas, lo que en principio debería reducir las alucinaciones. Pero “en principio” no significa “siempre”. En esta sesión lo pondremos a prueba.</p>
 <hr>
 </section>
-<section id="prácticas-de-la-sesión" class="level2">
-<h2 class="anchored" data-anchor-id="prácticas-de-la-sesión">Prácticas de la sesión</h2>
-<section id="practica-2a" class="level3">
-<h3 class="anchored" data-anchor-id="practica-2a">Práctica en clase A — Caza de errores</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🔵 Práctica en clase &nbsp;·&nbsp; Individual &nbsp;·&nbsp; ~25 min
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Tarea:</strong> El siguiente texto es una traducción al inglés del fragmento base del tema generada por IA. Contiene al menos <strong>cuatro errores</strong> de distinto tipo. Identifícalos, clasifícalos y justifica por qué son errores.</p>
-<blockquote class="blockquote">
-<p><em>The licensor grants the licensee a non-exclusive, non-transferable and cancellable license for the use of the software subject of this contract, being expressly forbidden its sublicense, assignment or distribution to third parties without the previous and written consent of the licensor. The breach of any of the conditions established in this agreement will empower the licensor to terminate the contract by full right, without the need of previous judicial requirement.</em></p>
-</blockquote>
-<p><strong>Tipos de error a buscar:</strong> falso cognado, calco sintáctico, término técnico incorrecto en el sistema jurídico anglosajón, registro inadecuado.</p>
-<p><strong>Puesta en común:</strong> cada persona comparte un error. Se discute cuáles son los más peligrosos en un contexto profesional real y por qué la IA los comete.</p>
-</div>
-</div>
 </section>
-<section id="practica-2b" class="level3">
-<h3 class="anchored" data-anchor-id="practica-2b">Práctica en clase B — Casos en zona gris</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🔵 Práctica en clase &nbsp;·&nbsp; Grupos de 3-4 &nbsp;·&nbsp; ~20 min
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Tarea:</strong> Discutid en grupo dónde está la línea en cada uno de estos casos. Preparad una posición para defenderla en la puesta en común.</p>
-<p><strong>Caso 1:</strong> Una estudiante usa ChatGPT para generar un primer borrador de la sección de metodología de su TFG. Luego lo reescribe casi por completo, pero la estructura y algunas frases son del modelo. No lo menciona en el trabajo.</p>
-<p><strong>Caso 2:</strong> Un estudiante sube el PDF de un artículo académico a NotebookLM, le pide un resumen y lo incluye en su trabajo citando el artículo original (que no ha leído completo).</p>
-<p><strong>Caso 3:</strong> Una traductora en prácticas usa DeepL para hacer una primera pasada de un contrato de un cliente, lo revisa y corrige, y entrega la traducción como propia sin mencionarlo al cliente.</p>
-<p><strong>Preguntas guía:</strong> ¿Es un problema ético, académico, legal o los tres? ¿Cambia algo si se declara el uso? ¿Cambia algo si el resultado final es de calidad?</p>
-</div>
-</div>
-</section>
-<section id="entregable-2" class="level3">
-<h3 class="anchored" data-anchor-id="entregable-2">Entregable 2 — Glosario terminológico verificado</h3>
-<div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Advertencia</span>🟢 Entregable individual &nbsp;·&nbsp; Se hace y corrige en clase
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Tarea:</strong> Usando el mismo texto base de la sesión 1, pide a Gemini o ChatGPT que extraiga los términos clave y proponga equivalencias en inglés o francés. Luego <strong>verifica cada término</strong> usando al menos una de las fuentes que encontraste en el entregable 1.</p>
-<p><strong>Qué entregar</strong> — una tabla con estas columnas:</p>
+<section id="herramientas-especializadas" class="level2">
+<h2 class="anchored" data-anchor-id="herramientas-especializadas">Herramientas especializadas</h2>
+<p>Los LLMs generales pueden hacer de todo de forma mediocre. Las herramientas especializadas hacen una cosa de forma más fiable dentro de su dominio, precisamente porque están diseñadas para reducir algunos de los fallos descritos arriba. Pero ninguna los elimina por completo.</p>
+<section id="herramientas-de-recuperación-de-información-académica" class="level3">
+<h3 class="anchored" data-anchor-id="herramientas-de-recuperación-de-información-académica">Herramientas de recuperación de información académica</h3>
+<p><strong><a href="https://perplexity.ai">Perplexity</a></strong>, <strong><a href="https://elicit.com">Elicit</a></strong>, <strong><a href="https://consensus.app">Consensus</a></strong> y <strong><a href="https://scite.ai">Scite</a></strong> reducen el problema de las alucinaciones bibliográficas porque trabajan sobre índices de literatura real. Sin embargo, presentan sus propios sesgos:</p>
+<ul>
+<li><strong>Sesgo hacia literatura en abierto:</strong> tienen acceso preferente a PubMed, arXiv y repositorios de acceso abierto. La literatura detrás de paywall está sistemáticamente subrepresentada, lo que puede darte una imagen parcial del estado del arte en tu campo</li>
+<li><strong>Sesgo hacia lo más indexado digitalmente:</strong> tienden a recuperar más lo que está bien indexado, que suele coincidir con lo más reciente y con lo publicado en inglés. La literatura más antigua o en otras lenguas aparece menos</li>
+</ul>
+<p>Esto no las hace poco útiles, pero sí exige que seas consciente de lo que no estás viendo.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 19%">
-<col style="width: 34%">
-<col style="width: 27%">
+<col style="width: 23%">
+<col style="width: 33%">
+<col style="width: 42%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Término en español</th>
-<th>Propuesta de la IA</th>
-<th>Fuente que lo avala o contradice</th>
-<th>Decisión final justificada</th>
+<th>Herramienta</th>
+<th>Qué resuelve mejor</th>
+<th>Limitación que persiste</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>licenciatario</td>
-<td>licensee</td>
-<td>Black’s Law Dictionary (2024)</td>
-<td>✓ Correcto en derecho anglosajón</td>
+<td><strong>Perplexity</strong></td>
+<td>Preguntas factuales con cita de fuentes</td>
+<td>Mezcla fuentes académicas y no académicas</td>
 </tr>
 <tr class="even">
-<td>resolver el contrato de pleno derecho</td>
-<td>terminate the contract by full right</td>
-<td>— (no encontré fuente)</td>
-<td>✗ Calco; la expresión correcta es <em>terminate ipso facto</em> o <em>automatic termination</em></td>
+<td><strong>Elicit</strong></td>
+<td>Extracción de metodología y resultados de papers</td>
+<td>Solo literatura en abierto, mayoritariamente en inglés</td>
 </tr>
 <tr class="odd">
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
+<td><strong>Consensus</strong></td>
+<td>Síntesis de evidencia científica sobre una afirmación</td>
+<td>Sesgo hacia estudios con alta citación</td>
+</tr>
+<tr class="even">
+<td><strong>Scite</strong></td>
+<td>Verificar si un paper es apoyado o contradicho</td>
+<td>Cobertura limitada fuera de las grandes revistas</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Corrección en clase:</strong> se comparan tablas. Se discute qué ocurrió cuando la IA y la fuente no coincidían, y qué hizo cada persona ante la discrepancia.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+</section>
+<section id="herramientas-de-trabajo-con-documentos-propios" class="level3">
+<h3 class="anchored" data-anchor-id="herramientas-de-trabajo-con-documentos-propios">Herramientas de trabajo con documentos propios</h3>
+<p><strong><a href="https://notebooklm.google.com">NotebookLM</a></strong> trabaja exclusivamente sobre las fuentes que tú le proporcionas, lo que en principio debería reducir las alucinaciones. En la práctica, las reduce pero no las elimina: el modelo puede distorsionar o sintetizar incorrectamente incluso documentos que tiene delante. La diferencia es que al menos puedes verificar: siempre puedes ir al documento original a comprobar si lo que dice NotebookLM está realmente ahí.</p>
+</section>
+<section id="herramientas-de-traducción-especializada" class="level3">
+<h3 class="anchored" data-anchor-id="herramientas-de-traducción-especializada">Herramientas de traducción especializada</h3>
+<p><strong><a href="https://deepl.com">DeepL</a></strong> produce traducciones de mayor calidad que un LLM general en la mayoría de pares de lenguas europeas, especialmente en textos con estructura clara. Su punto débil es el mismo que el de cualquier herramienta automática: no entiende el sistema jurídico, médico o técnico de la lengua de llegada. Puede darte una equivalencia lingüísticamente correcta que sea conceptualmente incorrecta en ese sistema.</p>
+<hr>
+</section>
+</section>
+<section id="efectos-nocivos-del-uso-inadecuado" class="level2">
+<h2 class="anchored" data-anchor-id="efectos-nocivos-del-uso-inadecuado">Efectos nocivos del uso inadecuado</h2>
+<p>Entender cómo funciona un LLM y qué herramientas existen no es suficiente si no se reflexiona sobre cómo el uso sistemático e irreflexivo puede tener consecuencias que van más allá del error puntual.</p>
+<section id="sycophancy-y-pensamiento-acrítico" class="level3">
+<h3 class="anchored" data-anchor-id="sycophancy-y-pensamiento-acrítico">Sycophancy y pensamiento acrítico</h3>
+<p>Como vimos en la sesión 1, el entrenamiento RLHF lleva a los modelos a generar respuestas que agradan. Esto tiene una consecuencia directa: si usas un LLM para validar tus ideas, tenderá a confirmártelas. No es un buen interlocutor crítico. Para aprender, necesitas que alguien te lleve la contraria cuando te equivocas. Un LLM rara vez lo hará.</p>
+</section>
+<section id="ilusión-de-competencia" class="level3">
+<h3 class="anchored" data-anchor-id="ilusión-de-competencia">Ilusión de competencia</h3>
+<p>Un LLM puede generar un texto técnico convincente sobre un tema que no dominas. El peligro no es que el texto sea incorrecto, sino que <em>tú no puedas detectar que es incorrecto</em> porque no tienes el conocimiento previo necesario para evaluarlo. Esto es especialmente relevante en traducción especializada: si no conoces el dominio, no puedes verificar la terminología, y si no puedes verificar la terminología, no puedes garantizar la calidad de tu trabajo.</p>
+</section>
+<section id="deuda-cognitiva" class="level3">
+<h3 class="anchored" data-anchor-id="deuda-cognitiva">Deuda cognitiva</h3>
+<p>Un estudio reciente del MIT Media Lab (Kosmyna et al., 2025) midió la actividad cerebral mediante EEG en tres grupos de participantes que redactaron ensayos usando, respectivamente, un LLM, un buscador web o ninguna herramienta. Los resultados mostraron que el grupo que usó LLM presentó hasta un <strong>55% menos de conectividad neural</strong> que el grupo sin herramientas, y que el <strong>83% de sus participantes no fue capaz de citar su propio ensayo</strong> justo después de haberlo escrito. Cuando se retiró el acceso al LLM en una cuarta sesión, este grupo rindió peor que el grupo que nunca lo había usado.</p>
+<p>Los autores acuñan el concepto de <strong>deuda cognitiva</strong>: el uso sistemático del LLM aplaza el esfuerzo mental a corto plazo pero genera costes a largo plazo en pensamiento crítico, memoria y creatividad.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Pista
+<span class="screen-reader-only">Advertencia</span>Importante: limitaciones del estudio
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Para terminología jurídica en inglés, IATE (la base terminológica de la UE) y Black’s Law Dictionary son referencias más fiables que cualquier resultado de ChatGPT sin verificar.</p>
+<p>Kosmyna et al.&nbsp;(2025) es un preprint bajo revisión, con una muestra de 54 participantes en un contexto muy específico (redacción de ensayos en inglés). Los propios autores piden cautela en la generalización. Los resultados son sugerentes pero no concluyentes. Lo que sí es útil para nosotros es el concepto de deuda cognitiva como marco para pensar en cómo usamos estas herramientas.</p>
 </div>
 </div>
+</section>
+<section id="integridad-académica-y-privacidad" class="level3">
+<h3 class="anchored" data-anchor-id="integridad-académica-y-privacidad">Integridad académica y privacidad</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Política de la UGR sobre el uso de IA
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>La Universidad de Granada no prohíbe el uso de IA generativa, pero exige <strong>transparencia</strong>: si has usado IA en la elaboración de un trabajo, debes indicarlo explícitamente. El uso no declarado de IA para generar contenido que entregas como propio es considerado una falta de integridad académica. Consulta la política actualizada en el <a href="https://biblioteca.ugr.es">portal de la Biblioteca de la UGR</a>.</p>
+<p><strong>Cómo citar el uso de IA</strong> (formato APA 7ª edición):</p>
+<pre><code>
 
 
-<!-- -->
 
+:::{#quarto-navigation-envelope .hidden}
+[Documentación aplicada a la traducción]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl"}
+[Documentación aplicada a la traducción]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU="}
+[&lt;span class='chapter-number'&gt;3&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1uZXh0"}
+[&lt;span class='chapter-number'&gt;1&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;¿Qué es la IA Generativa?&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1wcmV2"}
+[Bienvenida a DAT]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sQmllbnZlbmlkYS1hLURBVA=="}
+[9| La IA en el entorno académico]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ=="}
+[&lt;span class='chapter-number'&gt;1&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;¿Qué es la IA Generativa?&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi90ZW1hOS9zZXNpb24xLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjE8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+wr9RdcOpLWVzLWxhLUlBLUdlbmVyYXRpdmE/PC9zcGFuPg=="}
+[&lt;span class='chapter-number'&gt;2&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;Limitaciones y uso crítico&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi90ZW1hOS9zZXNpb24yLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjI8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+TGltaXRhY2lvbmVzLXktdXNvLWNyw610aWNvPC9zcGFuPg=="}
+[&lt;span class='chapter-number'&gt;3&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWludC1zaWRlYmFyOi90ZW1hOS9zZXNpb24zLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjM8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+U2VzacOzbi0zLi1Qcm9tcHRzLC1mbHVqb3MtZGUtdHJhYmFqby15LWFwbGljYWNpb25lcy1wcsOhY3RpY2FzPC9zcGFuPg=="}
+[https://github.com/elrobin/dat]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLW5hdmJhci10b29sczpodHRwczovL2dpdGh1Yi5jb20vZWxyb2Jpbi9kYXQ="}
+[9| La IA en el entorno académico]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWJyZWFkY3J1bWJzLTl8LUxhLUlBLWVuLWVsLWVudG9ybm8tYWNhZMOpbWljbw=="}
+[&lt;span class='chapter-number'&gt;2&lt;/span&gt;&nbsp; &lt;span class='chapter-title'&gt;Limitaciones y uso crítico&lt;/span&gt;]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Mjwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5MaW1pdGFjaW9uZXMteS11c28tY3LDrXRpY288L3NwYW4+"}
+:::
+
+
+
+:::{#quarto-meta-markdown .hidden}
+[[Limitaciones y uso crítico]{.chapter-title} – Documentación aplicada a la traducción]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLW1ldGF0aXRsZQ=="}
+[[Limitaciones y uso crítico]{.chapter-title} – Documentación aplicada a la traducción]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU="}
+[[Limitaciones y uso crítico]{.chapter-title} – Documentación aplicada a la traducción]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLW9nY2FyZHRpdGxl"}
+[Documentación aplicada a la traducción]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ=="}
+[]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw=="}
+[]{.hidden .quarto-markdown-envelope-contents render-id="cXVhcnRvLW9nY2FyZGRkZXNj"}
+:::
+
+
+
+
+&lt;!-- --&gt;
+
+::: {.quarto-embedded-source-code}
+```````````````````{.markdown shortcodes="false"}
+# Limitaciones y uso crítico
+
+## Limitaciones técnicas de los LLMs
+
+Los LLMs son generadores de texto estadístico, no sistemas de conocimiento verificado. Entender esto es la clave para interpretar correctamente sus fallos: no mienten, no se equivocan por descuido, simplemente producen la secuencia de texto más probable dado su entrenamiento. De ahí se derivan todas sus limitaciones.
+
+### Alucinaciones
+
+El término **alucinación** designa la generación de contenido verosímil pero incorrecto o inventado. El modelo no tiene forma de distinguir entre lo que sabe y lo que no sabe: cuando no tiene información suficiente, extrapola patrones y genera texto plausible con la misma confianza que cuando acierta.
+
+Las alucinaciones son especialmente peligrosas en T&amp;I porque:
+
+- Los términos inventados suenan plausibles en la lengua meta
+- Las referencias bibliográficas falsas tienen el formato correcto: autor, año, título, revista existente
+- Los errores conceptuales en textos jurídicos o médicos pueden tener consecuencias reales
+
+::: {.callout-warning}
+## Ejemplo real
+Si pides a ChatGPT una lista de artículos sobre traducción jurídica español-inglés, es habitual que incluya títulos que no existen, publicados en revistas reales, con autores reales, en años plausibles. El formato es impecable. El artículo, inexistente.
+
+Puedes comprobarlo tú mismo: coge cualquier referencia que te dé un LLM sin conexión a internet y búscala en Google Scholar.
+:::
+
+### Sesgos lingüísticos
+
+Los LLMs no son igualmente competentes en todos los idiomas. Su calidad depende directamente del volumen de texto en esa lengua que había en el corpus de entrenamiento, que está fuertemente sesgado hacia el inglés y, en menor medida, hacia las lenguas europeas mayoritarias.
+
+Consecuencias prácticas para T&amp;I:
+
+- En pares de lenguas con corpus pequeño —español-euskera, español-galés, español-catalán jurídico— los errores son más frecuentes y menos detectables porque el propio modelo no sabe que se está equivocando
+- Los modelos tienden a *anglificar* las estructuras sintácticas incluso cuando traducen hacia lenguas con estructuras muy distintas
+- La terminología especializada en lenguas con menor presencia digital está sistemáticamente subrepresentada
+
+### Sesgos del corpus de entrenamiento
+
+Más allá del idioma, el corpus con el que se entrena un LLM introduce sesgos de contenido. El modelo aprende a reproducir los patrones más frecuentes en ese corpus, lo que significa que tiende a privilegiar ciertos enfoques, marcos conceptuales o perspectivas culturales sobre otros. En T&amp;I esto se manifiesta en traducciones que reproducen el sesgo cultural del texto mayoritario en el corpus, no necesariamente el del texto fuente.
+
+### Fecha de corte y falta de verificación en tiempo real
+
+Los LLMs tienen una **fecha de corte de conocimiento**: no saben nada de lo que ocurrió después de su entrenamiento. Aunque muchos modelos actuales tienen conexión a internet, eso no elimina el problema: el modelo puede malinterpretar o resumir incorrectamente las fuentes que consulta, y los usuarios tienden a confiar más en las respuestas cuando citan URLs, sin verificar si el contenido recuperado es realmente lo que el modelo dice que es.
+
+### Cómo evaluar un output
+
+Ante cualquier resultado generado por IA, aplica este filtro mínimo antes de usarlo:
+
+1. **¿Las fuentes o referencias existen?** Comprueba el DOI o búscalo directamente en Google Scholar
+2. **¿Los términos son correctos en ese dominio?** Contrasta con un diccionario especializado o base terminológica
+3. **¿La información es actual?** Recuerda la fecha de corte del modelo
+4. **¿El output es consistente internamente?** Un texto que se contradice a sí mismo es señal de alucinación
+5. **¿Sabes de dónde viene?** Si la herramienta no cita fuentes, no puedes verificar
+
+---
+
+## Herramientas especializadas
+
+Los LLMs generales pueden hacer de todo de forma mediocre. Las herramientas especializadas hacen una cosa de forma más fiable dentro de su dominio, precisamente porque están diseñadas para reducir algunos de los fallos descritos arriba. Pero ninguna los elimina por completo.
+
+### Herramientas de recuperación de información académica
+
+**[Perplexity](https://perplexity.ai)**, **[Elicit](https://elicit.com)**, **[Consensus](https://consensus.app)** y **[Scite](https://scite.ai)** reducen el problema de las alucinaciones bibliográficas porque trabajan sobre índices de literatura real. Sin embargo, presentan sus propios sesgos:
+
+- **Sesgo hacia literatura en abierto:** tienen acceso preferente a PubMed, arXiv y repositorios de acceso abierto. La literatura detrás de paywall está sistemáticamente subrepresentada, lo que puede darte una imagen parcial del estado del arte en tu campo
+- **Sesgo hacia lo más indexado digitalmente:** tienden a recuperar más lo que está bien indexado, que suele coincidir con lo más reciente y con lo publicado en inglés. La literatura más antigua o en otras lenguas aparece menos
+
+Esto no las hace poco útiles, pero sí exige que seas consciente de lo que no estás viendo.
+
+| Herramienta | Qué resuelve mejor | Limitación que persiste |
+|-------------|-------------------|------------------------|
+| **Perplexity** | Preguntas factuales con cita de fuentes | Mezcla fuentes académicas y no académicas |
+| **Elicit** | Extracción de metodología y resultados de papers | Solo literatura en abierto, mayoritariamente en inglés |
+| **Consensus** | Síntesis de evidencia científica sobre una afirmación | Sesgo hacia estudios con alta citación |
+| **Scite** | Verificar si un paper es apoyado o contradicho | Cobertura limitada fuera de las grandes revistas |
+
+### Herramientas de trabajo con documentos propios
+
+**[NotebookLM](https://notebooklm.google.com)** trabaja exclusivamente sobre las fuentes que tú le proporcionas, lo que en principio debería reducir las alucinaciones. En la práctica, las reduce pero no las elimina: el modelo puede distorsionar o sintetizar incorrectamente incluso documentos que tiene delante. La diferencia es que al menos puedes verificar: siempre puedes ir al documento original a comprobar si lo que dice NotebookLM está realmente ahí.
+
+### Herramientas de traducción especializada
+
+**[DeepL](https://deepl.com)** produce traducciones de mayor calidad que un LLM general en la mayoría de pares de lenguas europeas, especialmente en textos con estructura clara. Su punto débil es el mismo que el de cualquier herramienta automática: no entiende el sistema jurídico, médico o técnico de la lengua de llegada. Puede darte una equivalencia lingüísticamente correcta que sea conceptualmente incorrecta en ese sistema.
+
+---
+
+## Efectos nocivos del uso inadecuado
+
+Entender cómo funciona un LLM y qué herramientas existen no es suficiente si no se reflexiona sobre cómo el uso sistemático e irreflexivo puede tener consecuencias que van más allá del error puntual.
+
+### Sycophancy y pensamiento acrítico
+
+Como vimos en la sesión 1, el entrenamiento RLHF lleva a los modelos a generar respuestas que agradan. Esto tiene una consecuencia directa: si usas un LLM para validar tus ideas, tenderá a confirmártelas. No es un buen interlocutor crítico. Para aprender, necesitas que alguien te lleve la contraria cuando te equivocas. Un LLM rara vez lo hará.
+
+### Ilusión de competencia
+
+Un LLM puede generar un texto técnico convincente sobre un tema que no dominas. El peligro no es que el texto sea incorrecto, sino que *tú no puedas detectar que es incorrecto* porque no tienes el conocimiento previo necesario para evaluarlo. Esto es especialmente relevante en traducción especializada: si no conoces el dominio, no puedes verificar la terminología, y si no puedes verificar la terminología, no puedes garantizar la calidad de tu trabajo.
+
+### Deuda cognitiva
+
+Un estudio reciente del MIT Media Lab (Kosmyna et al., 2025) midió la actividad cerebral mediante EEG en tres grupos de participantes que redactaron ensayos usando, respectivamente, un LLM, un buscador web o ninguna herramienta. Los resultados mostraron que el grupo que usó LLM presentó hasta un **55% menos de conectividad neural** que el grupo sin herramientas, y que el **83% de sus participantes no fue capaz de citar su propio ensayo** justo después de haberlo escrito. Cuando se retiró el acceso al LLM en una cuarta sesión, este grupo rindió peor que el grupo que nunca lo había usado.
+
+Los autores acuñan el concepto de **deuda cognitiva**: el uso sistemático del LLM aplaza el esfuerzo mental a corto plazo pero genera costes a largo plazo en pensamiento crítico, memoria y creatividad.
+
+::: {.callout-warning}
+## Importante: limitaciones del estudio
+Kosmyna et al. (2025) es un preprint bajo revisión, con una muestra de 54 participantes en un contexto muy específico (redacción de ensayos en inglés). Los propios autores piden cautela en la generalización. Los resultados son sugerentes pero no concluyentes. Lo que sí es útil para nosotros es el concepto de deuda cognitiva como marco para pensar en cómo usamos estas herramientas.
+:::
+
+### Integridad académica y privacidad
+
+::: {.callout-note}
+## Política de la UGR sobre el uso de IA
+La Universidad de Granada no prohíbe el uso de IA generativa, pero exige **transparencia**: si has usado IA en la elaboración de un trabajo, debes indicarlo explícitamente. El uso no declarado de IA para generar contenido que entregas como propio es considerado una falta de integridad académica. Consulta la política actualizada en el [portal de la Biblioteca de la UGR](https://biblioteca.ugr.es).
+
+**Cómo citar el uso de IA** (formato APA 7ª edición):</code></pre>
+<p>```````````````````</p>
+</div>
+</div>
 </section>
 </section>
 
@@ -1138,160 +1158,7 @@ https://chatgpt.com</code></pre>
         <span class="nav-page-text"><span class="chapter-title">Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Sesión 2. Riesgos, limitaciones y uso crítico</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sesión 2 de 3 &amp;nbsp;·&amp;nbsp; 2 horas</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>**Foco:** fallar de forma controlada y reflexionar  </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>**Hilo conductor:** la IA no es un oráculo — el criterio es tuyo, no de la herramienta</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Funcionalidades y limitaciones básicas</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>Antes de hablar de riesgos concretos, conviene tener claro qué tipo de sistema es un LLM:</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Es un **chat conversacional**, no un sistema de preguntas y respuestas con acceso a una base de datos verificada</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No discrimina las fuentes** con las que fue entrenado: un artículo científico revisado por pares y una entrada de un foro anónimo tienen el mismo peso estadístico</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Aprende patrones de texto**, no hechos: genera la continuación más probable, no la más verdadera</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Cada respuesta es aleatoria** en cierta medida: el mismo prompt puede dar respuestas distintas en distintas sesiones</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alucinaciones</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>El término **alucinación** designa la generación de contenido verosímil pero incorrecto o inventado. El modelo no "miente" conscientemente: simplemente produce la secuencia de texto estadísticamente más probable, aunque no corresponda a ningún hecho real.</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>Las alucinaciones son especialmente peligrosas en contextos de traducción especializada porque:</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Los términos inventados suenan plausibles en la lengua meta</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Las referencias bibliográficas falsas tienen el formato correcto (autor, año, título, revista)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Los errores conceptuales en textos jurídicos o médicos pueden tener consecuencias reales</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejemplo real de alucinación bibliográfica</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>Si pides a ChatGPT una lista de artículos sobre traducción jurídica español-inglés, es habitual que incluya títulos que no existen, publicados en revistas reales, con autores reales, en años plausibles. El formato es impecable. El artículo, inexistente.</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sesgos lingüísticos</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>Los LLMs no son igualmente competentes en todos los idiomas. La calidad de sus outputs depende directamente del volumen de datos en esa lengua que había en el corpus de entrenamiento.</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>Consecuencias prácticas para T&amp;I:</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En pares de lenguas con corpus pequeño (español-euskera, español-galés, español-catalán jurídico), los errores son más frecuentes y menos detectables porque la propia herramienta no sabe que se está equivocando</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Los modelos tienden a "anglificar" las estructuras sintácticas incluso cuando traducen hacia lenguas con estructuras muy distintas</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>La terminología especializada en lenguas minoritarias está sistemáticamente subrepresentada</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluación de la calidad de los outputs</span></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>Ante cualquier output generado por IA, aplica este filtro mínimo:</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**¿Las fuentes o referencias existen?** Comprueba DOI, enlace o búsqueda directa en Google Scholar</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**¿Los términos son reales y correctos en ese dominio?** Contrasta con un diccionario especializado o una base terminológica</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**¿La información es actual?** Los LLMs tienen fecha de corte de conocimiento</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**¿El output es consistente internamente?** Un texto que se contradice a sí mismo es señal de alucinación</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**¿Sabes de dónde viene la información?** Si la herramienta no cita fuentes, no puedes verificar</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ética e integridad académica</span></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="fu">### Qué dice la UGR</span></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>La Universidad de Granada no prohíbe el uso de IA generativa, pero exige **transparencia**: si has usado IA en la elaboración de un trabajo, debes indicarlo explícitamente. El uso no declarado de IA para generar contenido que entregas como propio es considerado una falta de integridad académica.</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>Consulta la política actualizada en el <span class="co">[</span><span class="ot">portal de integridad académica de la UGR</span><span class="co">](https://biblioteca.ugr.es)</span>.</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="fu">### Cómo citar el uso de IA</span></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>La forma más extendida actualmente sigue las recomendaciones de APA 7ª edición:</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="in">OpenAI. (2024). ChatGPT (versión GPT-4o) [Modelo de lenguaje de gran escala]. </span></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="in">https://chatgpt.com</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>Además de la cita, es buena práctica incluir una nota metodológica breve que explique para qué usaste la herramienta y qué verificaste o modificaste del output.</span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="fu">### Usos aceptables, zona gris e inaceptables</span></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tipo de uso <span class="pp">|</span> Ejemplos <span class="pp">|</span></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------------|---------|</span></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Aceptable** <span class="pp">|</span> Buscar fuentes para documentarse, generar un borrador que luego reescribes, verificar terminología, mejorar el estilo de un texto propio <span class="pp">|</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Zona gris** <span class="pp">|</span> Resumir un artículo que luego citas como si lo hubieras leído completo, usar IA para corregir un texto sin indicarlo <span class="pp">|</span></span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Inaceptable** <span class="pp">|</span> Entregar como propio un texto generado íntegramente por IA, fabricar referencias bibliográficas <span class="pp">|</span></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## Privacidad y propiedad intelectual</span></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>Cuando subes un texto a ChatGPT, Gemini u otras herramientas, ese texto puede ser usado para mejorar los modelos según los términos de uso de cada plataforma. Esto tiene implicaciones directas para el trabajo de traducción profesional:</span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Textos de clientes:** subir un contrato, un informe médico o cualquier documento confidencial a una herramienta pública puede violar los acuerdos de confidencialidad</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Textos protegidos por derechos de autor:** subir el texto original de un libro o artículo puede ser problemático legalmente</span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Alternativa:** Copilot con cuenta UGR garantiza que los datos permanecen dentro de la organización y no se usan para entrenar modelos</span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="fu">## Regla práctica</span></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>Si el texto que vas a subir contiene información que no publicarías libremente en internet, no lo subas a una herramienta de IA pública. Usa Copilot con tu cuenta UGR o trabaja solo con fragmentos descontextualizados.</span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## NotebookLM como caso de estudio crítico</span></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>NotebookLM trabaja sobre documentos cerrados que tú proporcionas, lo que en principio debería reducir las alucinaciones. Pero "en principio" no significa "siempre". En esta sesión lo pondremos a prueba.</span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prácticas de la sesión</span></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="fu">### Práctica en clase A — Caza de errores {#practica-2a}</span></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔵 Práctica en clase &amp;nbsp;·&amp;nbsp; Individual &amp;nbsp;·&amp;nbsp; ~25 min</span></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>**Tarea:** El siguiente texto es una traducción al inglés del fragmento base del tema generada por IA. Contiene al menos **cuatro errores** de distinto tipo. Identifícalos, clasifícalos y justifica por qué son errores.</span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *The licensor grants the licensee a non-exclusive, non-transferable and cancellable license for the use of the software subject of this contract, being expressly forbidden its sublicense, assignment or distribution to third parties without the previous and written consent of the licensor. The breach of any of the conditions established in this agreement will empower the licensor to terminate the contract by full right, without the need of previous judicial requirement.*</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>**Tipos de error a buscar:** falso cognado, calco sintáctico, término técnico incorrecto en el sistema jurídico anglosajón, registro inadecuado.</span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>**Puesta en común:** cada persona comparte un error. Se discute cuáles son los más peligrosos en un contexto profesional real y por qué la IA los comete.</span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="fu">### Práctica en clase B — Casos en zona gris {#practica-2b}</span></span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔵 Práctica en clase &amp;nbsp;·&amp;nbsp; Grupos de 3-4 &amp;nbsp;·&amp;nbsp; ~20 min</span></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>**Tarea:** Discutid en grupo dónde está la línea en cada uno de estos casos. Preparad una posición para defenderla en la puesta en común.</span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>**Caso 1:** Una estudiante usa ChatGPT para generar un primer borrador de la sección de metodología de su TFG. Luego lo reescribe casi por completo, pero la estructura y algunas frases son del modelo. No lo menciona en el trabajo.</span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>**Caso 2:** Un estudiante sube el PDF de un artículo académico a NotebookLM, le pide un resumen y lo incluye en su trabajo citando el artículo original (que no ha leído completo).</span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>**Caso 3:** Una traductora en prácticas usa DeepL para hacer una primera pasada de un contrato de un cliente, lo revisa y corrige, y entrega la traducción como propia sin mencionarlo al cliente.</span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>**Preguntas guía:** ¿Es un problema ético, académico, legal o los tres? ¿Cambia algo si se declara el uso? ¿Cambia algo si el resultado final es de calidad?</span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="fu">### Entregable 2 — Glosario terminológico verificado {#entregable-2}</span></span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning icon=false}</span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🟢 Entregable individual &amp;nbsp;·&amp;nbsp; Se hace y corrige en clase</span></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>**Tarea:** Usando el mismo texto base de la sesión 1, pide a Gemini o ChatGPT que extraiga los términos clave y proponga equivalencias en inglés o francés. Luego **verifica cada término** usando al menos una de las fuentes que encontraste en el entregable 1.</span>
-<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>**Qué entregar** — una tabla con estas columnas:</span>
-<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Término en español <span class="pp">|</span> Propuesta de la IA <span class="pp">|</span> Fuente que lo avala o contradice <span class="pp">|</span> Decisión final justificada <span class="pp">|</span></span>
-<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="pp">|--------------------|-------------------|----------------------------------|---------------------------|</span></span>
-<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> licenciatario <span class="pp">|</span> licensee <span class="pp">|</span> Black's Law Dictionary (2024) <span class="pp">|</span> ✓ Correcto en derecho anglosajón <span class="pp">|</span></span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> resolver el contrato de pleno derecho <span class="pp">|</span> terminate the contract by full right <span class="pp">|</span> — (no encontré fuente) <span class="pp">|</span> ✗ Calco; la expresión correcta es *terminate ipso facto* o *automatic termination* <span class="pp">|</span></span>
-<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
-<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>**Corrección en clase:** se comparan tablas. Se discute qué ocurrió cuando la IA y la fuente no coincidían, y qué hizo cada persona ante la discrepancia.</span>
-<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pista</span></span>
-<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>Para terminología jurídica en inglés, IATE (la base terminológica de la UE) y Black's Law Dictionary son referencias más fiables que cualquier resultado de ChatGPT sin verificar.</span>
-<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+</nav>
 </div> <!-- /content -->
 
 
