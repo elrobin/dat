@@ -2,11 +2,42 @@
 
 ## Limitaciones técnicas de los LLMs
 
-Los LLMs son generadores de texto estadístico, no sistemas de conocimiento verificado. Entender esto es la clave para interpretar correctamente sus fallos: no mienten, no se equivocan por descuido, simplemente producen la secuencia de texto más probable dado su entrenamiento. De ahí se derivan todas sus limitaciones.
+|  |  |
+|--------------------------|----------------------------------------------|
+| **Alucinaciones** | Fabricación de contenido o razonamientos aparentemente plausibles pero falsos. |
+| **Sesgos o estereotipos** | Respuestas moduladas en base a las características del usuario o patrones de comportamiento generales. |
+| **Memoria corta** | Pérdida de contexto en conversaciones largas, rindiendo peor conforme aumenta la conversación. |
+| **Mezcla de contenidos factuales** | Incapacidad de diferenciar entre eventos presentes y pasados, mezclando información pasada con más reciente. |
+| **Limitaciones idiomáticas** | Rendimiento desigual resultado de los sesgos idiomáticos presentes en Internet. |
+| ***Prompt injections*** | Sensibles a la introducción de instrucciones maliciosas, contrarias a las instrucciones del usuario. |
+| **Deferencia excesiva** | Tendencia del chatbot a estar de acuerdo o halagar en exceso en todo lo que afirme el usuario independientemente de si es correcto o no. |
+| **Opacidad** | Incapacidad de explicar las motivaciones que le llevan a generar una respuesta y no otra. |
 
 ### Alucinaciones
 
 El término **alucinación** designa la generación de contenido verosímil pero incorrecto o inventado. El modelo no tiene forma de distinguir entre lo que sabe y lo que no sabe: cuando no tiene información suficiente, extrapola patrones y genera texto plausible con la misma confianza que cuando acierta.
+
+Hay dos tipos de alucinaciones:
+
+1.  **Factual.** Se inventa datos, fechas o eventos. 💡[Ejemplo:]{.underline}
+
+    > ¿Cuál es la capital de Francia?
+    >
+    > *Berlín*
+
+2.  **Referencial.** Las fuentes, referencias o recomendaciones que indica son fabricadas. 💡[Ejemplo:]{.underline}
+
+    > Recomiéndame una película de Almodóvar.
+    >
+    > *Stranger stuff*
+
+3.  **Identitaria.** Las afirmaciones son ciertas pero se las atribuye a las personas erróneas. 💡Ejemplo:
+
+    > 
+
+4.  **Razonamiento.** Llega a una conclusión completamente errónea con una lógica aparentemente válida. 💡Ejemplo:
+
+    > 
 
 Las alucinaciones son especialmente peligrosas en T&I porque:
 
@@ -14,14 +45,19 @@ Las alucinaciones son especialmente peligrosas en T&I porque:
 - Las referencias bibliográficas falsas tienen el formato correcto: autor, año, título, revista existente
 - Los errores conceptuales en textos jurídicos o médicos pueden tener consecuencias reales
 
-::: {.callout-warning}
-## Ejemplo real
+::: callout-warning
+## Algunos ejemplos
+
 Si pides a ChatGPT una lista de artículos sobre traducción jurídica español-inglés, es habitual que incluya títulos que no existen, publicados en revistas reales, con autores reales, en años plausibles. El formato es impecable. El artículo, inexistente.
+
+![](/images/fake-ref.jpg){fig-align="center"}
 
 Puedes comprobarlo tú mismo: coge cualquier referencia que te dé un LLM sin conexión a internet y búscala en Google Scholar.
 :::
 
-### Sesgos lingüísticos
+### Sesgos o estereotipos
+
+Meter TFM de Cambio climático
 
 Los LLMs no son igualmente competentes en todos los idiomas. Su calidad depende directamente del volumen de texto en esa lengua que había en el corpus de entrenamiento, que está fuertemente sesgado hacia el inglés y, en menor medida, hacia las lenguas europeas mayoritarias.
 
@@ -43,13 +79,13 @@ Los LLMs tienen una **fecha de corte de conocimiento**: no saben nada de lo que 
 
 Ante cualquier resultado generado por IA, aplica este filtro mínimo antes de usarlo:
 
-1. **¿Las fuentes o referencias existen?** Comprueba el DOI o búscalo directamente en Google Scholar
-2. **¿Los términos son correctos en ese dominio?** Contrasta con un diccionario especializado o base terminológica
-3. **¿La información es actual?** Recuerda la fecha de corte del modelo
-4. **¿El output es consistente internamente?** Un texto que se contradice a sí mismo es señal de alucinación
-5. **¿Sabes de dónde viene?** Si la herramienta no cita fuentes, no puedes verificar
+1.  **¿Las fuentes o referencias existen?** Comprueba el DOI o búscalo directamente en Google Scholar
+2.  **¿Los términos son correctos en ese dominio?** Contrasta con un diccionario especializado o base terminológica
+3.  **¿La información es actual?** Recuerda la fecha de corte del modelo
+4.  **¿El output es consistente internamente?** Un texto que se contradice a sí mismo es señal de alucinación
+5.  **¿Sabes de dónde viene?** Si la herramienta no cita fuentes, no puedes verificar
 
----
+------------------------------------------------------------------------
 
 ## Herramientas especializadas
 
@@ -57,7 +93,7 @@ Los LLMs generales pueden hacer de todo de forma mediocre. Las herramientas espe
 
 ### Herramientas de recuperación de información académica
 
-**[Perplexity](https://perplexity.ai)**, **[Elicit](https://elicit.com)**, **[Consensus](https://consensus.app)** y **[Scite](https://scite.ai)** reducen el problema de las alucinaciones bibliográficas porque trabajan sobre índices de literatura real. Sin embargo, presentan sus propios sesgos:
+[**Perplexity**](https://perplexity.ai), [**Elicit**](https://elicit.com), [**Consensus**](https://consensus.app) y [**Scite**](https://scite.ai) reducen el problema de las alucinaciones bibliográficas porque trabajan sobre índices de literatura real. Sin embargo, presentan sus propios sesgos:
 
 - **Sesgo hacia literatura en abierto:** tienen acceso preferente a PubMed, arXiv y repositorios de acceso abierto. La literatura detrás de paywall está sistemáticamente subrepresentada, lo que puede darte una imagen parcial del estado del arte en tu campo
 - **Sesgo hacia lo más indexado digitalmente:** tienden a recuperar más lo que está bien indexado, que suele coincidir con lo más reciente y con lo publicado en inglés. La literatura más antigua o en otras lenguas aparece menos
@@ -65,7 +101,7 @@ Los LLMs generales pueden hacer de todo de forma mediocre. Las herramientas espe
 Esto no las hace poco útiles, pero sí exige que seas consciente de lo que no estás viendo.
 
 | Herramienta | Qué resuelve mejor | Limitación que persiste |
-|-------------|-------------------|------------------------|
+|------------------|------------------------|------------------------------|
 | **Perplexity** | Preguntas factuales con cita de fuentes | Mezcla fuentes académicas y no académicas |
 | **Elicit** | Extracción de metodología y resultados de papers | Solo literatura en abierto, mayoritariamente en inglés |
 | **Consensus** | Síntesis de evidencia científica sobre una afirmación | Sesgo hacia estudios con alta citación |
@@ -73,13 +109,13 @@ Esto no las hace poco útiles, pero sí exige que seas consciente de lo que no e
 
 ### Herramientas de trabajo con documentos propios
 
-**[NotebookLM](https://notebooklm.google.com)** trabaja exclusivamente sobre las fuentes que tú le proporcionas, lo que en principio debería reducir las alucinaciones. En la práctica, las reduce pero no las elimina: el modelo puede distorsionar o sintetizar incorrectamente incluso documentos que tiene delante. La diferencia es que al menos puedes verificar: siempre puedes ir al documento original a comprobar si lo que dice NotebookLM está realmente ahí.
+[**NotebookLM**](https://notebooklm.google.com) trabaja exclusivamente sobre las fuentes que tú le proporcionas, lo que en principio debería reducir las alucinaciones. En la práctica, las reduce pero no las elimina: el modelo puede distorsionar o sintetizar incorrectamente incluso documentos que tiene delante. La diferencia es que al menos puedes verificar: siempre puedes ir al documento original a comprobar si lo que dice NotebookLM está realmente ahí.
 
 ### Herramientas de traducción especializada
 
-**[DeepL](https://deepl.com)** produce traducciones de mayor calidad que un LLM general en la mayoría de pares de lenguas europeas, especialmente en textos con estructura clara. Su punto débil es el mismo que el de cualquier herramienta automática: no entiende el sistema jurídico, médico o técnico de la lengua de llegada. Puede darte una equivalencia lingüísticamente correcta que sea conceptualmente incorrecta en ese sistema.
+[**DeepL**](https://deepl.com) produce traducciones de mayor calidad que un LLM general en la mayoría de pares de lenguas europeas, especialmente en textos con estructura clara. Su punto débil es el mismo que el de cualquier herramienta automática: no entiende el sistema jurídico, médico o técnico de la lengua de llegada. Puede darte una equivalencia lingüísticamente correcta que sea conceptualmente incorrecta en ese sistema.
 
----
+------------------------------------------------------------------------
 
 ## Efectos nocivos del uso inadecuado
 
@@ -99,16 +135,18 @@ Un estudio reciente del MIT Media Lab (Kosmyna et al., 2025) midió la actividad
 
 Los autores acuñan el concepto de **deuda cognitiva**: el uso sistemático del LLM aplaza el esfuerzo mental a corto plazo pero genera costes a largo plazo en pensamiento crítico, memoria y creatividad.
 
-::: {.callout-warning}
+::: callout-warning
 ## Importante: limitaciones del estudio
+
 Kosmyna et al. (2025) es un preprint bajo revisión, con una muestra de 54 participantes en un contexto muy específico (redacción de ensayos en inglés). Los propios autores piden cautela en la generalización. Los resultados son sugerentes pero no concluyentes. Lo que sí es útil para nosotros es el concepto de deuda cognitiva como marco para pensar en cómo usamos estas herramientas.
 :::
 
 ### Integridad académica y privacidad
 
-::: {.callout-note}
+::: callout-note
 ## Política de la UGR sobre el uso de IA
+
 La Universidad de Granada no prohíbe el uso de IA generativa, pero exige **transparencia**: si has usado IA en la elaboración de un trabajo, debes indicarlo explícitamente. El uso no declarado de IA para generar contenido que entregas como propio es considerado una falta de integridad académica. Consulta la política actualizada en el [portal de la Biblioteca de la UGR](https://biblioteca.ugr.es).
 
-**Cómo citar el uso de IA** (formato APA 7ª edición):
-```
+**Cómo citar el uso de IA** (formato APA 7ª edición): \`\`\`
+:::
