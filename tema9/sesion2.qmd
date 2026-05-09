@@ -3,7 +3,7 @@
 ## Limitaciones técnicas de los LLMs
 
 |  |  |
-|--------------------------|----------------------------------------------|
+|----|----|
 | **Alucinaciones** | Fabricación de contenido o razonamientos aparentemente plausibles pero falsos. |
 | **Sesgos o estereotipos** | Respuestas moduladas en base a las características del usuario o patrones de comportamiento generales. |
 | **Memoria corta** | Pérdida de contexto en conversaciones largas, rindiendo peor conforme aumenta la conversación. |
@@ -57,35 +57,109 @@ Puedes comprobarlo tú mismo: coge cualquier referencia que te dé un LLM sin co
 
 ### Sesgos o estereotipos
 
-Meter TFM de Cambio climático
+Luego te incluyo una tablita más completa, pero quédate especialmente con estos dos:
 
-Los LLMs no son igualmente competentes en todos los idiomas. Su calidad depende directamente del volumen de texto en esa lengua que había en el corpus de entrenamiento, que está fuertemente sesgado hacia el inglés y, en menor medida, hacia las lenguas europeas mayoritarias.
+1.  **Sesgos ideológicos.** Ocurren debido a la naturaleza propia de los LLMs y el corpus lingüístico sobre el que se entrenan. No buscan cuál es el discurso más veraz, sino regularidades lingüísticas.
 
-Consecuencias prácticas para T&I:
+    No sólo sesgos en el set de datos de entrenamiento pueden dar lugar a sesgos ideológicos, también la formulación del prompt también puede afectar. Por ejemplo:
 
-- En pares de lenguas con corpus pequeño —español-euskera, español-galés, español-catalán jurídico— los errores son más frecuentes y menos detectables porque el propio modelo no sabe que se está equivocando
-- Los modelos tienden a *anglificar* las estructuras sintácticas incluso cuando traducen hacia lenguas con estructuras muy distintas
-- La terminología especializada en lenguas con menor presencia digital está sistemáticamente subrepresentada
+    > *¿Qué medidas deberíamos tomar contra el cambio climático?*
 
-### Sesgos del corpus de entrenamiento
+    No dará la misma respuesta que si formulamos la pregunta así:
 
-Más allá del idioma, el corpus con el que se entrena un LLM introduce sesgos de contenido. El modelo aprende a reproducir los patrones más frecuentes en ese corpus, lo que significa que tiende a privilegiar ciertos enfoques, marcos conceptuales o perspectivas culturales sobre otros. En T&I esto se manifiesta en traducciones que reproducen el sesgo cultural del texto mayoritario en el corpus, no necesariamente el del texto fuente.
+    > *¿Qué impacto económico tienen las políticas climáticas?*
 
-### Fecha de corte y falta de verificación en tiempo real
+    ::: {.callout-note appearance="minimal"}
+    ## Diferencias entre perfiles
 
-Los LLMs tienen una **fecha de corte de conocimiento**: no saben nada de lo que ocurrió después de su entrenamiento. Aunque muchos modelos actuales tienen conexión a internet, eso no elimina el problema: el modelo puede malinterpretar o resumir incorrectamente las fuentes que consulta, y los usuarios tienden a confiar más en las respuestas cuando citan URLs, sin verificar si el contenido recuperado es realmente lo que el modelo dice que es.
+    En [un experimento](https://globalwitness.org/en/campaigns/digital-threats/ai-chatbots-share-climate-disinformation-to-susceptible-users/) en el que comparaban Grok y ChatGPT, usaban dos perfiles de usuario distintos y lanzaban los mismos prompts. Grok tendía hacia un discurso más cercano al negacion.
+    :::
 
-### Cómo evaluar un output
+    ![](images/clipboard-3592245070.png)
 
-Ante cualquier resultado generado por IA, aplica este filtro mínimo antes de usarlo:
+2.  **Sesgos de adulación.** Se trata de la tendencia de los modelos a adular o dar la razón al usuario. En inglés el término empleado es *sycophancy*. Esto no es algo que el modelo haga de manera "natural", sino que las empresas añaden *a posteriori* mediante lo que se conoce como *reinforcement learning from human feedback* o **RLHF**. Una técnica mediante la cuál humanos "enseñan" al modelo ya entrenado a adoptar un comportamiento determinado.
 
-1.  **¿Las fuentes o referencias existen?** Comprueba el DOI o búscalo directamente en Google Scholar
-2.  **¿Los términos son correctos en ese dominio?** Contrasta con un diccionario especializado o base terminológica
-3.  **¿La información es actual?** Recuerda la fecha de corte del modelo
-4.  **¿El output es consistente internamente?** Un texto que se contradice a sí mismo es señal de alucinación
-5.  **¿Sabes de dónde viene?** Si la herramienta no cita fuentes, no puedes verificar
+    +---------------------------------+-----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+    | Tipo de comportamiento          | Ejemplo                                                                                                   | Explicación                                                                                  |
+    +=================================+===========================================================================================================+==============================================================================================+
+    | Seguir instrucciones explícitas | - *Respóndeme en una tabla*                                                                               | El modelo intenta obedecer la intención comunicativa del usuario y no sólo predecir texto.   |
+    |                                 |                                                                                                           |                                                                                              |
+    |                                 | - *Sé breve*                                                                                              |                                                                                              |
+    |                                 |                                                                                                           |                                                                                              |
+    |                                 | - *Adopta tono académico*                                                                                 |                                                                                              |
+    +---------------------------------+-----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+    | Redirección segura              | *No puedo ayudarte con eso, pero sí puedo explicar cómo generar una imagen con características similares* | No solo se niega: intenta mantener utilidad dentro de límites seguros.                       |
+    +---------------------------------+-----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+    | Tono educado y cooperativo      | - *Muy buena elección*                                                                                    | El feedback humano suele preferir respuestas amables y no agresivas.                         |
+    |                                 |                                                                                                           |                                                                                              |
+    |                                 | - *¡Qué iniciativa tan interesante!*                                                                      |                                                                                              |
+    +---------------------------------+-----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+    | Admitir incertidumbre           | *No tengo suficiente información para afirmarlo*                                                          | El modelo está entrenado para parecer más honesto, aunque esto no elimina las alucinaciones. |
+    +---------------------------------+-----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+    | Evitar controversias            | - *Existen distintas posiciones a este respecto...*                                                       | El feedback humano favorece respuestas alineadas con consensos expertos o cierta ambigüedad. |
+    |                                 |                                                                                                           |                                                                                              |
+    |                                 | - *La evidencia científica señala que...*                                                                 |                                                                                              |
+    +---------------------------------+-----------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
 
-------------------------------------------------------------------------
+    : Ejemplos de comportamientos resultado de RLHF
+
+    ::: {.callout-note appearance="minimal"}
+    ## Adulación vs. verdad
+
+    En [un estudio](https://arxiv.org/abs/2310.13548) liderado por científicos afiliados a Anthropic (la empresa de Claude) analizaron que la mayoría de los LLMs, precisamente debido a este entrenamiento humano, **tienden a favorecer en muchos casos la adulación a la verdad** si ésta es contraria al perfil ideológico del usuario.
+    :::
+
+### Memoria corta
+
+Una limitación técnica importante de los LLMs es su memoria corta, o más exactamente su **ventana de contexto**: el modelo solo puede “tener presente” una cantidad limitada de texto dentro de una conversación o documento. A medida que el chat crece, aumenta el ruido:
+
+- Instrucciones antiguas
+
+- Correcciones
+
+- Ejemplos previos
+
+- Errores aceptados
+
+- PDFs anteriores
+
+El modelo intenta aprovechar todo eso, pero no siempre distingue bien qué debe seguir vigente y qué era solo parte de una tarea pasada.
+
+::: {.callout-note appearance="minimal"}
+## El uso de chatines
+
+Empiezas un chat diciendo:
+
+*Resume cada PDF en 5 puntos: objetivo, metodología, datos, resultados y limitaciones*
+
+Tras diez PDFs, has ido pidiendo excepciones: “haz este más breve”, “en este céntrate en la teoría”, “omite metodología”, “extrae solo citas”. Cuando subes el undécimo PDF, el modelo puede mezclar criterios: quizá resume demasiado, quizá omite metodología o quizá aplica el estilo del PDF anterior.
+:::
+
+Pero también [se ha visto](https://arxiv.org/abs/2307.03172) que en un mismo prompt, el orden en el que se dan las instrucciones también variará en la calidad de la respuesta. El chatbot le hará más caso a la información que aparece al principio y al final del prompt.
+
+### Mezcla de contenidos factuales
+
+Esta limitación viene determinada por considerar su corpus lingüístico como una foto fija y no como un corpus que se ha ido generando de manera dinámica y longitudinal. De manera que a la hora de generar contenido que sea específico de un momento concreto, podrá mezclar cosas de momentos distintos.
+
+💡**Ejemplo:**
+
+> ¿Quién va el primero en la liga?
+
+Es probable que confunda el año e indique posiciones de temporadas o momentos distintos al actual.
+
+Otro ejemplo común es cuando le estamos pidiendo que nos indique cómo funciona algún programa o aparato y confunde versiones del mismo.
+
+### Limitaciones idiomáticas
+
+Ocurren debido a una descompensación a favor de contenido en lengua inglesa en los datos que se utilizan para entrenar los modelos. Los LLMs no son igualmente competentes en todos los idiomas. Su calidad depende directamente del volumen de texto en esa lengua que había en el corpus de entrenamiento, que está fuertemente sesgado hacia el inglés y, en menor medida, hacia las lenguas europeas mayoritarias.
+
+::: callout-note
+## Consecuencias prácticas
+
+- En pares de lenguas con corpus pequeño (español-euskera, español-galés) los errores son más frecuentes y menos detectables porque el propio modelo no sabe que se está equivocando.
+- Los modelos tienden a *anglificar* las estructuras sintácticas incluso cuando traducen hacia lenguas con estructuras muy distintas.
+- La terminología especializada en lenguas con menor presencia digital está sistemáticamente subrepresentada.
+:::
 
 ## Herramientas especializadas
 
@@ -101,7 +175,7 @@ Los LLMs generales pueden hacer de todo de forma mediocre. Las herramientas espe
 Esto no las hace poco útiles, pero sí exige que seas consciente de lo que no estás viendo.
 
 | Herramienta | Qué resuelve mejor | Limitación que persiste |
-|------------------|------------------------|------------------------------|
+|----|----|----|
 | **Perplexity** | Preguntas factuales con cita de fuentes | Mezcla fuentes académicas y no académicas |
 | **Elicit** | Extracción de metodología y resultados de papers | Solo literatura en abierto, mayoritariamente en inglés |
 | **Consensus** | Síntesis de evidencia científica sobre una afirmación | Sesgo hacia estudios con alta citación |
