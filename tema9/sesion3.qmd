@@ -1,4 +1,4 @@
-# Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas
+# Prompting avanzado y creación asistida de contenidos
 
 ::: {.callout-note}
 ## Sesión 3 de 3 &nbsp;·&nbsp; 2 horas
