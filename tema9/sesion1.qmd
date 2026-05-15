@@ -40,7 +40,7 @@ Chatbots conversacionales, IA Generativa, todos estos términos se utilizan de m
 |           |                                                                         |                                                                                                                                                                                                                                                                                                                                                |
 |           |                                                                         | - Por atención, queremos decir que el modelo es capaz de darle mayor peso a unas palabras que a otras, lo que le permite un mejor análisis sintáctico y semántico de la oración:                                                                                                                                                               |
 |           |                                                                         |                                                                                                                                                                                                                                                                                                                                                |
-|           |                                                                         |   🗣️ “El traductor revisó el texto porque lo consideraba confuso.” \| \| \| \| \| \| \|                                                                                                                                                                                                                                                        |
+|           |                                                                         |   🗣️ “El traductor revisó el texto porque lo consideraba confuso.” \|                                                                                                                                                                                                                                                                          |
 |           |                                                                         |                                                                                                                                                                                                                                                                                                                                                |
 |           |                                                                         |   Para entender a qué se refiere “lo”, el modelo presta atención a “texto”.                                                                                                                                                                                                                                                                    |
 +-----------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -113,15 +113,11 @@ A los humanos nos gusta que nos den la razón. Nos gusta que nos alaben. No nos 
 
 Los LLMs actuales son posibles gracias a la confluencia de tres factores que solo se han dado recientemente:
 
-+------------------------------------+------------------------------------------------------------------------------------------------------------------+
-| Factor                             | En qué consiste                                                                                                  |
-+====================================+==================================================================================================================+
-| **Arquitectura Transformer**       | Nuevo diseño algorítmico publicado en 2017 que permite procesar texto de forma mucho más eficiente               |
-+------------------------------------+------------------------------------------------------------------------------------------------------------------+
-| **Datos de entrenamiento masivos** | Terabytes de texto y código extraídos de internet, impensables hace dos décadas                                  |
-+------------------------------------+------------------------------------------------------------------------------------------------------------------+
-| **Potencia computacional**         | La capacidad de cómputo necesaria para entrenar modelos a esta escala solo está disponible desde hace pocos años |
-+------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| Factor | En qué consiste |
+|----|----|
+| **Arquitectura Transformer** | Nuevo diseño algorítmico publicado en 2017 que permite procesar texto de forma mucho más eficiente |
+| **Datos de entrenamiento masivos** | Terabytes de texto y código extraídos de internet, impensables hace dos décadas |
+| **Potencia computacional** | La capacidad de cómputo necesaria para entrenar modelos a esta escala solo está disponible desde hace pocos años |
 
 ### Qué hacen y qué no hacen
 
@@ -155,24 +151,24 @@ Un \*\*token\*\* es la unidad mínima de texto que procesa un LLM. No equivale e
 Como referencia orientativa: 1.000 tokens equivalen a unas 700 palabras en español, o aproximadamente una página y media de texto.
 :::
 
-+----------------------------+-------------+-----------+-------------+-----------+
-|                            | ChatGPT\    | Gemini\   | Claude\     | DeepSeek  |
-|                            | (OpenAI)    | (Google)  | (Anthropic) |           |
-+============================+:===========:+:=========:+:===========:+:=========:+
-| **Conexión a Internet**    | 🟢          | 🟢        | 🟢          | 🟢        |
-+----------------------------+-------------+-----------+-------------+-----------+
-| **Multimodalidad**         | 🟢          | 🟢        | 🟢          | 🟡        |
-+----------------------------+-------------+-----------+-------------+-----------+
-| **Generación de imágenes** | 🟢          | 🟢        | 🔴          | 🔴        |
-+----------------------------+-------------+-----------+-------------+-----------+
-| **Razonamiento avanzado**  | 🟢          | 🟢        | 🟢          | 🟢        |
-+----------------------------+-------------+-----------+-------------+-----------+
-| **Contexto largo**         | 🟢          | 🟢        | 🟢🟢        | 🟢        |
-+----------------------------+-------------+-----------+-------------+-----------+
-| **Código abierto**         | 🔴          | 🔴        | 🔴          | 🟢        |
-+----------------------------+-------------+-----------+-------------+-----------+
-| **Acceso UGR**             | 🟢(Copilot) | 🟢        | 🔴          | 🔴        |
-+----------------------------+-------------+-----------+-------------+-----------+
++----------------------------+-------------+----------+-------------+----------+
+|                            | ChatGPT\    | Gemini\  | Claude\     | DeepSeek |
+|                            | (OpenAI)    | (Google) | (Anthropic) |          |
++============================+:===========:+:========:+:===========:+:========:+
+| **Conexión a Internet**    | 🟢          | 🟢       | 🟢          | 🟢       |
++----------------------------+-------------+----------+-------------+----------+
+| **Multimodalidad**         | 🟢          | 🟢       | 🟢          | 🟡       |
++----------------------------+-------------+----------+-------------+----------+
+| **Generación de imágenes** | 🟢          | 🟢       | 🔴          | 🔴       |
++----------------------------+-------------+----------+-------------+----------+
+| **Razonamiento avanzado**  | 🟢          | 🟢       | 🟢          | 🟢       |
++----------------------------+-------------+----------+-------------+----------+
+| **Contexto largo**         | 🟢          | 🟢       | 🟢🟢        | 🟢       |
++----------------------------+-------------+----------+-------------+----------+
+| **Código abierto**         | 🔴          | 🔴       | 🔴          | 🟢       |
++----------------------------+-------------+----------+-------------+----------+
+| **Acceso UGR**             | 🟢(Copilot) | 🟢       | 🔴          | 🔴       |
++----------------------------+-------------+----------+-------------+----------+
 
 ### Peculiaridades de cada modelo
 
@@ -219,21 +215,19 @@ Como referencia orientativa: 1.000 tokens equivalen a unas 700 palabras en espa�
 
 Primer patrón:
 
-> *¿Cuál es la siguiente letra de la serie?*
-> *C, E, L, S, L, D, L, ...*
+> *¿Cuál es la siguiente letra de la serie?* *C, E, L, S, L, D, L, ...*
 
 Segundo patrón:
 
-> *¿Cuál es la siguiente letra de la serie?*
-> *A, B, E, G, H, J, ...*
+> *¿Cuál es la siguiente letra de la serie?* *A, B, E, G, H, J, ...*
 
-**Responde a las siguientes pregunta**
-1. ¿Cuál es la respuesta correcta de cada pregunta?
-2. ¿Pudiste resolver alguno de los dos acertijos sin ayuda del chatbot?
-3. ¿Fue capaz el chatbot de resolver la pregunta?
-4. ¿Cómo lo hizo, cuál es el razonamiento correcto?
-5. ¿Te convenció la respuesta que te dio el chatbot?
+**Responde a las siguientes pregunta**:
 
+1.  ¿Cuál es la respuesta correcta de cada pregunta?
+2.  ¿Pudiste resolver alguno de los dos acertijos sin ayuda del chatbot?
+3.  ¿Fue capaz el chatbot de resolver la pregunta?
+4.  ¿Cómo lo hizo, cuál es el razonamiento correcto?
+5.  ¿Te convenció la respuesta que te dio el chatbot?
 :::
 
 ::: {.callout-note icon="false"}
@@ -244,7 +238,7 @@ Segundo patrón:
 **Los cuatro componentes de un buen prompt:**
 
 | Componente | Pregunta que responde | Ejemplo |
-|------------|----------------------|---------|
+|----|----|----|
 | **Tarea** | ¿Qué quiero que haga? | "Explícame qué es..." |
 | **Contexto** | ¿Quién pregunta y para qué? | "Soy estudiante de T&I y necesito..." |
 | **Formato** | ¿Cómo quiero el resultado? | "en una lista de cinco puntos..." |
@@ -276,10 +270,8 @@ Guarda la respuesta.
 
 **Entrega individual** — responde en un documento de texto:
 
-1. Copia las cuatro respuestas obtenidas (o capturas de pantalla).
-2. ¿Cuál es la diferencia más llamativa entre la primera y la última respuesta?
-3. ¿Qué componente ha marcado más la diferencia en tu caso? ¿Por qué crees que es así?
-4. ¿Hay algo que aún mejorarías en el prompt final? Propón una iteración 5 y pruébala.
-
+1.  Copia las cuatro respuestas obtenidas (o capturas de pantalla).
+2.  ¿Cuál es la diferencia más llamativa entre la primera y la última respuesta?
+3.  ¿Qué componente ha marcado más la diferencia en tu caso? ¿Por qué crees que es así?
+4.  ¿Hay algo que aún mejorarías en el prompt final? Propón una iteración 5 y pruébala.
 :::
-

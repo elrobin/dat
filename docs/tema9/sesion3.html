@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas – Documentación aplicada a la traducción</title>
+<title>Ingeniería de prompts – Documentación aplicada a la traducción</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -301,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tema9/sesion1.html">9| La IA en el entorno académico</a></li><li class="breadcrumb-item"><a href="../tema9/sesion3.html"><span class="chapter-title">Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tema9/sesion1.html">9| La IA en el entorno académico</a></li><li class="breadcrumb-item"><a href="../tema9/sesion3.html"><span class="chapter-title">Ingeniería de prompts</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -352,7 +352,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tema9/sesion3.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span></a>
+  <a href="../tema9/sesion3.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Ingeniería de prompts</span></a>
   </div>
 </li>
       </ul>
@@ -367,11 +367,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">En esta página</h2>
    
   <ul class="collapse">
-  <li><a href="#ingeniería-de-prompts" id="toc-ingeniería-de-prompts" class="nav-link active" data-scroll-target="#ingeniería-de-prompts">Ingeniería de prompts</a></li>
-  <li><a href="#la-ia-como-asistente" id="toc-la-ia-como-asistente" class="nav-link" data-scroll-target="#la-ia-como-asistente">La IA como asistente</a></li>
-  <li><a href="#gemini-integrado-en-google-workspace" id="toc-gemini-integrado-en-google-workspace" class="nav-link" data-scroll-target="#gemini-integrado-en-google-workspace">Gemini integrado en Google Workspace</a></li>
-  <li><a href="#canvas-y-ai-studio-de-prompt-a-artefacto-visual" id="toc-canvas-y-ai-studio-de-prompt-a-artefacto-visual" class="nav-link" data-scroll-target="#canvas-y-ai-studio-de-prompt-a-artefacto-visual">Canvas y AI Studio: de prompt a artefacto visual</a></li>
-  <li><a href="#prácticas-de-la-sesión" id="toc-prácticas-de-la-sesión" class="nav-link" data-scroll-target="#prácticas-de-la-sesión">Prácticas de la sesión</a></li>
+  <li><a href="#replicabilidad-y-control-en-la-respuesta" id="toc-replicabilidad-y-control-en-la-respuesta" class="nav-link active" data-scroll-target="#replicabilidad-y-control-en-la-respuesta">Replicabilidad y control en la respuesta</a></li>
+  <li><a href="#tipos-de-prompts" id="toc-tipos-de-prompts" class="nav-link" data-scroll-target="#tipos-de-prompts">Tipos de prompts</a></li>
+  <li><a href="#prácticas" id="toc-prácticas" class="nav-link" data-scroll-target="#prácticas">Prácticas</a></li>
   </ul>
 <div class="toc-actions"><ul class="collapse"><li><a href="https://github.com/elrobin/dat/edit/main/tema9/sesion3.qmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li><li><a href="https://github.com/elrobin/dat/issues/new" class="toc-action"><i class="bi empty"></i>Informar sobre problema</a></li></ul></div></nav>
     </div>
@@ -379,9 +377,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tema9/sesion1.html">9| La IA en el entorno académico</a></li><li class="breadcrumb-item"><a href="../tema9/sesion3.html"><span class="chapter-title">Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tema9/sesion1.html">9| La IA en el entorno académico</a></li><li class="breadcrumb-item"><a href="../tema9/sesion3.html"><span class="chapter-title">Ingeniería de prompts</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">Ingeniería de prompts</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
 </div>
 
 
@@ -398,271 +396,222 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Sesión 3 de 3 &nbsp;·&nbsp; 2 horas
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Foco:</strong> aplicar con criterio<br>
-<strong>Hilo conductor:</strong> la IA como asistente, no como sustituto — y ponerle nombre a lo que habéis estado haciendo</p>
-</div>
-</div>
-<section id="ingeniería-de-prompts" class="level2">
-<h2 class="anchored" data-anchor-id="ingeniería-de-prompts">Ingeniería de prompts</h2>
-<p>La <strong>ingeniería de prompts</strong> es la práctica de diseñar instrucciones de entrada para obtener outputs más útiles y precisos de un LLM. No es una disciplina técnica reservada a programadores: es una habilidad comunicativa que cualquier profesional puede desarrollar.</p>
-<section id="técnicas-básicas" class="level3">
-<h3 class="anchored" data-anchor-id="técnicas-básicas">Técnicas básicas</h3>
-<section id="zero-shot-prompting" class="level4">
-<h4 class="anchored" data-anchor-id="zero-shot-prompting">Zero-shot prompting</h4>
-<p>Se pide una tarea sin proporcionar ningún ejemplo ni contexto adicional. Es el punto de partida más simple.</p>
-<pre><code>Traduce el siguiente término jurídico al inglés: "resolver el contrato de pleno derecho"</code></pre>
-</section>
-<section id="few-shot-prompting" class="level4">
-<h4 class="anchored" data-anchor-id="few-shot-prompting">Few-shot prompting</h4>
-<p>Se proporcionan uno o varios ejemplos dentro del prompt para guiar el tipo de output esperado. Muy útil para tareas de formato específico.</p>
-<pre><code>Extrae los términos clave del siguiente texto y proporciona su equivalente en inglés 
-jurídico. Sigue este formato:
-
-Término: licenciante
-Equivalente: licensor
-Contexto: derecho contractual anglosajón
-
-Ahora haz lo mismo con este texto: [texto]</code></pre>
-</section>
-<section id="chain-of-thought-cot-prompting" class="level4">
-<h4 class="anchored" data-anchor-id="chain-of-thought-cot-prompting">Chain-of-Thought (CoT) prompting</h4>
-<p>Se pide al modelo que razone paso a paso antes de dar la respuesta final. Mejora significativamente los resultados en tareas que requieren análisis o justificación.</p>
-<pre><code>Analiza si el término "requerimiento judicial previo" tiene equivalente directo en el 
-sistema jurídico inglés. Razona tu respuesta antes de concluir: considera primero las 
-diferencias entre el sistema procesal civil español y el anglosajón, luego evalúa si 
-existe un concepto equivalente, y finalmente propón la traducción más adecuada.</code></pre>
-</section>
-<section id="role-prompting" class="level4">
-<h4 class="anchored" data-anchor-id="role-prompting">Role prompting</h4>
-<p>Se asigna un rol al modelo para que ajuste su base de conocimiento y tono al tipo de respuesta deseada.</p>
-<pre><code>Actúa como terminólogo especializado en derecho contractual con experiencia en el par 
-de lenguas español-inglés. Tu tarea es revisar la siguiente lista de equivalencias y 
-señalar cuáles son incorrectas o imprecisas para un contexto de derecho anglosajón.</code></pre>
-</section>
-<section id="prompting-multimodal" class="level4">
-<h4 class="anchored" data-anchor-id="prompting-multimodal">Prompting multimodal</h4>
-<p>Se combinan diferentes formatos de entrada: texto, imágenes, PDFs, código. Gemini y ChatGPT admiten subir documentos directamente al chat.</p>
-<p>Casos de uso para T&amp;I:</p>
+<section id="replicabilidad-y-control-en-la-respuesta" class="level2">
+<h2 class="anchored" data-anchor-id="replicabilidad-y-control-en-la-respuesta">Replicabilidad y control en la respuesta</h2>
+<p>Cuando lanzas el mismo prompt dos veces, el modelo no da exactamente la misma respuesta. Esto no es un fallo: es una decisión de diseño. Los LLMs tienen parámetros que controlan cuánta variabilidad hay en sus respuestas, y entenderlos te permite decidir cuándo quieres creatividad y cuándo quieres consistencia. Esto lo hacen a través de dos parámetros:</p>
 <ul>
-<li>Subir un glosario en PDF y pedir que lo use como referencia para verificar terminología</li>
-<li>Subir una captura de pantalla de una interfaz y pedir que explique cómo usarla</li>
-<li>Combinar un texto fuente con instrucciones estilísticas para orientar la traducción</li>
+<li>La <strong>temperatura</strong>, que controla cuánta aleatoriedad introduce el modelo al elegir la siguiente palabra.</li>
 </ul>
-</section>
-</section>
-<section id="tipos-de-prompts-por-función" class="level3">
-<h3 class="anchored" data-anchor-id="tipos-de-prompts-por-función">Tipos de prompts por función</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/temperatura.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="470"></p>
+</figure>
+</div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 50%">
-<col style="width: 30%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Tipo</th>
-<th>Para qué sirve</th>
-<th>Ejemplo</th>
+<th style="text-align: right;">Temperatura</th>
+<th>Comportamiento</th>
+<th>Cuándo usarla</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Instrucción directa</td>
-<td>Pedir algo concreto</td>
-<td>“Dame una ecuación de búsqueda para Web of Science sobre traducción jurídica”</td>
+<td style="text-align: right;"><strong>0.0 - 0.3</strong></td>
+<td>Prácticamente determinista. Ante el mismo prompt en condiciones idénticas, el modelo tenderá a dar la misma respuesta.</td>
+<td>Útil para extracción de datos, terminología, traducciones o tareas que deban replicarse. Limitada si queremos hacer <em>brainstorming</em> o queremos que sea ‘creativo’ en su respuesta.</td>
 </tr>
 <tr class="even">
-<td>Reescritura y edición</td>
-<td>Mejorar un texto</td>
-<td>“Reescribe este párrafo en un registro más formal e indica los cambios”</td>
+<td style="text-align: right;"><strong>0.4 - 0.7</strong></td>
+<td>Equilibrio entre coherencia y variedad. La probabilidad permite más variabilidad en la respuesta, dando respuestas más diversas, pero controlando la probabilidad de respuesta aún</td>
+<td>Útil para redacciones, análisis o explicaciones para el usuario</td>
 </tr>
 <tr class="odd">
-<td>Consulta</td>
-<td>Obtener una explicación</td>
-<td>“¿Cuál es la diferencia entre <em>assignment</em> y <em>transfer</em> en derecho contractual inglés?”</td>
-</tr>
-<tr class="even">
-<td>Tarea simulada</td>
-<td>Generar contenido desde un rol</td>
-<td>“Eres un revisor de traducción jurídica. Evalúa este fragmento y señala los problemas”</td>
-</tr>
-<tr class="odd">
-<td>Refinamiento</td>
-<td>Ajustar la respuesta anterior</td>
-<td>“Bien, ahora hazlo más conciso y elimina los ejemplos”</td>
+<td style="text-align: right;"><strong>0.8 - 1.0</strong></td>
+<td>Más creativa, menos predecible, más probabilidad de alucinación, ya que hay mayor aletoriedad en las respuestas que da, incluyendo texto plausible aunque no necesariamente correcto.</td>
+<td>Útil para hacer brainstorming, pelotear ideas o redactar textos creativos</td>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-<section id="la-ia-como-asistente" class="level2">
-<h2 class="anchored" data-anchor-id="la-ia-como-asistente">La IA como asistente</h2>
-<p>Llegados aquí, es el momento de nombrar lo que habéis estado haciendo estas tres sesiones.</p>
-<p>En ningún momento os hemos pedido que la IA haga el trabajo por vosotros. Os hemos pedido que la uséis para <strong>buscar</strong> (sesión 1), <strong>verificar</strong> (sesión 2) y ahora <strong>construir con criterio</strong> (sesión 3). Eso tiene un nombre: usar la IA como <strong>asistente</strong>, no como oráculo ni como sustituto.</p>
-<p>Los usos más valiosos de un LLM en el trabajo de documentación y traducción son precisamente los que no generan un producto final directamente:</p>
 <ul>
-<li><strong>Brainstorming:</strong> generar ideas, ángulos o enfoques que luego tú evalúas y seleccionas</li>
-<li><strong>Andamiaje:</strong> obtener una estructura o borrador sobre el que trabajar, no el resultado final</li>
-<li><strong>Ecuaciones de búsqueda:</strong> construir búsquedas para bases de datos que luego ejecutas y verificas tú</li>
-<li><strong>Tutoriales on demand:</strong> pedir que te explique cómo usar una herramienta, un formato o una función concreta</li>
-<li><strong>Código asistido:</strong> generar un script para automatizar una tarea repetitiva aunque no sepas programar</li>
+<li><p>El <strong>top-p</strong> o <em>nucelus sampling</em>, que trabaja de forma complementaria a la temperatura. En lugar de controlar cuánta aleatoriedad hay en general, controla el tamaño del conjunto de palabras entre las que el modelo puede elegir.</p>
+<blockquote class="blockquote">
+<p>Imagínate que le damos un valor de <code>top-p = 0.1</code>, el modelo solo considera las palabras que juntas acumulan el 10% de probabilidad: es decir, sólo las más probables. Con <code>top-p = 0.9</code>, considera un conjunto mucho más amplio de palabras posibles.</p>
+</blockquote></li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>La pregunta clave
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Antes de usar la IA para una tarea, pregúntate: ¿estoy usando la IA para <strong>pensar mejor</strong> o para <strong>no pensar</strong>? La primera opción suma. La segunda resta.</p>
-</div>
-</div>
-</section>
-<section id="gemini-integrado-en-google-workspace" class="level2">
-<h2 class="anchored" data-anchor-id="gemini-integrado-en-google-workspace">Gemini integrado en Google Workspace</h2>
-<p>Con tu cuenta UGR tienes acceso a Gemini integrado directamente en Google Docs, Sheets y Drive. Muchos de vosotros ya lo usáis sin identificarlo conscientemente: el botón de “Ayúdame a escribir” en Docs, las sugerencias de respuesta en Gmail, los resúmenes automáticos en Drive.</p>
-<p>Usos concretos para T&amp;I:</p>
-<ul>
-<li>En Google Docs: pedir que reformule un párrafo, que cambie el registro, que resuma un documento largo</li>
-<li>En Google Sheets: generar fórmulas, ordenar y filtrar datos terminológicos</li>
-<li>En Drive: buscar dentro de documentos usando lenguaje natural</li>
-</ul>
-</section>
-<section id="canvas-y-ai-studio-de-prompt-a-artefacto-visual" class="level2">
-<h2 class="anchored" data-anchor-id="canvas-y-ai-studio-de-prompt-a-artefacto-visual">Canvas y AI Studio: de prompt a artefacto visual</h2>
-<p><strong>Canvas</strong> (disponible en ChatGPT y en algunas versiones de Gemini) permite trabajar de forma iterativa sobre un documento o código, editando partes concretas sin reescribir todo cada vez.</p>
-<p><strong>AI Studio</strong> de Google permite construir aplicaciones sencillas a partir de prompts, incluyendo páginas web estáticas, sin necesidad de saber HTML. El punto no es que aprendáis a programar: es que entendéis que la IA puede hacer de puente entre vuestra idea y un artefacto técnico que de otra manera requeriría conocimientos que no tenéis todavía.</p>
-<hr>
-</section>
-<section id="prácticas-de-la-sesión" class="level2">
-<h2 class="anchored" data-anchor-id="prácticas-de-la-sesión">Prácticas de la sesión</h2>
-<section id="practica-3a" class="level3">
-<h3 class="anchored" data-anchor-id="practica-3a">Práctica en clase A — Refinamiento de prompts en cadena</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🔵 Práctica en clase &nbsp;·&nbsp; Individual &nbsp;·&nbsp; ~25 min
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Tarea:</strong> Partid del prompt más básico posible y llegad a uno bien construido en cuatro iteraciones. Usad Gemini con vuestra cuenta UGR.</p>
-<p><strong>Iteración 1 — Prompt malo:</strong></p>
-<pre><code>tradúceme esto al inglés
-[pegar el texto base]</code></pre>
-<p><strong>Iteración 2 — Añadir tarea y contexto:</strong></p>
-<pre><code>Traduce el siguiente fragmento de contrato de licencia de software del español al inglés 
-jurídico. El texto va dirigido a una empresa anglosajona en un contexto de derecho 
-contractual británico.
-[texto]</code></pre>
-<p><strong>Iteración 3 — Añadir formato y restricciones:</strong></p>
-<pre><code>[prompt anterior] 
-Presenta el resultado en dos columnas: español a la izquierda, inglés a la derecha. 
-Para los términos que no tengan equivalente directo en el sistema jurídico británico, 
-añade una nota breve explicando la diferencia conceptual.</code></pre>
-<p><strong>Iteración 4 — Añadir input multimodal:</strong><br>
-Subid junto al prompt una captura o PDF con una entrada del diccionario IATE o Black’s Law Dictionary para uno de los términos clave. Pedid que tenga en cuenta esa referencia.</p>
-<p><strong>Puesta en común:</strong> comparamos el resultado de la iteración 1 y la iteración 4. ¿Qué cambió? ¿Qué sigue siendo incorrecto aunque el prompt sea mejor?</p>
-</div>
-</div>
-</section>
-<section id="practica-3b" class="level3">
-<h3 class="anchored" data-anchor-id="practica-3b">Práctica en clase B — Flujo de trabajo real</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>🔵 Práctica en clase &nbsp;·&nbsp; Grupos de 3 &nbsp;·&nbsp; ~25 min
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Tarea:</strong> Resolved en grupo la siguiente tarea de documentación previa usando al menos dos herramientas distintas. Documentad qué usasteis para qué y por qué.</p>
-<p><strong>Encargo:</strong> Necesitáis documentaros para traducir el texto base al francés jurídico. En 25 minutos tenéis que producir: (1) tres fuentes fiables, (2) cinco equivalencias terminológicas verificadas, (3) una nota sobre las diferencias entre el sistema jurídico español y el francés relevantes para esta traducción.</p>
-<p><strong>Lo que se evalúa no es el resultado sino el proceso:</strong> ¿qué herramienta usasteis para qué paso? ¿Dónde falló la IA? ¿Cómo lo compensasteis?</p>
-</div>
-</div>
-</section>
-<section id="entregable-3" class="level3">
-<h3 class="anchored" data-anchor-id="entregable-3">Entregable 3 — Infografía del flujo de trabajo</h3>
-<div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Advertencia</span>🟢 Entregable individual &nbsp;·&nbsp; Se hace y corrige en clase
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Tarea:</strong> Usando los entregables 1 y 2 como materia prima, documentad el flujo de trabajo completo que habéis seguido a lo largo de las tres sesiones. El output no es un documento de texto: es una <strong>infografía</strong> creada con Canvas (Gemini o ChatGPT) o con <strong>AI Studio</strong>.</p>
-<p><strong>Qué debe incluir la infografía:</strong></p>
-<ol type="1">
-<li>Las tres fases del flujo (búsqueda de fuentes → glosario verificado → traducción asistida)</li>
-<li>Qué herramienta usaste en cada fase y para qué</li>
-<li>Al menos un prompt que funcionó bien y uno que no funcionó</li>
-<li>Una decisión que tomaste tú porque la IA se equivocó o fue insuficiente</li>
-</ol>
-<p><strong>Proceso sugerido:</strong></p>
-<pre><code>Prompt de partida para Canvas o AI Studio:
-
-Crea una infografía visual sobre mi flujo de trabajo de documentación para traducción. 
-El flujo tiene tres fases: [describe brevemente cada fase]. 
-Incluye iconos simples, flechas de proceso y una sección de "lecciones aprendidas". 
-Estilo limpio y profesional, paleta de colores azul y gris.</code></pre>
-<p>Luego iterad sobre el resultado: pedid cambios concretos, añadid texto, ajustad el diseño.</p>
-<p><strong>Corrección en clase:</strong> mini-exposición de 2 minutos por persona. Mostráis la infografía y respondéis a una pregunta sobre una decisión que tomasteis.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Opción avanzada
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Si quieres ir más allá, usa AI Studio para generar una página web estática sencilla en lugar de una infografía. El proceso es el mismo: partes de un prompt describiendo el contenido y el estilo, y la herramienta genera el código HTML. No necesitas saber programar para entender lo que está haciendo.</p>
-</div>
-</div>
-</div>
-</div>
-<hr>
+<p>En la práctica, temperatura y top-p actúan juntos. La mayoría de herramientas de uso general como Gemini no exponen estos parámetros directamente, pero AI Studio sí permite ajustarlos, lo que te da control total sobre el comportamiento del modelo.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Cierre del tema 9
+<span class="screen-reader-only">Nota</span>Modos indirectos de influir en los parámetros
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Lo que habéis hecho en estas tres sesiones tiene un nombre: usar la IA como <strong>asistente inteligente</strong>, no como oráculo. Habéis buscado con criterio, verificado con escepticismo y producido con decisión propia. Eso es exactamente lo que diferencia a un profesional de alguien que delega sin pensar.</p>
-<p>Las herramientas cambiarán. El criterio que habéis entrenado, no.</p>
+<p>No puedes cambiar la temperatura directamente desde la interfaz de un chatbot. Normalmente esto se hace cuando uno se conecta a estos sistemas a través de una API. Sin embargo, puedes conseguir un efecto similar instruyendo al modelo en el propio prompt:</p>
+<ul>
+<li><em>“Dame siempre la misma respuesta para este tipo de consulta”</em> → empuja hacia consistencia</li>
+<li><em>“Dame cinco opciones muy distintas entre sí”</em> → empuja hacia variedad</li>
+</ul>
+<p>No es lo mismo que controlar el parámetro directamente, pero puede funcionar para la mayoría de casos.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>¿Qué es una API?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><u>Una API (Application Programming Interface) es una forma de comunicarse con un programa sin necesidad de usar su interfaz visual.</u> Cuando usas ChatGPT a través del navegador, interactúas con una interfaz diseñada para humanos. Cuando accedes a través de la API, le mandas instrucciones directamente en forma de código y recibes la respuesta también en código, sin pantallas ni botones de por medio.</p>
+<p>Esto es importante porque a partir de las APIs podemos integrar un LLM dentro de otras herramientas: un gestor de traducciones, una hoja de cálculo, un flujo de trabajo automatizado. En lugar de abrir el chat y copiar y pegar, el programa habla directamente con el modelo y procesa los resultados automáticamente.</p>
+</div>
+</div>
+</section>
+<section id="tipos-de-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-prompts">Tipos de prompts</h2>
+<p>Un prompt no es solo una pregunta. Según cómo lo construyas, el modelo activará estrategias de respuesta muy distintas. Conocer estas técnicas te permite elegir la más adecuada para cada tarea en lugar de improvisar cada vez.</p>
+<section id="zero-shot-prompting" class="level3">
+<h3 class="anchored" data-anchor-id="zero-shot-prompting">Zero-shot prompting</h3>
+<p>Le pides al modelo que haga algo sin darle ningún ejemplo ni contexto adicional. Es el punto de partida más simple y funciona bien para tareas directas y bien definidas.</p>
+<pre><code>Traduce el siguiente término jurídico al inglés británico: 
+"resolver el contrato de pleno derecho"</code></pre>
+<p><strong>Cuándo funciona bien:</strong> consultas terminológicas directas, preguntas factuales, tareas con un output muy claro.</p>
+<p><strong>Cuándo falla:</strong> cuando la tarea requiere un formato muy específico, cuando el dominio es muy especializado o cuando necesitas que el modelo adopte un criterio concreto que no está en su entrenamiento general.</p>
+</section>
+<section id="few-shot-prompting" class="level3">
+<h3 class="anchored" data-anchor-id="few-shot-prompting">Few-shot prompting</h3>
+<p>Antes de pedir la tarea, le muestras al modelo uno o varios ejemplos del output que esperas. El modelo aprende el patrón de tus ejemplos y lo replica.</p>
+<pre><code>Aquí tienes ejemplos de cómo quiero que presentes las entradas del glosario:
+
+Término: despechá
+Categoría: andalucismo / apócope
+Definición: forma apocopada de "despechada", con elisión de la -d- 
+intervocálica característica del habla andaluza
+Reto de traducción: la apócope es intraducible fonéticamente en inglés; 
+se pierde el marcador dialectal
+Propuesta: "done with you" (pérdida del rasgo dialectal aceptada)
+
+Ahora haz lo mismo con estos términos: [lista de términos]</code></pre>
+<p><strong>Cuándo funciona bien:</strong> cuando necesitas un formato de salida exacto y consistente, cuando construyes un glosario o tabla con estructura definida, cuando el zero-shot te da respuestas correctas pero mal formateadas.</p>
+<p><strong>Cuándo falla:</strong> si los ejemplos que das tienen inconsistencias, el modelo las replica. Basura entra, basura sale.</p>
+</section>
+<section id="chain-of-thought-cot-prompting" class="level3">
+<h3 class="anchored" data-anchor-id="chain-of-thought-cot-prompting">Chain-of-Thought (CoT) prompting</h3>
+<p>Le pides al modelo que razone paso a paso antes de dar la respuesta final. Esto mejora significativamente los resultados en tareas que requieren análisis, comparación o justificación. Sería una forma <em>artificial</em> de obligar al modelo a que razone o piense.</p>
+<pre><code>Analiza si el término "motomami" tiene equivalente en inglés. 
+Razona tu respuesta siguiendo estos pasos: 
+primero explica qué significa el término y de dónde viene, 
+luego evalúa si existe un concepto equivalente en la cultura anglófona, 
+y finalmente propón la estrategia de traducción más adecuada 
+justificando tu elección.</code></pre>
+<p><strong>Cuándo funciona bien:</strong> análisis de equivalencias complejas, justificación de decisiones traductológicas, evaluación de opciones cuando no hay una respuesta única correcta.</p>
+<p><strong>Cuándo falla:</strong> para tareas simples y directas es innecesario y hace las respuestas más largas sin añadir valor. Si le pides que razone por qué “cat” se traduce como “gato”, el resultado es ridículo.</p>
+</section>
+<section id="role-prompting" class="level3">
+<h3 class="anchored" data-anchor-id="role-prompting">Role prompting</h3>
+<p>Le asignas al modelo un rol específico para que ajuste su base de conocimiento, su tono y sus criterios al perfil que necesitas.</p>
+<pre><code>Eres un traductor especializado en música urbana hispanohablante 
+con experiencia en localización cultural para el mercado anglosajón. 
+Tu criterio prioritario es preservar el impacto cultural del texto 
+aunque eso implique pérdidas formales. Con ese criterio, 
+propón una traducción al inglés de esta estrofa de Bad Bunny: [estrofa]</code></pre>
+<p><strong>Cuándo funciona bien:</strong> cuando necesitas que el modelo adopte un criterio profesional específico, cuando quieres simular la perspectiva de un revisor, un cliente o un experto en un dominio concreto.</p>
+<p><strong>Cuándo falla:</strong> el modelo acepta el rol pero no siempre lo mantiene de forma consistente a lo largo de una conversación larga. Conviene recordárselo si la sesión se extiende.</p>
+</section>
+<section id="combinando-técnicas" class="level3">
+<h3 class="anchored" data-anchor-id="combinando-técnicas">Combinando técnicas</h3>
+<p>Las técnicas anteriores no son excluyentes. En la práctica, los prompts más efectivos combinan varias:</p>
+<pre><code>[Role] Eres un terminólogo especializado en música urbana.
+[CoT] Analiza el término "perreo" siguiendo estos pasos: 
+origen, connotaciones culturales, registro, presencia en otras lenguas.
+[Few-shot] Presenta el resultado en este formato:
+
+Término: [término]
+Origen: [origen]
+Connotaciones: [connotaciones]
+Registro: [registro]
+Equivalente propuesto: [equivalente]
+Estrategia: [estrategia de traducción]
+
+[Zero-shot para el contenido] Ahora aplica este análisis a: 
+perreo, flow, jangueo</code></pre>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>💡Very important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><u>La técnica de prompting no determina la calidad del resultado por sí sola</u>. Un few-shot con ejemplos malos produce outputs malos con mucha consistencia. Un role prompt con un rol mal definido produce respuestas genéricas con apariencia de especialización. La técnica es el vehículo: el criterio es tuyo.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="prácticas" class="level2">
+<h2 class="anchored" data-anchor-id="prácticas">Prácticas</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Ejercicio - Creación de contenido interactivo con Gemini
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Tarea.</strong> En esta práctica vas a usar Gemini Canvas para construir una página web de análisis terminológico sobre un artista o grupo musical a tu elección. La única condición es que debe ser alguien que o bien combine distintos idiomas o utilice expresiones especialmente distintivas. Yo te voy a sugerir dos si estás escasa de imaginación:</p>
+<ul>
+<li>Rosalia</li>
+<li>Bad Bunny</li>
+<li>Stromae</li>
+</ul>
+<p>Para ello vamos a trabajar con la opción de Canvas de <a href="https://gemini.google.com">Gemini</a>. Canvas es un generador y editor de textos que no sólo permite generar texto, sino también convertirlo a diferentes formatos:</p>
+<ul>
+<li>Página web</li>
+<li>Infografía</li>
+<li>Cuestionario</li>
+<li>Tarjetas didácticas</li>
+<li>Resumen de audio</li>
+</ul>
+<p>Nosotros trabajaremos con la de creación de páginas web. Esta página web deberás colgarla luego en Google Sites y pasarme el link. <strong>¿Cómo se hace eso?</strong> Pregúntale a Gemini 😮.</p>
+<p>Estas son las tareas que deberás llevar a cabo:</p>
+<ol type="1">
+<li>Buscar las letras de 3 canciones del artista y generar un corpus terminológico</li>
+<li>Crear una web que contenga estas cuatro secciones:
+<ol type="1">
+<li><strong>Presentación del artista</strong>. ¿Por qué es interesante desde el punto de vista de la traducción? Menciona al menos dos rasgos lingüísticos característicos.</li>
+<li><strong>Análisis terminológico por canción.</strong> Para cada canción, pídele al modelo que identifique las palabras más repetidas quitando preposiciones y artículos y organice en categorías lingüísticas. También tiene que incluirte un análisis terminológico de cada canción.</li>
+<li><strong>Cinco retos de traducción</strong>. Aquí deberás incluir expresiones o términos especialmente difíciles de traducir a la lengua que elijas, con una propuesta de solución razonada para cada uno</li>
+<li><strong>Ficha de proceso</strong>. Incluye aquí un resumen de técnicas de prompt empleadas.</li>
+</ol></li>
+</ol>
+<p>Cuando lo tengas todo respóndeme a las siguientes preguntas:</p>
+<ol type="1">
+<li>Enlace de la web generada</li>
+<li>¿Con qué apartado te liaste o se lió más Gemini para crearlo? ¿Qué parte ha sido especialmente costosa y cómo lo has arreglado?</li>
+<li>¿Hasta qué punto te sientes dueña del contenido de la web? ¿Se te ocurre un uso alternativo para utilizar esta herramienta en la creación de páginas web?</li>
+</ol>
 </div>
 </div>
 
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1144,214 +1093,184 @@ Estilo limpio y profesional, paleta de colores azul y gris.</code></pre>
   <div class="nav-page nav-page-next">
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sesión 3 de 3 &amp;nbsp;·&amp;nbsp; 2 horas</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>**Foco:** aplicar con criterio  </span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>**Hilo conductor:** la IA como asistente, no como sustituto — y ponerle nombre a lo que habéis estado haciendo</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ingeniería de prompts</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>La **ingeniería de prompts** es la práctica de diseñar instrucciones de entrada para obtener outputs más útiles y precisos de un LLM. No es una disciplina técnica reservada a programadores: es una habilidad comunicativa que cualquier profesional puede desarrollar.</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### Técnicas básicas</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Zero-shot prompting</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>Se pide una tarea sin proporcionar ningún ejemplo ni contexto adicional. Es el punto de partida más simple.</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="in">Traduce el siguiente término jurídico al inglés: "resolver el contrato de pleno derecho"</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Few-shot prompting</span></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>Se proporcionan uno o varios ejemplos dentro del prompt para guiar el tipo de output esperado. Muy útil para tareas de formato específico.</span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="in">Extrae los términos clave del siguiente texto y proporciona su equivalente en inglés </span></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="in">jurídico. Sigue este formato:</span></span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="in">Término: licenciante</span></span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="in">Equivalente: licensor</span></span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="in">Contexto: derecho contractual anglosajón</span></span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="in">Ahora haz lo mismo con este texto: [texto]</span></span>
-<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Chain-of-Thought (CoT) prompting</span></span>
-<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>Se pide al modelo que razone paso a paso antes de dar la respuesta final. Mejora significativamente los resultados en tareas que requieren análisis o justificación.</span>
-<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="in">Analiza si el término "requerimiento judicial previo" tiene equivalente directo en el </span></span>
-<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="in">sistema jurídico inglés. Razona tu respuesta antes de concluir: considera primero las </span></span>
-<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="in">diferencias entre el sistema procesal civil español y el anglosajón, luego evalúa si </span></span>
-<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="in">existe un concepto equivalente, y finalmente propón la traducción más adecuada.</span></span>
-<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Role prompting</span></span>
-<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>Se asigna un rol al modelo para que ajuste su base de conocimiento y tono al tipo de respuesta deseada.</span>
-<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a><span class="in">Actúa como terminólogo especializado en derecho contractual con experiencia en el par </span></span>
-<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a><span class="in">de lenguas español-inglés. Tu tarea es revisar la siguiente lista de equivalencias y </span></span>
-<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="in">señalar cuáles son incorrectas o imprecisas para un contexto de derecho anglosajón.</span></span>
-<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Prompting multimodal</span></span>
-<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>Se combinan diferentes formatos de entrada: texto, imágenes, PDFs, código. Gemini y ChatGPT admiten subir documentos directamente al chat.</span>
-<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>Casos de uso para T&amp;I:</span>
-<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Subir un glosario en PDF y pedir que lo use como referencia para verificar terminología</span>
-<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Subir una captura de pantalla de una interfaz y pedir que explique cómo usarla</span>
-<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Combinar un texto fuente con instrucciones estilísticas para orientar la traducción</span>
-<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tipos de prompts por función</span></span>
-<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tipo <span class="pp">|</span> Para qué sirve <span class="pp">|</span> Ejemplo <span class="pp">|</span></span>
-<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|---------------|---------|</span></span>
-<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Instrucción directa <span class="pp">|</span> Pedir algo concreto <span class="pp">|</span> "Dame una ecuación de búsqueda para Web of Science sobre traducción jurídica" <span class="pp">|</span></span>
-<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Reescritura y edición <span class="pp">|</span> Mejorar un texto <span class="pp">|</span> "Reescribe este párrafo en un registro más formal e indica los cambios" <span class="pp">|</span></span>
-<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Consulta <span class="pp">|</span> Obtener una explicación <span class="pp">|</span> "¿Cuál es la diferencia entre *assignment* y *transfer* en derecho contractual inglés?" <span class="pp">|</span></span>
-<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tarea simulada <span class="pp">|</span> Generar contenido desde un rol <span class="pp">|</span> "Eres un revisor de traducción jurídica. Evalúa este fragmento y señala los problemas" <span class="pp">|</span></span>
-<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Refinamiento <span class="pp">|</span> Ajustar la respuesta anterior <span class="pp">|</span> "Bien, ahora hazlo más conciso y elimina los ejemplos" <span class="pp">|</span></span>
-<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## La IA como asistente</span></span>
-<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a>Llegados aquí, es el momento de nombrar lo que habéis estado haciendo estas tres sesiones.</span>
-<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a>En ningún momento os hemos pedido que la IA haga el trabajo por vosotros. Os hemos pedido que la uséis para **buscar** (sesión 1), **verificar** (sesión 2) y ahora **construir con criterio** (sesión 3). Eso tiene un nombre: usar la IA como **asistente**, no como oráculo ni como sustituto.</span>
-<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a>Los usos más valiosos de un LLM en el trabajo de documentación y traducción son precisamente los que no generan un producto final directamente:</span>
-<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Brainstorming:** generar ideas, ángulos o enfoques que luego tú evalúas y seleccionas</span>
-<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Andamiaje:** obtener una estructura o borrador sobre el que trabajar, no el resultado final</span>
-<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ecuaciones de búsqueda:** construir búsquedas para bases de datos que luego ejecutas y verificas tú</span>
-<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tutoriales on demand:** pedir que te explique cómo usar una herramienta, un formato o una función concreta</span>
-<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Código asistido:** generar un script para automatizar una tarea repetitiva aunque no sepas programar</span>
-<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## La pregunta clave</span></span>
-<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a>Antes de usar la IA para una tarea, pregúntate: ¿estoy usando la IA para **pensar mejor** o para **no pensar**? La primera opción suma. La segunda resta.</span>
-<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gemini integrado en Google Workspace</span></span>
-<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a>Con tu cuenta UGR tienes acceso a Gemini integrado directamente en Google Docs, Sheets y Drive. Muchos de vosotros ya lo usáis sin identificarlo conscientemente: el botón de "Ayúdame a escribir" en Docs, las sugerencias de respuesta en Gmail, los resúmenes automáticos en Drive.</span>
-<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a>Usos concretos para T&amp;I:</span>
-<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En Google Docs: pedir que reformule un párrafo, que cambie el registro, que resuma un documento largo</span>
-<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En Google Sheets: generar fórmulas, ordenar y filtrar datos terminológicos</span>
-<span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>En Drive: buscar dentro de documentos usando lenguaje natural</span>
-<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a><span class="fu">## Canvas y AI Studio: de prompt a artefacto visual</span></span>
-<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a>**Canvas** (disponible en ChatGPT y en algunas versiones de Gemini) permite trabajar de forma iterativa sobre un documento o código, editando partes concretas sin reescribir todo cada vez.</span>
-<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>**AI Studio** de Google permite construir aplicaciones sencillas a partir de prompts, incluyendo páginas web estáticas, sin necesidad de saber HTML. El punto no es que aprendáis a programar: es que entendéis que la IA puede hacer de puente entre vuestra idea y un artefacto técnico que de otra manera requeriría conocimientos que no tenéis todavía.</span>
-<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prácticas de la sesión</span></span>
-<span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a><span class="fu">### Práctica en clase A — Refinamiento de prompts en cadena {#practica-3a}</span></span>
-<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
-<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔵 Práctica en clase &amp;nbsp;·&amp;nbsp; Individual &amp;nbsp;·&amp;nbsp; ~25 min</span></span>
-<span id="cb9-122"><a href="#cb9-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-123"><a href="#cb9-123" aria-hidden="true" tabindex="-1"></a>**Tarea:** Partid del prompt más básico posible y llegad a uno bien construido en cuatro iteraciones. Usad Gemini con vuestra cuenta UGR.</span>
-<span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a>**Iteración 1 — Prompt malo:**</span>
-<span id="cb9-126"><a href="#cb9-126" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-127"><a href="#cb9-127" aria-hidden="true" tabindex="-1"></a><span class="in">tradúceme esto al inglés</span></span>
-<span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a><span class="in">[pegar el texto base]</span></span>
-<span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-130"><a href="#cb9-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-131"><a href="#cb9-131" aria-hidden="true" tabindex="-1"></a>**Iteración 2 — Añadir tarea y contexto:**</span>
-<span id="cb9-132"><a href="#cb9-132" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-133"><a href="#cb9-133" aria-hidden="true" tabindex="-1"></a><span class="in">Traduce el siguiente fragmento de contrato de licencia de software del español al inglés </span></span>
-<span id="cb9-134"><a href="#cb9-134" aria-hidden="true" tabindex="-1"></a><span class="in">jurídico. El texto va dirigido a una empresa anglosajona en un contexto de derecho </span></span>
-<span id="cb9-135"><a href="#cb9-135" aria-hidden="true" tabindex="-1"></a><span class="in">contractual británico.</span></span>
-<span id="cb9-136"><a href="#cb9-136" aria-hidden="true" tabindex="-1"></a><span class="in">[texto]</span></span>
-<span id="cb9-137"><a href="#cb9-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-138"><a href="#cb9-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-139"><a href="#cb9-139" aria-hidden="true" tabindex="-1"></a>**Iteración 3 — Añadir formato y restricciones:**</span>
-<span id="cb9-140"><a href="#cb9-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-141"><a href="#cb9-141" aria-hidden="true" tabindex="-1"></a><span class="in">[prompt anterior] </span></span>
-<span id="cb9-142"><a href="#cb9-142" aria-hidden="true" tabindex="-1"></a><span class="in">Presenta el resultado en dos columnas: español a la izquierda, inglés a la derecha. </span></span>
-<span id="cb9-143"><a href="#cb9-143" aria-hidden="true" tabindex="-1"></a><span class="in">Para los términos que no tengan equivalente directo en el sistema jurídico británico, </span></span>
-<span id="cb9-144"><a href="#cb9-144" aria-hidden="true" tabindex="-1"></a><span class="in">añade una nota breve explicando la diferencia conceptual.</span></span>
-<span id="cb9-145"><a href="#cb9-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-146"><a href="#cb9-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-147"><a href="#cb9-147" aria-hidden="true" tabindex="-1"></a>**Iteración 4 — Añadir input multimodal:**  </span>
-<span id="cb9-148"><a href="#cb9-148" aria-hidden="true" tabindex="-1"></a>Subid junto al prompt una captura o PDF con una entrada del diccionario IATE o Black's Law Dictionary para uno de los términos clave. Pedid que tenga en cuenta esa referencia.</span>
-<span id="cb9-149"><a href="#cb9-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-150"><a href="#cb9-150" aria-hidden="true" tabindex="-1"></a>**Puesta en común:** comparamos el resultado de la iteración 1 y la iteración 4. ¿Qué cambió? ¿Qué sigue siendo incorrecto aunque el prompt sea mejor?</span>
-<span id="cb9-151"><a href="#cb9-151" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb9-152"><a href="#cb9-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-153"><a href="#cb9-153" aria-hidden="true" tabindex="-1"></a><span class="fu">### Práctica en clase B — Flujo de trabajo real {#practica-3b}</span></span>
-<span id="cb9-154"><a href="#cb9-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-155"><a href="#cb9-155" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon=false}</span>
-<span id="cb9-156"><a href="#cb9-156" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔵 Práctica en clase &amp;nbsp;·&amp;nbsp; Grupos de 3 &amp;nbsp;·&amp;nbsp; ~25 min</span></span>
-<span id="cb9-157"><a href="#cb9-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-158"><a href="#cb9-158" aria-hidden="true" tabindex="-1"></a>**Tarea:** Resolved en grupo la siguiente tarea de documentación previa usando al menos dos herramientas distintas. Documentad qué usasteis para qué y por qué.</span>
-<span id="cb9-159"><a href="#cb9-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-160"><a href="#cb9-160" aria-hidden="true" tabindex="-1"></a>**Encargo:** Necesitáis documentaros para traducir el texto base al francés jurídico. En 25 minutos tenéis que producir: (1) tres fuentes fiables, (2) cinco equivalencias terminológicas verificadas, (3) una nota sobre las diferencias entre el sistema jurídico español y el francés relevantes para esta traducción.</span>
-<span id="cb9-161"><a href="#cb9-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-162"><a href="#cb9-162" aria-hidden="true" tabindex="-1"></a>**Lo que se evalúa no es el resultado sino el proceso:** ¿qué herramienta usasteis para qué paso? ¿Dónde falló la IA? ¿Cómo lo compensasteis?</span>
-<span id="cb9-163"><a href="#cb9-163" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb9-164"><a href="#cb9-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-165"><a href="#cb9-165" aria-hidden="true" tabindex="-1"></a><span class="fu">### Entregable 3 — Infografía del flujo de trabajo {#entregable-3}</span></span>
-<span id="cb9-166"><a href="#cb9-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-167"><a href="#cb9-167" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning icon=false}</span>
-<span id="cb9-168"><a href="#cb9-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🟢 Entregable individual &amp;nbsp;·&amp;nbsp; Se hace y corrige en clase</span></span>
-<span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a>**Tarea:** Usando los entregables 1 y 2 como materia prima, documentad el flujo de trabajo completo que habéis seguido a lo largo de las tres sesiones. El output no es un documento de texto: es una **infografía** creada con Canvas (Gemini o ChatGPT) o con **AI Studio**.</span>
-<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-172"><a href="#cb9-172" aria-hidden="true" tabindex="-1"></a>**Qué debe incluir la infografía:**</span>
-<span id="cb9-173"><a href="#cb9-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-174"><a href="#cb9-174" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Las tres fases del flujo (búsqueda de fuentes → glosario verificado → traducción asistida)</span>
-<span id="cb9-175"><a href="#cb9-175" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Qué herramienta usaste en cada fase y para qué</span>
-<span id="cb9-176"><a href="#cb9-176" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Al menos un prompt que funcionó bien y uno que no funcionó</span>
-<span id="cb9-177"><a href="#cb9-177" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Una decisión que tomaste tú porque la IA se equivocó o fue insuficiente</span>
-<span id="cb9-178"><a href="#cb9-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-179"><a href="#cb9-179" aria-hidden="true" tabindex="-1"></a>**Proceso sugerido:**</span>
-<span id="cb9-180"><a href="#cb9-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-181"><a href="#cb9-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-182"><a href="#cb9-182" aria-hidden="true" tabindex="-1"></a><span class="in">Prompt de partida para Canvas o AI Studio:</span></span>
-<span id="cb9-183"><a href="#cb9-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-184"><a href="#cb9-184" aria-hidden="true" tabindex="-1"></a><span class="in">Crea una infografía visual sobre mi flujo de trabajo de documentación para traducción. </span></span>
-<span id="cb9-185"><a href="#cb9-185" aria-hidden="true" tabindex="-1"></a><span class="in">El flujo tiene tres fases: [describe brevemente cada fase]. </span></span>
-<span id="cb9-186"><a href="#cb9-186" aria-hidden="true" tabindex="-1"></a><span class="in">Incluye iconos simples, flechas de proceso y una sección de "lecciones aprendidas". </span></span>
-<span id="cb9-187"><a href="#cb9-187" aria-hidden="true" tabindex="-1"></a><span class="in">Estilo limpio y profesional, paleta de colores azul y gris.</span></span>
-<span id="cb9-188"><a href="#cb9-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-189"><a href="#cb9-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-190"><a href="#cb9-190" aria-hidden="true" tabindex="-1"></a>Luego iterad sobre el resultado: pedid cambios concretos, añadid texto, ajustad el diseño.</span>
-<span id="cb9-191"><a href="#cb9-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-192"><a href="#cb9-192" aria-hidden="true" tabindex="-1"></a>**Corrección en clase:** mini-exposición de 2 minutos por persona. Mostráis la infografía y respondéis a una pregunta sobre una decisión que tomasteis.</span>
-<span id="cb9-193"><a href="#cb9-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-194"><a href="#cb9-194" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb9-195"><a href="#cb9-195" aria-hidden="true" tabindex="-1"></a><span class="fu">## Opción avanzada</span></span>
-<span id="cb9-196"><a href="#cb9-196" aria-hidden="true" tabindex="-1"></a>Si quieres ir más allá, usa AI Studio para generar una página web estática sencilla en lugar de una infografía. El proceso es el mismo: partes de un prompt describiendo el contenido y el estilo, y la herramienta genera el código HTML. No necesitas saber programar para entender lo que está haciendo.</span>
-<span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb9-199"><a href="#cb9-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-200"><a href="#cb9-200" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb9-201"><a href="#cb9-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-202"><a href="#cb9-202" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb9-203"><a href="#cb9-203" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cierre del tema 9</span></span>
-<span id="cb9-204"><a href="#cb9-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-205"><a href="#cb9-205" aria-hidden="true" tabindex="-1"></a>Lo que habéis hecho en estas tres sesiones tiene un nombre: usar la IA como **asistente inteligente**, no como oráculo. Habéis buscado con criterio, verificado con escepticismo y producido con decisión propia. Eso es exactamente lo que diferencia a un profesional de alguien que delega sin pensar.</span>
-<span id="cb9-206"><a href="#cb9-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-207"><a href="#cb9-207" aria-hidden="true" tabindex="-1"></a>Las herramientas cambiarán. El criterio que habéis entrenado, no.</span>
-<span id="cb9-208"><a href="#cb9-208" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Ingeniería de prompts</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Replicabilidad y control en la respuesta</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>Cuando lanzas el mismo prompt dos veces, el modelo no da exactamente la misma respuesta. Esto no es un fallo: es una decisión de diseño. Los LLMs tienen parámetros que controlan cuánta variabilidad hay en sus respuestas, y entenderlos te permite decidir cuándo quieres creatividad y cuándo quieres consistencia. Esto lo hacen a través de dos parámetros:</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>La **temperatura**, que controla cuánta aleatoriedad introduce el modelo al elegir la siguiente palabra.</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/temperatura.png)</span>{fig-align="center" width="470"}</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Temperatura <span class="pp">|</span> Comportamiento <span class="pp">|</span> Cuándo usarla <span class="pp">|</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="pp">|---:|----|----|</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **0.0 - 0.3** <span class="pp">|</span> Prácticamente determinista. Ante el mismo prompt en condiciones idénticas, el modelo tenderá a dar la misma respuesta. <span class="pp">|</span> Útil para extracción de datos, terminología, traducciones o tareas que deban replicarse. Limitada si queremos hacer *brainstorming* o queremos que sea 'creativo' en su respuesta. <span class="pp">|</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **0.4 - 0.7** <span class="pp">|</span> Equilibrio entre coherencia y variedad. La probabilidad permite más variabilidad en la respuesta, dando respuestas más diversas, pero controlando la probabilidad de respuesta aún <span class="pp">|</span> Útil para redacciones, análisis o explicaciones para el usuario <span class="pp">|</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **0.8 - 1.0** <span class="pp">|</span> Más creativa, menos predecible, más probabilidad de alucinación, ya que hay mayor aletoriedad en las respuestas que da, incluyendo texto plausible aunque no necesariamente correcto. <span class="pp">|</span> Útil para hacer brainstorming, pelotear ideas o redactar textos creativos <span class="pp">|</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>El **top-p** o *nucelus sampling*, que trabaja de forma complementaria a la temperatura. En lugar de controlar cuánta aleatoriedad hay en general, controla el tamaño del conjunto de palabras entre las que el modelo puede elegir.</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="at">  &gt; Imagínate que le damos un valor de </span><span class="in">`top-p = 0.1`</span><span class="at">, el modelo solo considera las palabras que juntas acumulan el 10% de probabilidad: es decir, sólo las más probables. Con </span><span class="in">`top-p = 0.9`</span><span class="at">, considera un conjunto mucho más amplio de palabras posibles.</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>En la práctica, temperatura y top-p actúan juntos. La mayoría de herramientas de uso general como Gemini no exponen estos parámetros directamente, pero AI Studio sí permite ajustarlos, lo que te da control total sobre el comportamiento del modelo.</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Modos indirectos de influir en los parámetros</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>No puedes cambiar la temperatura directamente desde la interfaz de un chatbot. Normalmente esto se hace cuando uno se conecta a estos sistemas a través de una API. Sin embargo, puedes conseguir un efecto similar instruyendo al modelo en el propio prompt:</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*"Dame siempre la misma respuesta para este tipo de consulta"* → empuja hacia consistencia</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>*"Dame cinco opciones muy distintas entre sí"* → empuja hacia variedad</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>No es lo mismo que controlar el parámetro directamente, pero puede funcionar para la mayoría de casos.</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip appearance="simple"}</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## ¿Qué es una API?</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Una API (Application Programming Interface) es una forma de comunicarse con un programa sin necesidad de usar su interfaz visual.</span><span class="co">]</span>{.underline} Cuando usas ChatGPT a través del navegador, interactúas con una interfaz diseñada para humanos. Cuando accedes a través de la API, le mandas instrucciones directamente en forma de código y recibes la respuesta también en código, sin pantallas ni botones de por medio.</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>Esto es importante porque a partir de las APIs podemos integrar un LLM dentro de otras herramientas: un gestor de traducciones, una hoja de cálculo, un flujo de trabajo automatizado. En lugar de abrir el chat y copiar y pegar, el programa habla directamente con el modelo y procesa los resultados automáticamente.</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tipos de prompts</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>Un prompt no es solo una pregunta. Según cómo lo construyas, el modelo activará estrategias de respuesta muy distintas. Conocer estas técnicas te permite elegir la más adecuada para cada tarea en lugar de improvisar cada vez.</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### Zero-shot prompting</span></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>Le pides al modelo que haga algo sin darle ningún ejemplo ni contexto adicional. Es el punto de partida más simple y funciona bien para tareas directas y bien definidas.</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a><span class="in">Traduce el siguiente término jurídico al inglés británico: </span></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a><span class="in">"resolver el contrato de pleno derecho"</span></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>**Cuándo funciona bien:** consultas terminológicas directas, preguntas factuales, tareas con un output muy claro.</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>**Cuándo falla:** cuando la tarea requiere un formato muy específico, cuando el dominio es muy especializado o cuando necesitas que el modelo adopte un criterio concreto que no está en su entrenamiento general.</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="fu">### Few-shot prompting</span></span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>Antes de pedir la tarea, le muestras al modelo uno o varios ejemplos del output que esperas. El modelo aprende el patrón de tus ejemplos y lo replica.</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="in">Aquí tienes ejemplos de cómo quiero que presentes las entradas del glosario:</span></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a><span class="in">Término: despechá</span></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="in">Categoría: andalucismo / apócope</span></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="in">Definición: forma apocopada de "despechada", con elisión de la -d- </span></span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a><span class="in">intervocálica característica del habla andaluza</span></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a><span class="in">Reto de traducción: la apócope es intraducible fonéticamente en inglés; </span></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a><span class="in">se pierde el marcador dialectal</span></span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a><span class="in">Propuesta: "done with you" (pérdida del rasgo dialectal aceptada)</span></span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="in">Ahora haz lo mismo con estos términos: [lista de términos]</span></span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>**Cuándo funciona bien:** cuando necesitas un formato de salida exacto y consistente, cuando construyes un glosario o tabla con estructura definida, cuando el zero-shot te da respuestas correctas pero mal formateadas.</span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>**Cuándo falla:** si los ejemplos que das tienen inconsistencias, el modelo las replica. Basura entra, basura sale.</span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a><span class="fu">### Chain-of-Thought (CoT) prompting</span></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>Le pides al modelo que razone paso a paso antes de dar la respuesta final. Esto mejora significativamente los resultados en tareas que requieren análisis, comparación o justificación. Sería una forma *artificial* de obligar al modelo a que razone o piense.</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a><span class="in">Analiza si el término "motomami" tiene equivalente en inglés. </span></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a><span class="in">Razona tu respuesta siguiendo estos pasos: </span></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a><span class="in">primero explica qué significa el término y de dónde viene, </span></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a><span class="in">luego evalúa si existe un concepto equivalente en la cultura anglófona, </span></span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a><span class="in">y finalmente propón la estrategia de traducción más adecuada </span></span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a><span class="in">justificando tu elección.</span></span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>**Cuándo funciona bien:** análisis de equivalencias complejas, justificación de decisiones traductológicas, evaluación de opciones cuando no hay una respuesta única correcta.</span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>**Cuándo falla:** para tareas simples y directas es innecesario y hace las respuestas más largas sin añadir valor. Si le pides que razone por qué "cat" se traduce como "gato", el resultado es ridículo.</span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a><span class="fu">### Role prompting</span></span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a>Le asignas al modelo un rol específico para que ajuste su base de conocimiento, su tono y sus criterios al perfil que necesitas.</span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a><span class="in">Eres un traductor especializado en música urbana hispanohablante </span></span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a><span class="in">con experiencia en localización cultural para el mercado anglosajón. </span></span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a><span class="in">Tu criterio prioritario es preservar el impacto cultural del texto </span></span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a><span class="in">aunque eso implique pérdidas formales. Con ese criterio, </span></span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a><span class="in">propón una traducción al inglés de esta estrofa de Bad Bunny: [estrofa]</span></span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a>**Cuándo funciona bien:** cuando necesitas que el modelo adopte un criterio profesional específico, cuando quieres simular la perspectiva de un revisor, un cliente o un experto en un dominio concreto.</span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a>**Cuándo falla:** el modelo acepta el rol pero no siempre lo mantiene de forma consistente a lo largo de una conversación larga. Conviene recordárselo si la sesión se extiende.</span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a><span class="fu">### Combinando técnicas</span></span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a>Las técnicas anteriores no son excluyentes. En la práctica, los prompts más efectivos combinan varias:</span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a><span class="in">[Role] Eres un terminólogo especializado en música urbana.</span></span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a><span class="in">[CoT] Analiza el término "perreo" siguiendo estos pasos: </span></span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a><span class="in">origen, connotaciones culturales, registro, presencia en otras lenguas.</span></span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a><span class="in">[Few-shot] Presenta el resultado en este formato:</span></span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a><span class="in">Término: [término]</span></span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a><span class="in">Origen: [origen]</span></span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a><span class="in">Connotaciones: [connotaciones]</span></span>
+<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a><span class="in">Registro: [registro]</span></span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a><span class="in">Equivalente propuesto: [equivalente]</span></span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a><span class="in">Estrategia: [estrategia de traducción]</span></span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a><span class="in">[Zero-shot para el contenido] Ahora aplica este análisis a: </span></span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a><span class="in">perreo, flow, jangueo</span></span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## 💡Very important</span></span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">La técnica de prompting no determina la calidad del resultado por sí sola</span><span class="co">]</span>{.underline}. Un few-shot con ejemplos malos produce outputs malos con mucha consistencia. Un role prompt con un rol mal definido produce respuestas genéricas con apariencia de especialización. La técnica es el vehículo: el criterio es tuyo.</span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prácticas</span></span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="false"}</span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ejercicio - Creación de contenido interactivo con Gemini {#practica-3}</span></span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a>**Tarea.** En esta práctica vas a usar Gemini Canvas para construir una página web de análisis terminológico sobre un artista o grupo musical a tu elección. La única condición es que debe ser alguien que o bien combine distintos idiomas o utilice expresiones especialmente distintivas. Yo te voy a sugerir dos si estás escasa de imaginación:</span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rosalia</span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bad Bunny</span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stromae</span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a>Para ello vamos a trabajar con la opción de Canvas de <span class="co">[</span><span class="ot">Gemini</span><span class="co">](https://gemini.google.com)</span>. Canvas es un generador y editor de textos que no sólo permite generar texto, sino también convertirlo a diferentes formatos:</span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Página web</span>
+<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Infografía</span>
+<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cuestionario</span>
+<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tarjetas didácticas</span>
+<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Resumen de audio</span>
+<span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a>Nosotros trabajaremos con la de creación de páginas web. Esta página web deberás colgarla luego en Google Sites y pasarme el link. **¿Cómo se hace eso?** Pregúntale a Gemini 😮.</span>
+<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a>Estas son las tareas que deberás llevar a cabo:</span>
+<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Buscar las letras de 3 canciones del artista y generar un corpus terminológico</span>
+<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Crear una web que contenga estas cuatro secciones:</span>
+<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a><span class="ss">    1.  </span>**Presentación del artista**. ¿Por qué es interesante desde el punto de vista de la traducción? Menciona al menos dos rasgos lingüísticos característicos.</span>
+<span id="cb6-169"><a href="#cb6-169" aria-hidden="true" tabindex="-1"></a><span class="ss">    2.  </span>**Análisis terminológico por canción.** Para cada canción, pídele al modelo que identifique las palabras más repetidas quitando preposiciones y artículos y organice en categorías lingüísticas. También tiene que incluirte un análisis terminológico de cada canción.</span>
+<span id="cb6-170"><a href="#cb6-170" aria-hidden="true" tabindex="-1"></a><span class="ss">    3.  </span>**Cinco retos de traducción**. Aquí deberás incluir expresiones o términos especialmente difíciles de traducir a la lengua que elijas, con una propuesta de solución razonada para cada uno</span>
+<span id="cb6-171"><a href="#cb6-171" aria-hidden="true" tabindex="-1"></a><span class="ss">    4.  </span>**Ficha de proceso**. Incluye aquí un resumen de técnicas de prompt empleadas.</span>
+<span id="cb6-172"><a href="#cb6-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-173"><a href="#cb6-173" aria-hidden="true" tabindex="-1"></a>Cuando lo tengas todo respóndeme a las siguientes preguntas:</span>
+<span id="cb6-174"><a href="#cb6-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Enlace de la web generada</span>
+<span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>¿Con qué apartado te liaste o se lió más Gemini para crearlo? ¿Qué parte ha sido especialmente costosa y cómo lo has arreglado?</span>
+<span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>¿Hasta qué punto te sientes dueña del contenido de la web? ¿Se te ocurre un uso alternativo para utilizar esta herramienta en la creación de páginas web?</span>
+<span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

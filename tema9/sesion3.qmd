@@ -1,208 +1,178 @@
-# Prompting avanzado y creación asistida de contenidos
+# Ingeniería de prompts
 
-::: {.callout-note}
-## Sesión 3 de 3 &nbsp;·&nbsp; 2 horas
-**Foco:** aplicar con criterio  
-**Hilo conductor:** la IA como asistente, no como sustituto — y ponerle nombre a lo que habéis estado haciendo
+## Replicabilidad y control en la respuesta
+
+Cuando lanzas el mismo prompt dos veces, el modelo no da exactamente la misma respuesta. Esto no es un fallo: es una decisión de diseño. Los LLMs tienen parámetros que controlan cuánta variabilidad hay en sus respuestas, y entenderlos te permite decidir cuándo quieres creatividad y cuándo quieres consistencia. Esto lo hacen a través de dos parámetros:
+
+- La **temperatura**, que controla cuánta aleatoriedad introduce el modelo al elegir la siguiente palabra.
+
+![](images/temperatura.png){fig-align="center" width="470"}
+
+| Temperatura | Comportamiento | Cuándo usarla |
+|---:|----|----|
+| **0.0 - 0.3** | Prácticamente determinista. Ante el mismo prompt en condiciones idénticas, el modelo tenderá a dar la misma respuesta. | Útil para extracción de datos, terminología, traducciones o tareas que deban replicarse. Limitada si queremos hacer *brainstorming* o queremos que sea 'creativo' en su respuesta. |
+| **0.4 - 0.7** | Equilibrio entre coherencia y variedad. La probabilidad permite más variabilidad en la respuesta, dando respuestas más diversas, pero controlando la probabilidad de respuesta aún | Útil para redacciones, análisis o explicaciones para el usuario |
+| **0.8 - 1.0** | Más creativa, menos predecible, más probabilidad de alucinación, ya que hay mayor aletoriedad en las respuestas que da, incluyendo texto plausible aunque no necesariamente correcto. | Útil para hacer brainstorming, pelotear ideas o redactar textos creativos |
+
+- El **top-p** o *nucelus sampling*, que trabaja de forma complementaria a la temperatura. En lugar de controlar cuánta aleatoriedad hay en general, controla el tamaño del conjunto de palabras entre las que el modelo puede elegir.
+
+  > Imagínate que le damos un valor de `top-p = 0.1`, el modelo solo considera las palabras que juntas acumulan el 10% de probabilidad: es decir, sólo las más probables. Con `top-p = 0.9`, considera un conjunto mucho más amplio de palabras posibles.
+
+En la práctica, temperatura y top-p actúan juntos. La mayoría de herramientas de uso general como Gemini no exponen estos parámetros directamente, pero AI Studio sí permite ajustarlos, lo que te da control total sobre el comportamiento del modelo.
+
+::: callout-note
+## Modos indirectos de influir en los parámetros
+
+No puedes cambiar la temperatura directamente desde la interfaz de un chatbot. Normalmente esto se hace cuando uno se conecta a estos sistemas a través de una API. Sin embargo, puedes conseguir un efecto similar instruyendo al modelo en el propio prompt:
+
+- *"Dame siempre la misma respuesta para este tipo de consulta"* → empuja hacia consistencia
+- *"Dame cinco opciones muy distintas entre sí"* → empuja hacia variedad
+
+No es lo mismo que controlar el parámetro directamente, pero puede funcionar para la mayoría de casos.
 :::
 
-## Ingeniería de prompts
+::: {.callout-tip appearance="simple"}
+## ¿Qué es una API?
 
-La **ingeniería de prompts** es la práctica de diseñar instrucciones de entrada para obtener outputs más útiles y precisos de un LLM. No es una disciplina técnica reservada a programadores: es una habilidad comunicativa que cualquier profesional puede desarrollar.
+[Una API (Application Programming Interface) es una forma de comunicarse con un programa sin necesidad de usar su interfaz visual.]{.underline} Cuando usas ChatGPT a través del navegador, interactúas con una interfaz diseñada para humanos. Cuando accedes a través de la API, le mandas instrucciones directamente en forma de código y recibes la respuesta también en código, sin pantallas ni botones de por medio.
 
-### Técnicas básicas
-
-#### Zero-shot prompting
-
-Se pide una tarea sin proporcionar ningún ejemplo ni contexto adicional. Es el punto de partida más simple.
-
-```
-Traduce el siguiente término jurídico al inglés: "resolver el contrato de pleno derecho"
-```
-
-#### Few-shot prompting
-
-Se proporcionan uno o varios ejemplos dentro del prompt para guiar el tipo de output esperado. Muy útil para tareas de formato específico.
-
-```
-Extrae los términos clave del siguiente texto y proporciona su equivalente en inglés 
-jurídico. Sigue este formato:
-
-Término: licenciante
-Equivalente: licensor
-Contexto: derecho contractual anglosajón
-
-Ahora haz lo mismo con este texto: [texto]
-```
-
-#### Chain-of-Thought (CoT) prompting
-
-Se pide al modelo que razone paso a paso antes de dar la respuesta final. Mejora significativamente los resultados en tareas que requieren análisis o justificación.
-
-```
-Analiza si el término "requerimiento judicial previo" tiene equivalente directo en el 
-sistema jurídico inglés. Razona tu respuesta antes de concluir: considera primero las 
-diferencias entre el sistema procesal civil español y el anglosajón, luego evalúa si 
-existe un concepto equivalente, y finalmente propón la traducción más adecuada.
-```
-
-#### Role prompting
-
-Se asigna un rol al modelo para que ajuste su base de conocimiento y tono al tipo de respuesta deseada.
-
-```
-Actúa como terminólogo especializado en derecho contractual con experiencia en el par 
-de lenguas español-inglés. Tu tarea es revisar la siguiente lista de equivalencias y 
-señalar cuáles son incorrectas o imprecisas para un contexto de derecho anglosajón.
-```
-
-#### Prompting multimodal
-
-Se combinan diferentes formatos de entrada: texto, imágenes, PDFs, código. Gemini y ChatGPT admiten subir documentos directamente al chat.
-
-Casos de uso para T&I:
-
-- Subir un glosario en PDF y pedir que lo use como referencia para verificar terminología
-- Subir una captura de pantalla de una interfaz y pedir que explique cómo usarla
-- Combinar un texto fuente con instrucciones estilísticas para orientar la traducción
-
-### Tipos de prompts por función
-
-| Tipo | Para qué sirve | Ejemplo |
-|------|---------------|---------|
-| Instrucción directa | Pedir algo concreto | "Dame una ecuación de búsqueda para Web of Science sobre traducción jurídica" |
-| Reescritura y edición | Mejorar un texto | "Reescribe este párrafo en un registro más formal e indica los cambios" |
-| Consulta | Obtener una explicación | "¿Cuál es la diferencia entre *assignment* y *transfer* en derecho contractual inglés?" |
-| Tarea simulada | Generar contenido desde un rol | "Eres un revisor de traducción jurídica. Evalúa este fragmento y señala los problemas" |
-| Refinamiento | Ajustar la respuesta anterior | "Bien, ahora hazlo más conciso y elimina los ejemplos" |
-
-## La IA como asistente
-
-Llegados aquí, es el momento de nombrar lo que habéis estado haciendo estas tres sesiones.
-
-En ningún momento os hemos pedido que la IA haga el trabajo por vosotros. Os hemos pedido que la uséis para **buscar** (sesión 1), **verificar** (sesión 2) y ahora **construir con criterio** (sesión 3). Eso tiene un nombre: usar la IA como **asistente**, no como oráculo ni como sustituto.
-
-Los usos más valiosos de un LLM en el trabajo de documentación y traducción son precisamente los que no generan un producto final directamente:
-
-- **Brainstorming:** generar ideas, ángulos o enfoques que luego tú evalúas y seleccionas
-- **Andamiaje:** obtener una estructura o borrador sobre el que trabajar, no el resultado final
-- **Ecuaciones de búsqueda:** construir búsquedas para bases de datos que luego ejecutas y verificas tú
-- **Tutoriales on demand:** pedir que te explique cómo usar una herramienta, un formato o una función concreta
-- **Código asistido:** generar un script para automatizar una tarea repetitiva aunque no sepas programar
-
-::: {.callout-tip}
-## La pregunta clave
-Antes de usar la IA para una tarea, pregúntate: ¿estoy usando la IA para **pensar mejor** o para **no pensar**? La primera opción suma. La segunda resta.
+Esto es importante porque a partir de las APIs podemos integrar un LLM dentro de otras herramientas: un gestor de traducciones, una hoja de cálculo, un flujo de trabajo automatizado. En lugar de abrir el chat y copiar y pegar, el programa habla directamente con el modelo y procesa los resultados automáticamente.
 :::
 
-## Gemini integrado en Google Workspace
+## Tipos de prompts
 
-Con tu cuenta UGR tienes acceso a Gemini integrado directamente en Google Docs, Sheets y Drive. Muchos de vosotros ya lo usáis sin identificarlo conscientemente: el botón de "Ayúdame a escribir" en Docs, las sugerencias de respuesta en Gmail, los resúmenes automáticos en Drive.
+Un prompt no es solo una pregunta. Según cómo lo construyas, el modelo activará estrategias de respuesta muy distintas. Conocer estas técnicas te permite elegir la más adecuada para cada tarea en lugar de improvisar cada vez.
 
-Usos concretos para T&I:
+### Zero-shot prompting
 
-- En Google Docs: pedir que reformule un párrafo, que cambie el registro, que resuma un documento largo
-- En Google Sheets: generar fórmulas, ordenar y filtrar datos terminológicos
-- En Drive: buscar dentro de documentos usando lenguaje natural
+Le pides al modelo que haga algo sin darle ningún ejemplo ni contexto adicional. Es el punto de partida más simple y funciona bien para tareas directas y bien definidas.
 
-## Canvas y AI Studio: de prompt a artefacto visual
-
-**Canvas** (disponible en ChatGPT y en algunas versiones de Gemini) permite trabajar de forma iterativa sobre un documento o código, editando partes concretas sin reescribir todo cada vez.
-
-**AI Studio** de Google permite construir aplicaciones sencillas a partir de prompts, incluyendo páginas web estáticas, sin necesidad de saber HTML. El punto no es que aprendáis a programar: es que entendéis que la IA puede hacer de puente entre vuestra idea y un artefacto técnico que de otra manera requeriría conocimientos que no tenéis todavía.
-
----
-
-## Prácticas de la sesión
-
-### Práctica en clase A — Refinamiento de prompts en cadena {#practica-3a}
-
-::: {.callout-note icon=false}
-## 🔵 Práctica en clase &nbsp;·&nbsp; Individual &nbsp;·&nbsp; ~25 min
-
-**Tarea:** Partid del prompt más básico posible y llegad a uno bien construido en cuatro iteraciones. Usad Gemini con vuestra cuenta UGR.
-
-**Iteración 1 — Prompt malo:**
-```
-tradúceme esto al inglés
-[pegar el texto base]
+```         
+Traduce el siguiente término jurídico al inglés británico: 
+"resolver el contrato de pleno derecho"
 ```
 
-**Iteración 2 — Añadir tarea y contexto:**
-```
-Traduce el siguiente fragmento de contrato de licencia de software del español al inglés 
-jurídico. El texto va dirigido a una empresa anglosajona en un contexto de derecho 
-contractual británico.
-[texto]
+**Cuándo funciona bien:** consultas terminológicas directas, preguntas factuales, tareas con un output muy claro.
+
+**Cuándo falla:** cuando la tarea requiere un formato muy específico, cuando el dominio es muy especializado o cuando necesitas que el modelo adopte un criterio concreto que no está en su entrenamiento general.
+
+### Few-shot prompting
+
+Antes de pedir la tarea, le muestras al modelo uno o varios ejemplos del output que esperas. El modelo aprende el patrón de tus ejemplos y lo replica.
+
+```         
+Aquí tienes ejemplos de cómo quiero que presentes las entradas del glosario:
+
+Término: despechá
+Categoría: andalucismo / apócope
+Definición: forma apocopada de "despechada", con elisión de la -d- 
+intervocálica característica del habla andaluza
+Reto de traducción: la apócope es intraducible fonéticamente en inglés; 
+se pierde el marcador dialectal
+Propuesta: "done with you" (pérdida del rasgo dialectal aceptada)
+
+Ahora haz lo mismo con estos términos: [lista de términos]
 ```
 
-**Iteración 3 — Añadir formato y restricciones:**
-```
-[prompt anterior] 
-Presenta el resultado en dos columnas: español a la izquierda, inglés a la derecha. 
-Para los términos que no tengan equivalente directo en el sistema jurídico británico, 
-añade una nota breve explicando la diferencia conceptual.
+**Cuándo funciona bien:** cuando necesitas un formato de salida exacto y consistente, cuando construyes un glosario o tabla con estructura definida, cuando el zero-shot te da respuestas correctas pero mal formateadas.
+
+**Cuándo falla:** si los ejemplos que das tienen inconsistencias, el modelo las replica. Basura entra, basura sale.
+
+### Chain-of-Thought (CoT) prompting
+
+Le pides al modelo que razone paso a paso antes de dar la respuesta final. Esto mejora significativamente los resultados en tareas que requieren análisis, comparación o justificación. Sería una forma *artificial* de obligar al modelo a que razone o piense.
+
+```         
+Analiza si el término "motomami" tiene equivalente en inglés. 
+Razona tu respuesta siguiendo estos pasos: 
+primero explica qué significa el término y de dónde viene, 
+luego evalúa si existe un concepto equivalente en la cultura anglófona, 
+y finalmente propón la estrategia de traducción más adecuada 
+justificando tu elección.
 ```
 
-**Iteración 4 — Añadir input multimodal:**  
-Subid junto al prompt una captura o PDF con una entrada del diccionario IATE o Black's Law Dictionary para uno de los términos clave. Pedid que tenga en cuenta esa referencia.
+**Cuándo funciona bien:** análisis de equivalencias complejas, justificación de decisiones traductológicas, evaluación de opciones cuando no hay una respuesta única correcta.
 
-**Puesta en común:** comparamos el resultado de la iteración 1 y la iteración 4. ¿Qué cambió? ¿Qué sigue siendo incorrecto aunque el prompt sea mejor?
+**Cuándo falla:** para tareas simples y directas es innecesario y hace las respuestas más largas sin añadir valor. Si le pides que razone por qué "cat" se traduce como "gato", el resultado es ridículo.
+
+### Role prompting
+
+Le asignas al modelo un rol específico para que ajuste su base de conocimiento, su tono y sus criterios al perfil que necesitas.
+
+```         
+Eres un traductor especializado en música urbana hispanohablante 
+con experiencia en localización cultural para el mercado anglosajón. 
+Tu criterio prioritario es preservar el impacto cultural del texto 
+aunque eso implique pérdidas formales. Con ese criterio, 
+propón una traducción al inglés de esta estrofa de Bad Bunny: [estrofa]
+```
+
+**Cuándo funciona bien:** cuando necesitas que el modelo adopte un criterio profesional específico, cuando quieres simular la perspectiva de un revisor, un cliente o un experto en un dominio concreto.
+
+**Cuándo falla:** el modelo acepta el rol pero no siempre lo mantiene de forma consistente a lo largo de una conversación larga. Conviene recordárselo si la sesión se extiende.
+
+### Combinando técnicas
+
+Las técnicas anteriores no son excluyentes. En la práctica, los prompts más efectivos combinan varias:
+
+```         
+[Role] Eres un terminólogo especializado en música urbana.
+[CoT] Analiza el término "perreo" siguiendo estos pasos: 
+origen, connotaciones culturales, registro, presencia en otras lenguas.
+[Few-shot] Presenta el resultado en este formato:
+
+Término: [término]
+Origen: [origen]
+Connotaciones: [connotaciones]
+Registro: [registro]
+Equivalente propuesto: [equivalente]
+Estrategia: [estrategia de traducción]
+
+[Zero-shot para el contenido] Ahora aplica este análisis a: 
+perreo, flow, jangueo
+```
+
+::: callout-important
+## 💡Very important
+
+[La técnica de prompting no determina la calidad del resultado por sí sola]{.underline}. Un few-shot con ejemplos malos produce outputs malos con mucha consistencia. Un role prompt con un rol mal definido produce respuestas genéricas con apariencia de especialización. La técnica es el vehículo: el criterio es tuyo.
 :::
 
-### Práctica en clase B — Flujo de trabajo real {#practica-3b}
+------------------------------------------------------------------------
 
-::: {.callout-note icon=false}
-## 🔵 Práctica en clase &nbsp;·&nbsp; Grupos de 3 &nbsp;·&nbsp; ~25 min
+## Prácticas
 
-**Tarea:** Resolved en grupo la siguiente tarea de documentación previa usando al menos dos herramientas distintas. Documentad qué usasteis para qué y por qué.
+::: {.callout-note icon="false"}
+### Ejercicio - Creación de contenido interactivo con Gemini {#practica-3}
 
-**Encargo:** Necesitáis documentaros para traducir el texto base al francés jurídico. En 25 minutos tenéis que producir: (1) tres fuentes fiables, (2) cinco equivalencias terminológicas verificadas, (3) una nota sobre las diferencias entre el sistema jurídico español y el francés relevantes para esta traducción.
+**Tarea.** En esta práctica vas a usar Gemini Canvas para construir una página web de análisis terminológico sobre un artista o grupo musical a tu elección. La única condición es que debe ser alguien que o bien combine distintos idiomas o utilice expresiones especialmente distintivas. Yo te voy a sugerir dos si estás escasa de imaginación:
 
-**Lo que se evalúa no es el resultado sino el proceso:** ¿qué herramienta usasteis para qué paso? ¿Dónde falló la IA? ¿Cómo lo compensasteis?
-:::
+- Rosalia
+- Bad Bunny
+- Stromae
 
-### Entregable 3 — Infografía del flujo de trabajo {#entregable-3}
+Para ello vamos a trabajar con la opción de Canvas de [Gemini](https://gemini.google.com). Canvas es un generador y editor de textos que no sólo permite generar texto, sino también convertirlo a diferentes formatos:
 
-::: {.callout-warning icon=false}
-## 🟢 Entregable individual &nbsp;·&nbsp; Se hace y corrige en clase
+- Página web
+- Infografía
+- Cuestionario
+- Tarjetas didácticas
+- Resumen de audio
 
-**Tarea:** Usando los entregables 1 y 2 como materia prima, documentad el flujo de trabajo completo que habéis seguido a lo largo de las tres sesiones. El output no es un documento de texto: es una **infografía** creada con Canvas (Gemini o ChatGPT) o con **AI Studio**.
+Nosotros trabajaremos con la de creación de páginas web. Esta página web deberás colgarla luego en Google Sites y pasarme el link. **¿Cómo se hace eso?** Pregúntale a Gemini 😮.
 
-**Qué debe incluir la infografía:**
+Estas son las tareas que deberás llevar a cabo:
 
-1. Las tres fases del flujo (búsqueda de fuentes → glosario verificado → traducción asistida)
-2. Qué herramienta usaste en cada fase y para qué
-3. Al menos un prompt que funcionó bien y uno que no funcionó
-4. Una decisión que tomaste tú porque la IA se equivocó o fue insuficiente
+1.  Buscar las letras de 3 canciones del artista y generar un corpus terminológico
+2.  Crear una web que contenga estas cuatro secciones:
+    1.  **Presentación del artista**. ¿Por qué es interesante desde el punto de vista de la traducción? Menciona al menos dos rasgos lingüísticos característicos.
+    2.  **Análisis terminológico por canción.** Para cada canción, pídele al modelo que identifique las palabras más repetidas quitando preposiciones y artículos y organice en categorías lingüísticas. También tiene que incluirte un análisis terminológico de cada canción.
+    3.  **Cinco retos de traducción**. Aquí deberás incluir expresiones o términos especialmente difíciles de traducir a la lengua que elijas, con una propuesta de solución razonada para cada uno
+    4.  **Ficha de proceso**. Incluye aquí un resumen de técnicas de prompt empleadas.
 
-**Proceso sugerido:**
+Cuando lo tengas todo respóndeme a las siguientes preguntas:
 
-```
-Prompt de partida para Canvas o AI Studio:
-
-Crea una infografía visual sobre mi flujo de trabajo de documentación para traducción. 
-El flujo tiene tres fases: [describe brevemente cada fase]. 
-Incluye iconos simples, flechas de proceso y una sección de "lecciones aprendidas". 
-Estilo limpio y profesional, paleta de colores azul y gris.
-```
-
-Luego iterad sobre el resultado: pedid cambios concretos, añadid texto, ajustad el diseño.
-
-**Corrección en clase:** mini-exposición de 2 minutos por persona. Mostráis la infografía y respondéis a una pregunta sobre una decisión que tomasteis.
-
-::: {.callout-tip}
-## Opción avanzada
-Si quieres ir más allá, usa AI Studio para generar una página web estática sencilla en lugar de una infografía. El proceso es el mismo: partes de un prompt describiendo el contenido y el estilo, y la herramienta genera el código HTML. No necesitas saber programar para entender lo que está haciendo.
-:::
-:::
-
----
-
-::: {.callout-note}
-## Cierre del tema 9
-
-Lo que habéis hecho en estas tres sesiones tiene un nombre: usar la IA como **asistente inteligente**, no como oráculo. Habéis buscado con criterio, verificado con escepticismo y producido con decisión propia. Eso es exactamente lo que diferencia a un profesional de alguien que delega sin pensar.
-
-Las herramientas cambiarán. El criterio que habéis entrenado, no.
+1.  Enlace de la web generada
+2.  ¿Con qué apartado te liaste o se lió más Gemini para crearlo? ¿Qué parte ha sido especialmente costosa y cómo lo has arreglado?
+3.  ¿Hasta qué punto te sientes dueña del contenido de la web? ¿Se te ocurre un uso alternativo para utilizar esta herramienta en la creación de páginas web?
 :::

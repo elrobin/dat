@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>¿Qué es la IA Generativa? – Documentación aplicada a la traducción</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -72,18 +69,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a06763021a52c43c40a351ac8b799b8f.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-dbc92dda8186f57fa2e333fbb71d6a9d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a06763021a52c43c40a351ac8b799b8f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-969ddfa49e00a70eb3423444dbc81f6c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-065a5179aebd64318d7ea99d77b64a9e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4e114cd79268dd7cfb103f3422d85b1b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-36be77d7084ce65d9138e3a4791287a0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-4e114cd79268dd7cfb103f3422d85b1b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a9e733861a171a8fdea76b20008cc90a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-7d4ac4c5825c8150fc5af6cb165d6b86.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a9e733861a171a8fdea76b20008cc90a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -286,6 +284,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Documentación aplicada a la traducción</span>
     </a>
@@ -315,6 +315,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Buscar"></div>
@@ -349,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tema9/sesion3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Sesión 3. Prompts, flujos de trabajo y aplicaciones prácticas</span></a>
+  <a href="../tema9/sesion3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Ingeniería de prompts</span></a>
   </div>
 </li>
       </ul>
@@ -458,7 +462,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><p>Los Transformer se han empleado para crear numerosos modelos, desde los modelos BERT hasta los famosos GPTs de OpenAI</p></li>
 <li><p>Por atención, queremos decir que el modelo es capaz de darle mayor peso a unas palabras que a otras, lo que le permite un mejor análisis sintáctico y semántico de la oración:</p>
-<p>🗣️ “El traductor revisó el texto porque lo consideraba confuso.” | | | | | | | |</p>
+<p>🗣️ “El traductor revisó el texto porque lo consideraba confuso.” | |</p>
 <p>Para entender a qué se refiere “lo”, el modelo presta atención a “texto”.</p></li>
 </ul></td>
 </tr>
@@ -555,8 +559,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Los LLMs actuales son posibles gracias a la confluencia de tres factores que solo se han dado recientemente:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 24%">
-<col style="width: 75%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -618,11 +622,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 34%">
-<col style="width: 16%">
-<col style="width: 14%">
-<col style="width: 16%">
-<col style="width: 14%">
+<col style="width: 35%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 13%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -784,7 +788,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p><em>¿Cuál es la siguiente letra de la serie?</em> <em>A, B, E, G, H, J, …</em></p>
 </blockquote>
-<p><strong>Responde a las siguientes pregunta</strong> 1. ¿Cuál es la respuesta correcta de cada pregunta? 2. ¿Pudiste resolver alguno de los dos acertijos sin ayuda del chatbot? 3. ¿Fue capaz el chatbot de resolver la pregunta? 4. ¿Cómo lo hizo, cuál es el razonamiento correcto? 5. ¿Te convenció la respuesta que te dio el chatbot?</p>
+<p><strong>Responde a las siguientes pregunta</strong>:</p>
+<ol type="1">
+<li>¿Cuál es la respuesta correcta de cada pregunta?</li>
+<li>¿Pudiste resolver alguno de los dos acertijos sin ayuda del chatbot?</li>
+<li>¿Fue capaz el chatbot de resolver la pregunta?</li>
+<li>¿Cómo lo hizo, cuál es el razonamiento correcto?</li>
+<li>¿Te convenció la respuesta que te dio el chatbot?</li>
+</ol>
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
@@ -801,9 +812,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Los cuatro componentes de un buen prompt:</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 27%">
-<col style="width: 51%">
-<col style="width: 20%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1394,7 +1405,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>           <span class="pp">|</span>                                                                         <span class="pp">|</span>                                                                                                                                                                                                                                                                                                                                                <span class="pp">|</span></span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>           <span class="pp">|</span>                                                                         <span class="pp">|</span> - Por atención, queremos decir que el modelo es capaz de darle mayor peso a unas palabras que a otras, lo que le permite un mejor análisis sintáctico y semántico de la oración:                                                                                                                                                               <span class="pp">|</span></span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>           <span class="pp">|</span>                                                                         <span class="pp">|</span>                                                                                                                                                                                                                                                                                                                                                <span class="pp">|</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>           <span class="pp">|</span>                                                                         <span class="pp">|</span>   🗣️ “El traductor revisó el texto porque lo consideraba confuso.” <span class="sc">\|</span> <span class="sc">\|</span> <span class="sc">\|</span> <span class="sc">\|</span> <span class="sc">\|</span> <span class="sc">\|</span> <span class="sc">\|</span>                                                                                                                                                                                                                                                        <span class="pp">|</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>           <span class="pp">|</span>                                                                         <span class="pp">|</span>   🗣️ “El traductor revisó el texto porque lo consideraba confuso.” <span class="sc">\|</span>                                                                                                                                                                                                                                                                          <span class="pp">|</span></span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>           <span class="pp">|</span>                                                                         <span class="pp">|</span>                                                                                                                                                                                                                                                                                                                                                <span class="pp">|</span></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>           <span class="pp">|</span>                                                                         <span class="pp">|</span>   Para entender a qué se refiere “lo”, el modelo presta atención a “texto”.                                                                                                                                                                                                                                                                    <span class="pp">|</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>+-----------+-------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+</span>
@@ -1467,175 +1478,168 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>Los LLMs actuales son posibles gracias a la confluencia de tres factores que solo se han dado recientemente:</span>
 <span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>+------------------------------------+------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Factor                             <span class="pp">|</span> En qué consiste                                                                                                  <span class="pp">|</span></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>+==================================<span class="al">==+==</span>================================================================================================================+</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Arquitectura Transformer**       <span class="pp">|</span> Nuevo diseño algorítmico publicado en 2017 que permite procesar texto de forma mucho más eficiente               <span class="pp">|</span></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>+------------------------------------+------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Datos de entrenamiento masivos** <span class="pp">|</span> Terabytes de texto y código extraídos de internet, impensables hace dos décadas                                  <span class="pp">|</span></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>+------------------------------------+------------------------------------------------------------------------------------------------------------------+</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Potencia computacional**         <span class="pp">|</span> La capacidad de cómputo necesaria para entrenar modelos a esta escala solo está disponible desde hace pocos años <span class="pp">|</span></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>+------------------------------------+------------------------------------------------------------------------------------------------------------------+</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Factor <span class="pp">|</span> En qué consiste <span class="pp">|</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="pp">|----|----|</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Arquitectura Transformer** <span class="pp">|</span> Nuevo diseño algorítmico publicado en 2017 que permite procesar texto de forma mucho más eficiente <span class="pp">|</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Datos de entrenamiento masivos** <span class="pp">|</span> Terabytes de texto y código extraídos de internet, impensables hace dos décadas <span class="pp">|</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Potencia computacional** <span class="pp">|</span> La capacidad de cómputo necesaria para entrenar modelos a esta escala solo está disponible desde hace pocos años <span class="pp">|</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="fu">### Qué hacen y qué no hacen</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>Cuando le haces una pregunta a un LLM, el modelo no *piensa* en tu pregunta como lo haría una persona. Lo que hace es intentar predecir qué palabras habrían aparecido a continuación si tu pregunta hubiera formado parte de sus datos de entrenamiento. Lo sorprendente es lo bien que esta operación estadística imita una respuesta reflexiva. Dicho esto, los LLMs:</span>
 <span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="fu">### Qué hacen y qué no hacen</span></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>Cuando le haces una pregunta a un LLM, el modelo no *piensa* en tu pregunta como lo haría una persona. Lo que hace es intentar predecir qué palabras habrían aparecido a continuación si tu pregunta hubiera formado parte de sus datos de entrenamiento. Lo sorprendente es lo bien que esta operación estadística imita una respuesta reflexiva. Dicho esto, los LLMs:</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No razonan** como los humanos</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No tienen comprensión encarnada** del mundo</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No distinguen** de forma fundamental entre verdad y falsedad</span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No razonan** como los humanos</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No tienen comprensión encarnada** del mundo</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No distinguen** de forma fundamental entre verdad y falsedad</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>Simplemente generan texto plausible que se parece al texto con el que fueron entrenados.</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## Funcionalidades de los LLMs</span></span>
 <span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>Simplemente generan texto plausible que se parece al texto con el que fueron entrenados.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="fu">### Funcionalidades generales</span></span>
 <span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## Funcionalidades de los LLMs</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>Se trata de funcionalidades que tienen prácticamente todos los chatbots que se ofrecen en el mercado, aunque la calidad y potencial de cada una de estas funcionalidades varía por modelo.</span>
 <span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="fu">### Funcionalidades generales</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Conversación en lenguaje natural.** Capacidad para interactuar con un humano a través de un chat.</span>
 <span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>Se trata de funcionalidades que tienen prácticamente todos los chatbots que se ofrecen en el mercado, aunque la calidad y potencial de cada una de estas funcionalidades varía por modelo.</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Consulta multimodal.** Capacidad para interpretar y entender no sólo texto, sino también su combinación con imágenes, código y ficheros.</span>
 <span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Conversación en lenguaje natural.** Capacidad para interactuar con un humano a través de un chat.</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Generación de texto/código/imágenes.** Capacidad para generar texto sobre un tema específico, código de programación o imágenes artificiales en base a una serie de instrucciones.</span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Consulta multimodal.** Capacidad para interpretar y entender no sólo texto, sino también su combinación con imágenes, código y ficheros.</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Memoria dentro de la conversación.** Es lo que se llama el contexto de la conversación y funciona en base a *tokens* que le permiten *recordar* las interacciones previas en un mismo chat. Si la conversación excede el número de tokens máximo, el chatbot *olvidará* el comienzo de la conversación.</span>
 <span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Generación de texto/código/imágenes.** Capacidad para generar texto sobre un tema específico, código de programación o imágenes artificiales en base a una serie de instrucciones.</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Memoria dentro de la conversación.** Es lo que se llama el contexto de la conversación y funciona en base a *tokens* que le permiten *recordar* las interacciones previas en un mismo chat. Si la conversación excede el número de tokens máximo, el chatbot *olvidará* el comienzo de la conversación.</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="fu">## ¿Qué es un token?</span></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>Un <span class="sc">\*\*</span>token<span class="sc">\*\*</span> es la unidad mínima de texto que procesa un LLM. No equivale exactamente a una palabra: puede ser una palabra completa ("casa"), una parte de palabra ("tradu" + "cción"), un signo de puntuación o un espacio. En inglés, una palabra equivale aproximadamente a 1,3 tokens; en español la proporción es algo mayor por la morfología más rica del idioma.</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>Como referencia orientativa: 1.000 tokens equivalen a unas 700 palabras en español, o aproximadamente una página y media de texto.</span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+-----------+-------------+-----------+</span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>                            <span class="pp">|</span> ChatGPT\    <span class="pp">|</span> Gemini\   <span class="pp">|</span> Claude\     <span class="pp">|</span> DeepSeek  <span class="pp">|</span></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>                            <span class="pp">|</span> (OpenAI)    <span class="pp">|</span> (Google)  <span class="pp">|</span> (Anthropic) <span class="pp">|</span>           <span class="pp">|</span></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>+==========================<span class="al">==+:===========:+:=========:+:===========:+:==</span>=======:+</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Conexión a Internet**    <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢        <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢        <span class="pp">|</span></span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+-----------+-------------+-----------+</span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Multimodalidad**         <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢        <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟡        <span class="pp">|</span></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+-----------+-------------+-----------+</span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Generación de imágenes** <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢        <span class="pp">|</span> 🔴          <span class="pp">|</span> 🔴        <span class="pp">|</span></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+-----------+-------------+-----------+</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Razonamiento avanzado**  <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢        <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢        <span class="pp">|</span></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+-----------+-------------+-----------+</span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Contexto largo**         <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢        <span class="pp">|</span> 🟢🟢        <span class="pp">|</span> 🟢        <span class="pp">|</span></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+-----------+-------------+-----------+</span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Código abierto**         <span class="pp">|</span> 🔴          <span class="pp">|</span> 🔴        <span class="pp">|</span> 🔴          <span class="pp">|</span> 🟢        <span class="pp">|</span></span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+-----------+-------------+-----------+</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Acceso UGR**             <span class="pp">|</span> 🟢(Copilot) <span class="pp">|</span> 🟢        <span class="pp">|</span> 🔴          <span class="pp">|</span> 🔴        <span class="pp">|</span></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+-----------+-------------+-----------+</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="fu">### Peculiaridades de cada modelo</span></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip icon="false"}</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## ChatGPT (OpenAI)</span></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**GPTs personalizados:** permite crear asistentes configurados para tareas específicas</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Memoria persistente entre sesiones:** puede recordar información de conversaciones anteriores si se activa</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**DALL-E integrado:** generación de imágenes directamente en el chat</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Operator y agentes:** en versiones de pago, puede ejecutar tareas autónomas en el navegador</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip icon="false"}</span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gemini (Google)</span></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Integración nativa con Google Workspace:** funciona dentro de Docs, Sheets, Gmail y Drive</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**NotebookLM:** herramienta derivada para trabajar con documentos propios (ver siguiente sección)</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AI Studio:** entorno para construir aplicaciones y páginas web a partir de prompts</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Acceso con cuenta UGR** (<span class="in">`@go.ugr.es`</span>)</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip icon="false"}</span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claude (Anthropic)</span></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ventana de contexto más larga:** puede procesar documentos muy extensos sin perder el hilo</span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Projects:** permite mantener conversaciones organizadas con contexto compartido</span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Especialmente cuidadoso** con contenido sensible y con señalar sus propias limitaciones</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip icon="false"}</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## DeepSeek</span></span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Código abierto:** puede instalarse y ejecutarse en local, sin enviar datos a ningún servidor</span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Muy potente en código y matemáticas**</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Consideraciones de privacidad** en su versión web: los datos se procesan en China</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prácticas</span></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="false"}</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicio 1 — ¿Razonan los chatbots? {#practica-1a}</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>::: callout-important</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="fu">## ¿Qué es un token?</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>Un <span class="sc">\*\*</span>token<span class="sc">\*\*</span> es la unidad mínima de texto que procesa un LLM. No equivale exactamente a una palabra: puede ser una palabra completa ("casa"), una parte de palabra ("tradu" + "cción"), un signo de puntuación o un espacio. En inglés, una palabra equivale aproximadamente a 1,3 tokens; en español la proporción es algo mayor por la morfología más rica del idioma.</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>Como referencia orientativa: 1.000 tokens equivalen a unas 700 palabras en español, o aproximadamente una página y media de texto.</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+----------+-------------+----------+</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>                            <span class="pp">|</span> ChatGPT\    <span class="pp">|</span> Gemini\  <span class="pp">|</span> Claude\     <span class="pp">|</span> DeepSeek <span class="pp">|</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>                            <span class="pp">|</span> (OpenAI)    <span class="pp">|</span> (Google) <span class="pp">|</span> (Anthropic) <span class="pp">|</span>          <span class="pp">|</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>+==========================<span class="al">==+:===========:+:========:+:===========:+:==</span>======:+</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Conexión a Internet**    <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢       <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢       <span class="pp">|</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+----------+-------------+----------+</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Multimodalidad**         <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢       <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟡       <span class="pp">|</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+----------+-------------+----------+</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Generación de imágenes** <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢       <span class="pp">|</span> 🔴          <span class="pp">|</span> 🔴       <span class="pp">|</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+----------+-------------+----------+</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Razonamiento avanzado**  <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢       <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢       <span class="pp">|</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+----------+-------------+----------+</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Contexto largo**         <span class="pp">|</span> 🟢          <span class="pp">|</span> 🟢       <span class="pp">|</span> 🟢🟢        <span class="pp">|</span> 🟢       <span class="pp">|</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+----------+-------------+----------+</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Código abierto**         <span class="pp">|</span> 🔴          <span class="pp">|</span> 🔴       <span class="pp">|</span> 🔴          <span class="pp">|</span> 🟢       <span class="pp">|</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+----------+-------------+----------+</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Acceso UGR**             <span class="pp">|</span> 🟢(Copilot) <span class="pp">|</span> 🟢       <span class="pp">|</span> 🔴          <span class="pp">|</span> 🔴       <span class="pp">|</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>+----------------------------+-------------+----------+-------------+----------+</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="fu">### Peculiaridades de cada modelo</span></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip icon="false"}</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="fu">## ChatGPT (OpenAI)</span></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**GPTs personalizados:** permite crear asistentes configurados para tareas específicas</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Memoria persistente entre sesiones:** puede recordar información de conversaciones anteriores si se activa</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**DALL-E integrado:** generación de imágenes directamente en el chat</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Operator y agentes:** en versiones de pago, puede ejecutar tareas autónomas en el navegador</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip icon="false"}</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gemini (Google)</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Integración nativa con Google Workspace:** funciona dentro de Docs, Sheets, Gmail y Drive</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**NotebookLM:** herramienta derivada para trabajar con documentos propios (ver siguiente sección)</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AI Studio:** entorno para construir aplicaciones y páginas web a partir de prompts</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Acceso con cuenta UGR** (<span class="in">`@go.ugr.es`</span>)</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip icon="false"}</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claude (Anthropic)</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ventana de contexto más larga:** puede procesar documentos muy extensos sin perder el hilo</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Projects:** permite mantener conversaciones organizadas con contexto compartido</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Especialmente cuidadoso** con contenido sensible y con señalar sus propias limitaciones</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip icon="false"}</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="fu">## DeepSeek</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Código abierto:** puede instalarse y ejecutarse en local, sin enviar datos a ningún servidor</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Muy potente en código y matemáticas**</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Consideraciones de privacidad** en su versión web: los datos se procesan en China</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prácticas</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="false"}</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicio 1 — ¿Razonan los chatbots? {#practica-1a}</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>**Tarea:** Te voy a poner varios patrones a ver si eres capaz de adivinar la siguiente letra. Inténtalo tu primero y después, quiero que les preguntas a uno de los siguientes chatbots: ChatGPT, Gemini y Claude (yo te digo en clase cuál). Te paso yo los prompts para que los copies tal cual:</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>Primer patrón:</span>
 <span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>**Tarea:** Te voy a poner varios patrones a ver si eres capaz de adivinar la siguiente letra. Inténtalo tu primero y después, quiero que les preguntas a uno de los siguientes chatbots: ChatGPT, Gemini y Claude (yo te digo en clase cuál). Te paso yo los prompts para que los copies tal cual:</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *¿Cuál es la siguiente letra de la serie?* *C, E, L, S, L, D, L, ...*</span></span>
 <span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>Primer patrón:</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>Segundo patrón:</span>
 <span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *¿Cuál es la siguiente letra de la serie?*</span></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *C, E, L, S, L, D, L, ...*</span></span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>Segundo patrón:</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *¿Cuál es la siguiente letra de la serie?*</span></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *A, B, E, G, H, J, ...*</span></span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>**Responde a las siguientes pregunta**</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>¿Cuál es la respuesta correcta de cada pregunta?</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>¿Pudiste resolver alguno de los dos acertijos sin ayuda del chatbot?</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>¿Fue capaz el chatbot de resolver la pregunta?</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>¿Cómo lo hizo, cuál es el razonamiento correcto?</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>¿Te convenció la respuesta que te dio el chatbot?</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="false"}</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicio 2 - Construcción de un prompt {#practica-1b}</span></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>**Tarea:** Vas a construir un prompt de forma progresiva, añadiendo componentes en cada iteración. Usa la herramienta que prefieras (ChatGPT, Claude o Gemini).</span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>**Los cuatro componentes de un buen prompt:**</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Componente <span class="pp">|</span> Pregunta que responde <span class="pp">|</span> Ejemplo <span class="pp">|</span></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="pp">|------------|----------------------|---------|</span></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Tarea** <span class="pp">|</span> ¿Qué quiero que haga? <span class="pp">|</span> "Explícame qué es..." <span class="pp">|</span></span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Contexto** <span class="pp">|</span> ¿Quién pregunta y para qué? <span class="pp">|</span> "Soy estudiante de T&amp;I y necesito..." <span class="pp">|</span></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Formato** <span class="pp">|</span> ¿Cómo quiero el resultado? <span class="pp">|</span> "en una lista de cinco puntos..." <span class="pp">|</span></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Público** <span class="pp">|</span> ¿A quién va dirigido? <span class="pp">|</span> "para alguien sin conocimientos técnicos" <span class="pp">|</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *¿Cuál es la siguiente letra de la serie?* *A, B, E, G, H, J, ...*</span></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>**Responde a las siguientes pregunta**:</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>¿Cuál es la respuesta correcta de cada pregunta?</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>¿Pudiste resolver alguno de los dos acertijos sin ayuda del chatbot?</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>¿Fue capaz el chatbot de resolver la pregunta?</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>¿Cómo lo hizo, cuál es el razonamiento correcto?</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>¿Te convenció la respuesta que te dio el chatbot?</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="false"}</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicio 2 - Construcción de un prompt {#practica-1b}</span></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>**Tarea:** Vas a construir un prompt de forma progresiva, añadiendo componentes en cada iteración. Usa la herramienta que prefieras (ChatGPT, Claude o Gemini).</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**Los cuatro componentes de un buen prompt:**</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Componente <span class="pp">|</span> Pregunta que responde <span class="pp">|</span> Ejemplo <span class="pp">|</span></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="pp">|----|----|----|</span></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Tarea** <span class="pp">|</span> ¿Qué quiero que haga? <span class="pp">|</span> "Explícame qué es..." <span class="pp">|</span></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Contexto** <span class="pp">|</span> ¿Quién pregunta y para qué? <span class="pp">|</span> "Soy estudiante de T&amp;I y necesito..." <span class="pp">|</span></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Formato** <span class="pp">|</span> ¿Cómo quiero el resultado? <span class="pp">|</span> "en una lista de cinco puntos..." <span class="pp">|</span></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Público** <span class="pp">|</span> ¿A quién va dirigido? <span class="pp">|</span> "para alguien sin conocimientos técnicos" <span class="pp">|</span></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>**El punto de partida — escribe esto exactamente:**</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Explícame qué es un contrato de licencia de software*</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>Guarda la respuesta.</span>
 <span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>**El punto de partida — escribe esto exactamente:**</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>**Iteración 2 — añade contexto:**</span>
 <span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Explícame qué es un contrato de licencia de software*</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Soy estudiante de primer curso de Traducción e Interpretación. Explícame qué es un contrato de licencia de software*</span></span>
 <span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>Guarda la respuesta.</span>
 <span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>**Iteración 2 — añade contexto:**</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>**Iteración 3 — añade formato:**</span>
 <span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Soy estudiante de primer curso de Traducción e Interpretación. Explícame qué es un contrato de licencia de software*</span></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Soy estudiante de primer curso de Traducción e Interpretación. Explícame qué es un contrato de licencia de software en una lista de cinco puntos destacando los términos clave*</span></span>
 <span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>Guarda la respuesta.</span>
 <span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>**Iteración 3 — añade formato:**</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>**Iteración 4 — añade público:**</span>
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Soy estudiante de primer curso de Traducción e Interpretación. Explícame qué es un contrato de licencia de software en una lista de cinco puntos destacando los términos clave*</span></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Soy estudiante de primer curso de Traducción e Interpretación. Explícame qué es un contrato de licencia de software en una lista de cinco puntos destacando los términos clave. Usa un lenguaje claro y evita la jerga técnica*</span></span>
 <span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>Guarda la respuesta.</span>
 <span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>**Iteración 4 — añade público:**</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>**Entrega individual** — responde en un documento de texto:</span>
 <span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Soy estudiante de primer curso de Traducción e Interpretación. Explícame qué es un contrato de licencia de software en una lista de cinco puntos destacando los términos clave. Usa un lenguaje claro y evita la jerga técnica*</span></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>Guarda la respuesta.</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>**Entrega individual** — responde en un documento de texto:</span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Copia las cuatro respuestas obtenidas (o capturas de pantalla).</span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>¿Cuál es la diferencia más llamativa entre la primera y la última respuesta?</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>¿Qué componente ha marcado más la diferencia en tu caso? ¿Por qué crees que es así?</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>¿Hay algo que aún mejorarías en el prompt final? Propón una iteración 5 y pruébala.</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Copia las cuatro respuestas obtenidas (o capturas de pantalla).</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>¿Cuál es la diferencia más llamativa entre la primera y la última respuesta?</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>¿Qué componente ha marcado más la diferencia en tu caso? ¿Por qué crees que es así?</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>¿Hay algo que aún mejorarías en el prompt final? Propón una iteración 5 y pruébala.</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
